@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Nightmare-V2-pcb-V6-rescue)(type Legacy)(uri "${KIPRJMOD}/Nightmare V2 pcb V6-rescue.lib")(options "")(descr ""))
+)

@@ -1,0 +1,39 @@
+EESchema Schematic File Version 4
+LIBS:nik32-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L z_esp32:ESP-32S M1
+U 1 1 5CDF0DAD
+P 9250 2850
+F 0 "M1" H 9250 4087 60  0000 C CNN
+F 1 "ESP-32S" H 9250 3981 60  0000 C CNN
+F 2 "nik_things:esp32_board" H 9300 4000 60  0001 C CNN
+F 3 "" H 8900 3100 60  0001 C CNN
+	1    9250 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCU_ST_STM32:STM32F411RETx U1
+U 1 1 5CDF0F24
+P 4000 5250
+F 0 "U1" H 4000 7428 50  0000 C CNN
+F 1 "STM32F411RETx" H 4000 7337 50  0000 C CNN
+F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 6800 7125 50  0001 R TNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00115249.pdf" H 4000 5250 50  0001 C CNN
+	1    4000 5250
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
