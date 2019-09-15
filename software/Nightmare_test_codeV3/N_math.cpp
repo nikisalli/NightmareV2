@@ -3,6 +3,7 @@
 #include "N_defines.h"
 #include "N_structs.h"
 
+//Inverse kinematics
 void trigz(float &gama, float &alpha, float &beta, float x, float y, float z, struct Dleg dim) {
   if (dim.SIDE) { //LEFT
     float L, L1, alpha1, alpha2;
@@ -26,6 +27,7 @@ void trigz(float &gama, float &alpha, float &beta, float x, float y, float z, st
   }
 }
 
+//Forward kinematics
 void ftrigz(float &x, float &y, float &z, float alpha, float beta, float gama, struct Dleg dim){
   if(dim.SIDE) { //LEFT
     float L2 = dim.CX_LENGHT + cos(toRad(alpha))*dim.FM_LENGHT + cos(toRad((beta)+alpha))*dim.TB_LENGHT;
