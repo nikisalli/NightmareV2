@@ -82,9 +82,6 @@ void Task3code( void * parameter) {
           walk_center_y = -walk_center_y;
           walk_arc = -walk_arc;
         }
-        /*if(walk_center_y < 30 or walk_center_y > -30){
-          walk_arc = walk_arc * 0.5;
-        }*/
         Nightmare.Cy = walk_center_y;
         Nightmare.arc = -walk_arc;
         Nightmare.walk_ray = sqrt(sq(Nightmare.Cy) + sq(Nightmare.Cx));
