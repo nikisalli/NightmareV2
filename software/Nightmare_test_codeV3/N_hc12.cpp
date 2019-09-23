@@ -26,8 +26,8 @@ bool remote::receive(){
       bytes[i] = Serial1.read();
     }
     if(((byte)(~(bytes[0]+bytes[1]+bytes[2]+bytes[3]+bytes[4]+bytes[5]))) == bytes[6]){
-      angle1_ = bytes[0]*1.41176470588;
-      angle2_ = bytes[2]*1.41176470588;
+      angle1_ = bytes[0]*1.43426;
+      angle2_ = bytes[2]*1.43426;
       speed1_ = bytes[1];
       speed2_ = bytes[3];
       active_ = bytes[4];

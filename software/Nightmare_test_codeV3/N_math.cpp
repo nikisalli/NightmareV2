@@ -43,12 +43,6 @@ void ftrigz(float &x, float &y, float &z, float alpha, float beta, float gama, s
   }
 }
 
-void Tmatrix(float &Px, float &Py, float &Pz, float Dx, float Dy, float Dz){
-  Px += Dx;
-  Py += Dy;
-  Pz += Dz;
-}
-
 void RmatrixX(float &Px, float &Py, float &Pz, float alfa, float Cx, float Cy, float Cz) {
   float TPx = Px;
   float TPy = Py;

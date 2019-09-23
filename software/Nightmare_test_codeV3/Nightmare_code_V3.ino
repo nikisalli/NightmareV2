@@ -28,12 +28,12 @@ void loop() {
     }
     switch (hc12.state_) {
       case 0: {
-          if (hc12.speed1_ > 10 or hc12.speed2_ > 10) {
-            Nightmare.step(1, 6, 1.3);
+          if (hc12.speed1_ > 10) {
+            Nightmare.step(1, 5, 1.5);
           } else {
             Nightmare.stand();
           }
-        } break; 
+        } break;
       case 1: {
           int dir[4];
 
@@ -69,23 +69,24 @@ void Task3code( void * parameter) {
   for (;;) {
     if(hc12.receive()){
       if (hc12.state_ == 0) {
-        float x1 = (hc12.speed1_ * cos(toRad(hc12.angle1_)))/15;
-        float y1 = (hc12.speed1_ * sin(toRad(hc12.angle1_)))/15;
-        float x2 = (hc12.speed2_ * cos(toRad(hc12.angle2_)))/6;
-        float y2 = hc12.speed2_ * sin(toRad(hc12.angle2_));
-        Nightmare.y_step = x1;
-        Nightmare.x_step = y1;
-        if(x1+y1>10){
-          if(Nightmare.angle > 0){
-            Nightmare.angle = x2-(((x1+y1)-10)*4);
-          }
-          else{
-            Nightmare.angle = x2+(((x1+y1)-10)*4);
-          }
+        int new_ang = (-hc12.angle1_) + 90;
+        if (new_ang < -180) {
+          new_ang += 360;
+       }
+       if (new_ang == 0) {
+         new_ang = 1;
+       }
+        float walk_center_y = ((0.1 / abs(new_ang)) * 30000.0) - 34.0;
+        float walk_arc = fmap(hc12.speed1_, 0, 100, 0, MAX_STEP_LENGHT);
+        if (new_ang < 0) {
+          walk_center_y = -walk_center_y;
+          walk_arc = -walk_arc;
         }
-        else{
-          Nightmare.angle = x2;
-        }
+        Nightmare.Cy = walk_center_y;
+        Nightmare.arc = -walk_arc;
+        Nightmare.walk_ray = sqrt(sq(Nightmare.Cy) + sq(Nightmare.Cx));
+        Nightmare.walk_circ = 2 * PI * (Nightmare.walk_ray + STAND_POS[1][5]);
+        Nightmare.walk_ang = ((Nightmare.arc * 360.0) / Nightmare.walk_circ) * 2;
       }
       hc12.write();
     }
