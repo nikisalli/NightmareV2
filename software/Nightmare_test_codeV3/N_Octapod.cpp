@@ -131,17 +131,20 @@ void Octapod::step(int walk_pattern, float height, float time) {
         for (int c = 0; c < 8; c++) {
           if (!first_step) {
             if (c != fz && c != pz) {
-              RmatrixZ(pos[0][c], pos[1][c], pos[2][c], -(Octapod::walk_ang / 120), Octapod::Cx, Octapod::Cy, 0);
+              RmatrixZ(pos[0][c], pos[1][c], pos[2][c], -(Octapod::angle / 120), 0, 0, 0);
+              Tmatrix(pos[0][c], pos[1][c], pos[2][c], -(Octapod::x_step / 120), -(Octapod::y_step / 120), 0);
             }
           } else {
             if (c != fz) {
-              RmatrixZ(pos[0][c], pos[1][c], pos[2][c], -(Octapod::walk_ang / 120), Octapod::Cx, Octapod::Cy, 0);
+              RmatrixZ(pos[0][c], pos[1][c], pos[2][c], -(Octapod::angle / 120), 0, 0, 0);
+              Tmatrix(pos[0][c], pos[1][c], pos[2][c], -(Octapod::x_step / 120), -(Octapod::y_step / 120), 0);
             }
           }
         }
         if (!first_step) {
           float cr[3] = {STAND_POS[0][pz], STAND_POS[1][pz], STAND_POS[2][pz]};
-          RmatrixZ(cr[0], cr[1], cr[2], Octapod::walk_ang / 2.0, Octapod::Cx, Octapod::Cy, 0); //prev
+          RmatrixZ(cr[0], cr[1], cr[2], Octapod::angle / 2.0, 0, 0, 0); //prev
+          Tmatrix(cr[0], cr[1], cr[2], Octapod::x_step / 2.0, Octapod::y_step / 2.0, 0);
           float bm[3][4] = {//prev
             {cr[0], cr[0], bpos[0][1], bpos[0][1]},
             {cr[1], cr[1], bpos[1][1], bpos[1][1]},
@@ -150,7 +153,8 @@ void Octapod::step(int walk_pattern, float height, float time) {
           Spline3D(bm, (b / 2.0) + 0.5, pos[0][pz], pos[1][pz], pos[2][pz]); //prev
         }
         float br[3] = {STAND_POS[0][fz], STAND_POS[1][fz], STAND_POS[2][fz]};
-        RmatrixZ(br[0], br[1], br[2], Octapod::walk_ang / 2.0, Octapod::Cx, Octapod::Cy, 0); //forw
+        RmatrixZ(br[0], br[1], br[2], Octapod::angle / 2.0, 0, 0, 0); //forw
+        Tmatrix(br[0], br[1], br[2], Octapod::x_step / 2.0, Octapod::y_step / 2.0, 0);
         float am[3][4] = {//forw
           {br[0], br[0], bpos[0][0], bpos[0][0]},
           {br[1], br[1], bpos[1][0], bpos[1][0]},
