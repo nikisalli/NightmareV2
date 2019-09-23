@@ -6,12 +6,9 @@
 
 class Octapod{
   public:
-    float Cx;
-    float Cy;
-    float arc;
-    float walk_circ;
-    float walk_ang;
-    float walk_ray;
+    float x_step;
+    float y_step;
+    float angle;
     
     Octapod();
     void init();

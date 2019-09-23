@@ -7,6 +7,7 @@ void RmatrixX(float &Px, float &Py, float &Pz, float alfa , float Cx, float Cy, 
 void RmatrixY(float &Px, float &Py, float &Pz, float beta , float Cx, float Cy, float Cz);
 void RmatrixZ(float &Px, float &Py, float &Pz, float gamma, float Cx, float Cy, float Cz);
 void Rmatrix(float &x_, float &y_, float &z_, float alfa, float beta, float gama, float centerX_, float centerY_, float centerZ_);
+void Tmatrix(float &Px, float &Py, float &Pz, float Dx, float Dy, float Dz);
 void Spline2D(float p[2][11], float ti, float &a, float &b);
 void Spline3D(float p[3][4], float ti, float &a, float &b, float &c);
 float timeVal(float t, float higher, float lower);
