@@ -9,6 +9,7 @@
 struct Dleg Dlegs[8];
 float pos[3][8] = {};
 float bpos[3][2] = {};
+float pbpos[3][8] = {};
 boolean first_step = true;
 byte leg;
 
@@ -168,6 +169,38 @@ void Octapod::step(int walk_pattern, float height, float time) {
       first_step = false;
     }
   }
+  else if(walk_pattern == 2) {
+    for (int a=0; a<2; a++) {
+      for (int c=0; c<4; c++) {
+        int i = c*2+(1-a);
+        pbpos[0][i] = pos[0][i];
+        pbpos[1][i] = pos[1][i];
+        pbpos[2][i] = pos[2][i];
+      }
+      for (float b=0; b<1; b+=0.01) {
+        for (int c=0; c<4; c++) {
+          int i = c*2+a;
+          RmatrixZ(pos[0][i], pos[1][i], pos[2][i], -(Octapod::angle / 100), 0, 0, 0);
+          Tmatrix(pos[0][i], pos[1][i], pos[2][i], -(Octapod::x_step / 100), -(Octapod::y_step / 100), 0);
+        }
+        for (int c=0; c<4; c++) {
+          int i = c*2+(1-a);
+          float cr[3] = {STAND_POS[0][i], STAND_POS[1][i], STAND_POS[2][i]};
+          RmatrixZ(cr[0], cr[1], cr[2], Octapod::angle/2.0, 0, 0, 0);
+          Tmatrix(cr[0], cr[1], cr[2], Octapod::x_step / 2.0, Octapod::y_step / 2.0, 0);
+          float bm[3][4] = {//prev
+            {cr[0], cr[0], pbpos[0][i], pbpos[0][i]}, 
+            {cr[1], cr[1], pbpos[1][i], pbpos[1][i]}, 
+            {STAND_POS[2][i], STAND_POS[2][i]+height, STAND_POS[2][i]+height, STAND_POS[2][i]}, 
+          };
+          Spline3D(bm, b, pos[0][i], pos[1][i], pos[2][i]);
+        }
+        bodyToServos(pos);
+        delayMicroseconds(5000);
+     }
+      first_step = false;
+    }
+  }
 }
 
 void Octapod::moveleg() {
@@ -184,7 +217,7 @@ void Octapod::moveleg() {
     if(leg < 0){
       leg = 5;
     }
-    }
+    }  
     float actualpos[3][8] = {};
     for(int i=0;i<8;i++){
     for(int j=0;j<3;j++){

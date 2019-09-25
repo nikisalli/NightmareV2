@@ -29,7 +29,7 @@ void loop() {
     switch (hc12.state_) {
       case 0: {
           if (hc12.speed1_ > 10 or hc12.speed2_ > 10) {
-            Nightmare.step(1, 6, 1.3);
+            Nightmare.step(2, 6, 1.3);
           } else {
             Nightmare.stand();
           }
