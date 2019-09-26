@@ -90,7 +90,7 @@ const float LEG_START_OFFSET[16] = {
 // Step settings.
 #define MAX_STEP_LENGHT 7.0 //maximum arc lenght covered by two points of a natural spline while walking
 #define MAX_STEP_HEIGHT 5.0 //natural spline max point height from ground
-#define MINIMUM_STEP_TIME 2.0 //minimum time for executing a step
+#define MINIMUM_STEP_TIME 0.5 //minimum time for executing a step
 #define WALK_FRAMES 30
 #define START_Z -4
 #define STAND_Z -12

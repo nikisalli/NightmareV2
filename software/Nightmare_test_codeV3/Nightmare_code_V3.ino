@@ -29,7 +29,7 @@ void loop() {
     switch (hc12.state_) {
       case 0: {
           if (hc12.speed1_ > 10 or hc12.speed2_ > 10) {
-            Nightmare.step(2, 6, 1.3);
+            Nightmare.step(2, 6, 1);
           } else {
             Nightmare.stand();
           }
@@ -69,23 +69,35 @@ void Task3code( void * parameter) {
   for (;;) {
     if(hc12.receive()){
       if (hc12.state_ == 0) {
-        float x1 = (hc12.speed1_ * cos(toRad(hc12.angle1_)))/15;
-        float y1 = (hc12.speed1_ * sin(toRad(hc12.angle1_)))/15;
+        float x1 = (hc12.speed1_ * cos(toRad(hc12.angle1_)))/12;
+        float y1 = (hc12.speed1_ * sin(toRad(hc12.angle1_)))/12;
         float x2 = (hc12.speed2_ * cos(toRad(hc12.angle2_)))/6;
         float y2 = hc12.speed2_ * sin(toRad(hc12.angle2_));
         Nightmare.y_step = x1;
         Nightmare.x_step = y1;
         if(x1+y1>10){
-          if(Nightmare.angle > 0){
-            Nightmare.angle = x2-(((x1+y1)-10)*4);
+          if(x2 > 0){
+            Nightmare.angle = x2-(((x1+y1)-5)*10);
+            if(Nightmare.angle < 0){
+              Nightmare.angle = 0;
+            }
           }
           else{
-            Nightmare.angle = x2+(((x1+y1)-10)*4);
+            Nightmare.angle = x2+(((x1+y1)-5)*10);
+            if(Nightmare.angle > 0){
+              Nightmare.angle = 0;
+            }
           }
         }
         else{
           Nightmare.angle = x2;
         }
+        Nightmare.angle = -Nightmare.angle;
+        float speed_ = (hc12.speed1_ > hc12.speed2_ ? hc12.speed1_ : hc12.speed2_) / 10.0;
+        if(speed_ < 1.0){
+          speed_ = 5.0;
+        }
+        Nightmare.speed = ((1/(speed_ - 0.5)) * 2) + 0.22;
       }
       hc12.write();
     }

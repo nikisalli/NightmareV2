@@ -9,6 +9,7 @@ class Octapod{
     float x_step;
     float y_step;
     float angle;
+    float speed;
     
     Octapod();
     void init();
