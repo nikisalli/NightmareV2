@@ -166,7 +166,7 @@ void Octapod::step(int walk_pattern, float height, float time) {
         Spline3D(am, b / 2.0, pos[0][fz], pos[1][fz], pos[2][fz]); //forw
 
         bodyToServos(pos);
-        delayMicroseconds(Octapod::speed * 6250);
+        delayMicroseconds(Octapod::speed * 18750);
       }
       first_step = false;
     }
@@ -223,7 +223,7 @@ void Octapod::step(int walk_pattern, float height, float time) {
         Spline3D(am, b / 2.0, pos[0][fz], pos[1][fz], pos[2][fz]); //forw
 
         bodyToServos(pos);
-        delayMicroseconds(Octapod::speed * 6250);
+        delayMicroseconds(Octapod::speed * 18750);
       }
       first_step = false;
     }
