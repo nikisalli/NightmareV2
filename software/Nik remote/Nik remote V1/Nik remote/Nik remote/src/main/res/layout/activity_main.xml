@@ -138,6 +138,41 @@
             android:textColor="#65FFA8" />
     </RadioGroup>
 
+    <RadioGroup
+        android:id="@+id/radio_group1"
+        android:layout_width="196dp"
+        android:layout_height="135dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_toEndOf="@+id/chart1">
+
+        <RadioButton
+            android:id="@+id/tarantula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="#65FFA8"
+            android:checked="true"
+            android:text="tarantula"
+            android:textColor="#65FFA8" />
+
+        <RadioButton
+            android:id="@+id/slow_gait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#65FFA8"
+            android:text="slow gait"
+            android:textColor="#65FFA8" />
+
+        <RadioButton
+            android:id="@+id/ant_gait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#65FFA8"
+            android:text="ant gait"
+            android:textColor="#65FFA8" />
+    </RadioGroup>
+
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/chart1"
         android:layout_width="159dp"

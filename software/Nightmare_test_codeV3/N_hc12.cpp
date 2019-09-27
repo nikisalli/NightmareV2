@@ -7,14 +7,14 @@ remote::remote(){
 
 void remote::init(){
   Serial1.begin(HC12_BAUD_RATE, SERIAL_8N1, HC12_PIN_RX, HC12_PIN_TX);
-  Serial1.setRxBufferSize(18);
+  Serial1.setRxBufferSize(20);
   pinMode(13,OUTPUT);
   digitalWrite(13,HIGH);
 }
 
 bool remote::receive(){
-  if(Serial1.available()>9){
-    byte bytes[7];
+  if(Serial1.available()>10){
+    byte bytes[8];
     unsigned long val = micros();
     while(Serial1.read()!=0x55){
       if((micros()-val)>2000){
@@ -22,16 +22,17 @@ bool remote::receive(){
       }
     }
     Serial1.read();
-    for(int i=0;i<7;i++){
+    for(int i=0;i<8;i++){
       bytes[i] = Serial1.read();
     }
-    if(((byte)(~(bytes[0]+bytes[1]+bytes[2]+bytes[3]+bytes[4]+bytes[5]))) == bytes[6]){
+    if(((byte)(~(bytes[0]+bytes[1]+bytes[2]+bytes[3]+bytes[4]+bytes[5]+bytes[6]))) == bytes[7]){
       angle1_ = bytes[0]*1.41176470588;
       angle2_ = bytes[2]*1.41176470588;
       speed1_ = bytes[1];
       speed2_ = bytes[3];
       active_ = bytes[4];
       state_ = bytes[5];
+      state1_ = bytes[6];
       return 1;
     }
   }

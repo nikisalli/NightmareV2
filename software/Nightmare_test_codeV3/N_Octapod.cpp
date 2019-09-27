@@ -10,6 +10,8 @@ struct Dleg Dlegs[8];
 float pos[3][8] = {};
 float bpos[3][2] = {};
 float pbpos[3][8] = {};
+int tarantula[] = {4, 2, 7, 1, 3, 5, 0, 6};
+int slow_gait[] = {4, 2, 6, 0, 3, 5, 1, 7};
 boolean first_step = true;
 byte leg;
 
@@ -112,6 +114,63 @@ void Octapod::force_stand() {
 }
 
 void Octapod::step(int walk_pattern, float height, float time) {
+  if (walk_pattern == 0) {
+    int sequence[] = {4, 2, 7, 1, 3, 5, 0, 6};
+    for (int a = 0; a < 8; a++) {
+      int fz, pz;
+      fz = sequence[a];
+      if (a == 0) {
+        pz = sequence[7];
+      } else {
+        pz = sequence[a - 1];
+      }
+      bpos[0][1] = bpos[0][0];//p
+      bpos[1][1] = bpos[1][0];//p
+      bpos[2][1] = bpos[2][0];//p
+      bpos[0][0] = pos[0][fz];//f
+      bpos[1][0] = pos[1][fz];//f
+      bpos[2][0] = pos[2][fz];//f
+      for (float b = 0; b < 1; b += 0.05) {
+        for (int c = 0; c < 8; c++) {
+          if (!first_step) {
+            if (c != fz && c != pz) {
+              RmatrixZ(pos[0][c], pos[1][c], pos[2][c], -(Octapod::angle / 120), 0, 0, 0);
+              Tmatrix(pos[0][c], pos[1][c], pos[2][c], -(Octapod::x_step / 120), -(Octapod::y_step / 120), 0);
+            }
+          } else {
+            if (c != fz) {
+              RmatrixZ(pos[0][c], pos[1][c], pos[2][c], -(Octapod::angle / 120), 0, 0, 0);
+              Tmatrix(pos[0][c], pos[1][c], pos[2][c], -(Octapod::x_step / 120), -(Octapod::y_step / 120), 0);
+            }
+          }
+        }
+        if (!first_step) {
+          float cr[3] = {STAND_POS[0][pz], STAND_POS[1][pz], STAND_POS[2][pz]};
+          RmatrixZ(cr[0], cr[1], cr[2], Octapod::angle / 2.0, 0, 0, 0); //prev
+          Tmatrix(cr[0], cr[1], cr[2], Octapod::x_step / 2.0, Octapod::y_step / 2.0, 0);
+          float bm[3][4] = {//prev
+            {cr[0], cr[0], bpos[0][1], bpos[0][1]},
+            {cr[1], cr[1], bpos[1][1], bpos[1][1]},
+            {STAND_POS[2][pz], STAND_POS[2][pz] + height, STAND_POS[2][pz] + height, STAND_POS[2][pz]},
+          };
+          Spline3D(bm, (b / 2.0) + 0.5, pos[0][pz], pos[1][pz], pos[2][pz]); //prev
+        }
+        float br[3] = {STAND_POS[0][fz], STAND_POS[1][fz], STAND_POS[2][fz]};
+        RmatrixZ(br[0], br[1], br[2], Octapod::angle / 2.0, 0, 0, 0); //forw
+        Tmatrix(br[0], br[1], br[2], Octapod::x_step / 2.0, Octapod::y_step / 2.0, 0);
+        float am[3][4] = {//forw
+          {br[0], br[0], bpos[0][0], bpos[0][0]},
+          {br[1], br[1], bpos[1][0], bpos[1][0]},
+          {STAND_POS[2][fz], STAND_POS[2][fz] + height, STAND_POS[2][fz] + height, STAND_POS[2][fz]},
+        };
+        Spline3D(am, b / 2.0, pos[0][fz], pos[1][fz], pos[2][fz]); //forw
+
+        bodyToServos(pos);
+        delayMicroseconds(Octapod::speed * 6250);
+      }
+      first_step = false;
+    }
+  }
   if (walk_pattern == 1) {
     int sequence[] = {4, 2, 6, 0, 3, 5, 1, 7};
     for (int a = 0; a < 8; a++) {

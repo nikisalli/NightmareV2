@@ -99,8 +99,10 @@ public class MainActivity extends AppCompatActivity {
     boolean active;
     boolean activebuf;
 
+    int mode1;
     int mode;
     int modebuf;
+    int mode1buf;
 
     String buf;
 
@@ -166,8 +168,9 @@ public class MainActivity extends AppCompatActivity {
                 byte[] checksum = {0};
                 byte[] active_ = {(byte)(active?1:0)};
                 byte[] mode_ = {(byte)mode};
+                byte[] mode1_ = {(byte)mode1};
 
-                checksum[0] = (byte) ~(angle1_[0] + speed1_[0] + angle2_[0] + speed2_[0] + active_[0] + mode_[0]);
+                checksum[0] = (byte) ~(angle1_[0] + speed1_[0] + angle2_[0] + speed2_[0] + active_[0] + mode_[0] + mode1_[0]);
 
                 if (usbService != null) {
                     usbService.write(initiator);
@@ -177,6 +180,7 @@ public class MainActivity extends AppCompatActivity {
                     usbService.write(speed2_);
                     usbService.write(active_);
                     usbService.write(mode_);
+                    usbService.write(mode1_);
                     usbService.write(checksum);
                 }
 
@@ -185,6 +189,7 @@ public class MainActivity extends AppCompatActivity {
                 angle2buf = angle2;
                 speed2buf = speed2;
                 modebuf = mode;
+                mode1buf = mode1;
                 activebuf = active;
 
                 handler.postDelayed(this, delay);
@@ -229,6 +234,21 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.auto_mode:
                     mode = 3;
+                    break;
+            }
+        });
+
+        RadioGroup rg1 = findViewById(R.id.radio_group1);
+        rg1.setOnCheckedChangeListener((group, checkedId) -> {
+            switch(checkedId){
+                case R.id.tarantula:
+                    mode1 = 0;
+                    break;
+                case R.id.slow_gait:
+                    mode1 = 1;
+                    break;
+                case R.id.ant_gait:
+                    mode1 = 2;
                     break;
             }
         });

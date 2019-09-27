@@ -11,6 +11,7 @@ class remote{
     int speed2_;
     int active_;
     int state_;
+    int state1_;
     remote();
     void init();
     bool receive();
