@@ -179,8 +179,5 @@ int servoReadPos(byte id){
   if(checksum == checksum_){
     return fmap((low|(high<<8)),0,1000,-120,120);
   }
-  else{
-    return 4000;
-  }
 }
 

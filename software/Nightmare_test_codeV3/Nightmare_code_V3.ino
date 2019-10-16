@@ -55,6 +55,17 @@ void loop() {
           Nightmare.move(alpha, beta, 0, x_move, y_move, 0);
           delay(5);
         } break;
+      case 2: {
+          /*int dir[4];
+
+          dir[0] = fmap(hc12.speed1_ * sin(toRad(hc12.angle1_)),-100,100,-500,500);
+          dir[1] = fmap(hc12.speed1_ * cos(toRad(hc12.angle1_)),-100,100,-500,500);
+          dir[2] = fmap(hc12.speed2_ * sin(toRad(hc12.angle2_)),-100,100,-500,500);
+          dir[3] = fmap(hc12.speed2_ * cos(toRad(hc12.angle2_)),-100,100,-500,500);
+
+          Nightmare.moveleg(dir[0], dir[1], dir[2], dir[3]);
+          delay(10);*/
+        } break;
     }
   }
   else {

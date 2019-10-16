@@ -18,7 +18,7 @@ class Octapod{
     void step(int walk_pattern, float height, float time);
     void standUp();
     void move(float alpha, float beta, float gamma, float x_move, float y_move, float z_move);
-    void moveleg();
+    void moveleg(float dir0, float dir1, float dir2, float dir3);
     void sit();
 };
 
