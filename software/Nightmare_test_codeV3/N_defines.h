@@ -140,8 +140,8 @@ const float BATT_MIN_VOLTAGE = 7.0f;
 const float BATT_MAX_VOLTAGE = 8.5f;
 
 
-const char * OTA_WIFI_PWD   = "12344321";
-const char * OTA_WIFI_SSID  = "nik";
-const char * OTA_WIFI_HOST  = "esp32";
+#define OTA_WIFI_PWD  "12344321"
+#define OTA_WIFI_SSID "nik"
+#define OTA_WIFI_HOST "esp32"
 
 #endif
