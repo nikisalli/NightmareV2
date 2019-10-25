@@ -24,10 +24,8 @@
 //                                                         |___|
 
 
-#define LEFT true //just because it makes the code look better
-#define RIGHT false //same ^
-
-#define PI 3.141592653
+const bool LEFT  = true;  //just because it makes the code look better
+const bool RIGHT = false; //same ^
 
 //==========================================//
 //===========BODY & LEGS DIMENSIONS=========//
@@ -38,17 +36,17 @@
 const float LEG_DIMENSIONS[24] = {  6.5, 13.0, 17.0, 6.5, 13.0, 17.0, 6.5, 13.0, 17.0, 6.5, 13.0, 17.0,  6.5, 13.0, 17.0, 6.5, 13.0, 17.0, 6.5, 13.0, 17.0, 6.5, 13.0, 17.0};
 
 // Offset of each servo in degrees.
-//                                  L1C  L1F   L1T   L2C  L2F   L2T   L3C  L3F   L3T   L4C  L4F   L4T    L5C  L5F   L5T   L6C  L6F   L6T   L7C  L7F   L7T   L8C  L8F   L8T
-const int SERVO_OFFSETS[24]    = {-45.3,    0,    0,-9.1,    0,    0, 9.1,    0,    0,45.3,    0,    0,-45.3,    0,    0,-9.1,    0,    0, 9.1,    0,    0,45.3,    0,    0};
+//                                 L1C   L1F L1T  L2C  L2F L2T L3C  L3F L3T L4C   L4F L4T L5C    L5F L5T L6C   L6F L6T L7C  L7F L7T L8C   L8F L8T
+const int SERVO_OFFSETS[24]    = {-45.3, 0,  0,  -9.1, 0,  0,  9.1, 0,  0,  45.3, 0,  0,  -45.3, 0,  0,  -9.1, 0,  0,  9.1, 0,  0,  45.3, 0,  0};
 
 // Side of each leg in  respect to the body.
 //                        LEG1  LEG2  LEG3  LEG4  LEG5   LEG6   LEG7   LEG8
 const bool LEG_SIDE[8] = {LEFT, LEFT, LEFT, LEFT, RIGHT, RIGHT, RIGHT, RIGHT};
 
-#define BODY_LENGHT_MAX  21.6
-#define BODY_LENGHT_MIN  8.0
-#define BODY_WIDTH_MAX   23.0
-#define BODY_WIDTH_MIN   14.0
+const float BODY_LENGHT_MAX = 21.6f;
+const float BODY_LENGHT_MIN = 8.00f;
+const float BODY_WIDTH_MAX  = 23.0f;
+const float BODY_WIDTH_MIN  = 14.0f;
 
 //   /\      LEG1------LEG8         -  -           
 //  /||\     /           \          |  |           
@@ -72,15 +70,14 @@ const bool LEG_SIDE[8] = {LEFT, LEFT, LEFT, LEFT, RIGHT, RIGHT, RIGHT, RIGHT};
 
 // Offset of each leg attach point to the body in respect to the center O of the body in cm.
 const float LEG_START_OFFSET[16] = {
-               (BODY_LENGHT_MAX/2), -(BODY_WIDTH_MIN/2),    //L1X  L1Y
-               (BODY_LENGHT_MIN/2), -(BODY_WIDTH_MAX/2),    //L2X  L2Y
-              -(BODY_LENGHT_MIN/2), -(BODY_WIDTH_MAX/2),    //L3X  L3Y
-              -(BODY_LENGHT_MAX/2), -(BODY_WIDTH_MIN/2),    //L4X  L4Y
-              -(BODY_LENGHT_MAX/2),  (BODY_WIDTH_MIN/2),    //L5X  L5Y
-              -(BODY_LENGHT_MIN/2),  (BODY_WIDTH_MAX/2),    //L6X  L6Y
-               (BODY_LENGHT_MIN/2),  (BODY_WIDTH_MAX/2),    //L7X  L7Y
-               (BODY_LENGHT_MAX/2),  (BODY_WIDTH_MIN/2)     //L8X  L8Y
-               
+   (BODY_LENGHT_MAX/2), -(BODY_WIDTH_MIN/2),    //L1X  L1Y
+   (BODY_LENGHT_MIN/2), -(BODY_WIDTH_MAX/2),    //L2X  L2Y
+  -(BODY_LENGHT_MIN/2), -(BODY_WIDTH_MAX/2),    //L3X  L3Y
+  -(BODY_LENGHT_MAX/2), -(BODY_WIDTH_MIN/2),    //L4X  L4Y
+  -(BODY_LENGHT_MAX/2),  (BODY_WIDTH_MIN/2),    //L5X  L5Y
+  -(BODY_LENGHT_MIN/2),  (BODY_WIDTH_MAX/2),    //L6X  L6Y
+   (BODY_LENGHT_MIN/2),  (BODY_WIDTH_MAX/2),    //L7X  L7Y
+   (BODY_LENGHT_MAX/2),  (BODY_WIDTH_MIN/2)     //L8X  L8Y
 };
 
 //==========================================//
@@ -88,13 +85,13 @@ const float LEG_START_OFFSET[16] = {
 //==========================================//
 
 // Step settings.
-#define MAX_STEP_LENGHT 7.0 //maximum arc lenght covered by two points of a natural spline while walking
-#define MAX_STEP_HEIGHT 5.0 //natural spline max point height from ground
-#define MINIMUM_STEP_TIME 0.5 //minimum time for executing a step
-#define WALK_FRAMES 30
-#define START_Z -4
-#define STAND_Z -12
-#define BODY_X_SHIFT 0
+const float MAX_STEP_LENGHT   = 7.0; //maximum arc lenght covered by two points of a natural spline while walking
+const float MAX_STEP_HEIGHT   = 5.0; //natural spline max point height from ground
+const float MINIMUM_STEP_TIME = 0.5; //minimum time for executing a step
+const float WALK_FRAMES       = 30;
+const float START_Z           = -4;
+const float STAND_Z           = -12;
+const float BODY_X_SHIFT      = 0;
 
 const int RANDOM_SEQ[2][8] = { //i made this by randomly pushing keys on my keyboard so it's random enough
   {0,2,1,3, 4,6,5,7},
@@ -103,10 +100,10 @@ const int RANDOM_SEQ[2][8] = { //i made this by randomly pushing keys on my keyb
 
 // Natural position. Used while standing or doing nothing and to calculate everything with it.
 const float STAND_POS[3][8] = {
-//        L1               L2               L3              L4               L5               L6              L7              L8
-  { 27             , 10            ,-10            ,-27             ,-27             ,-10             , 10            , 27             },   //X
-  {-17             ,-27            ,-27            ,-17             , 17             , 27             , 27            , 17             },   //Y
-  {STAND_Z         ,        STAND_Z,        STAND_Z,         STAND_Z,         STAND_Z,         STAND_Z,        STAND_Z,         STAND_Z},   //Z
+// L1        L2        L3        L4        L5        L6        L7        L8
+  { 27,      10,      -10,      -27,      -27,      -10,       10,       27},      //X
+  {-17,     -27 ,     -27,      -17,       17,       27,       27,       17},      //Y
+  {STAND_Z,  STAND_Z,  STAND_Z,  STAND_Z,  STAND_Z,  STAND_Z,  STAND_Z,  STAND_Z}, //Z
 };
 
 //      C       BEZIER CURVE NATURAL SPLINE     D
@@ -125,26 +122,26 @@ const float STAND_POS[3][8] = {
 //===========ELECTRONICS SETTINGS===========//
 //==========================================//
 
-#define FAN1_PIN 21
-#define FAN2_PIN 22
-#define SERVO_PIN_TX_ENB 18
-#define SERVO_PIN_RX_ENB 19
-#define HC12_PIN_TX 2
-#define HC12_PIN_RX 15
-#define HC12_PIN_SET 13
-#define BATT_VOLTAGE_READ_PIN 35
-#define BATT_VOLTAGE_READ_FILTER_CONSTANT 2
-#define BATT_CURR_READ_PIN 32
-#define BATT_CURR_READ_FILTER_CONSTANT 1
-#define HC12_BAUD_RATE 9600
-#define DEF_FAN_SPEED 100
-#define MAX_FAN_SPEED 255
-#define BATT_MIN_VOLTAGE 7.0
-#define BATT_MAX_VOLTAGE 8.5
+const int   FAN1_PIN = 21;
+const int   FAN2_PIN = 22;
+const int   SERVO_PIN_TX_ENB = 18;
+const int   SERVO_PIN_RX_ENB = 19;
+const int   HC12_PIN_TX = 2;
+const int   HC12_PIN_RX = 15;
+const int   HC12_PIN_SET = 13;
+const int   BATT_VOLTAGE_READ_PIN = 35;
+const int   BATT_VOLTAGE_READ_FILTER_CONSTANT = 2;
+const int   BATT_CURR_READ_PIN = 32;
+const int   BATT_CURR_READ_FILTER_CONSTANT = 1;
+const int   HC12_BAUD_RATE = 9600;
+const int   DEF_FAN_SPEED = 100;
+const int   MAX_FAN_SPEED = 255;
+const float BATT_MIN_VOLTAGE = 7.0f;
+const float BATT_MAX_VOLTAGE = 8.5f;
 
 
-#define OTA_WIFI_PWD "12344321"
-#define OTA_WIFI_SSID "nik"
-#define OTA_WIFI_HOST "esp32"
+const char * OTA_WIFI_PWD   = "12344321";
+const char * OTA_WIFI_SSID  = "nik";
+const char * OTA_WIFI_HOST  = "esp32";
 
 #endif
