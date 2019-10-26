@@ -6,8 +6,6 @@
 #include "N_structs.h"
 #include "N_upload.h"
 
-struct Dleg dlegs[8];
-
 Octapod::Octapod() {
   for (int i = 0; i < 8; i++) {
     dlegs[i] = {
@@ -19,6 +17,11 @@ Octapod::Octapod() {
       LEG_SIDE[i]
     };
   }
+}
+
+Octapod& Octapod::getInstance() {
+  static Octapod instance{};
+  return instance;
 }
 
 void Octapod::init() {

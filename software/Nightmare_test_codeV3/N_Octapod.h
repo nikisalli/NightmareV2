@@ -10,8 +10,10 @@ public:
   float y_step;
   float angle;
   float speed;
+  struct Dleg dlegs[8];
   
-  Octapod();
+  static Octapod& getInstance();
+
   void init();
   void stand();
   void force_stand();
@@ -31,6 +33,7 @@ private:
   boolean first_step = true;
   byte leg;
 
+  Octapod();
   void tarantula_gait(const float height, const float time);
   void scorpio_gait(const float height, const float time);
   void ant_gait(const float height, const float time);
