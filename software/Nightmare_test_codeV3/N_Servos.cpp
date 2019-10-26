@@ -4,7 +4,7 @@
 #include "N_math.h"
 #include "N_structs.h"
 
-struct Dleg dlegs[8];
+extern struct Dleg dlegs[8];
 
 bool active_servo[26] = {};
 int variable_angles[26] = {};

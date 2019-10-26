@@ -22,7 +22,6 @@ public:
   void sit();
 private:
 
-  struct Dleg dlegs[8];
   float pos[3][8] = {};
   float bpos[3][2] = {};
   float pbpos[3][8] = {};
