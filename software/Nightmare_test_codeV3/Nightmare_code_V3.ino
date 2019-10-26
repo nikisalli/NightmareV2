@@ -1,7 +1,7 @@
 #include "N_Octapod.h"
 #include "N_hc12.h"
 
-Octapod Nightmare;
+Octapod& Nightmare = Octapod::getInstance();
 remote hc12;
 TaskHandle_t Task3;
 lp_filter f1(0.1);
