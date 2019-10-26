@@ -4,8 +4,6 @@
 #include "N_math.h"
 #include "N_structs.h"
 
-extern struct Dleg Dlegs[8];
-
 bool active_servo[26] = {};
 int variable_angles[26] = {};
 bool written = false;
@@ -46,11 +44,12 @@ void servoInit(){
 
 bool bodyToServos(float pos[][8]){
   float lol[24];
+  const struct Dleg * dlegs = Octapod::getInstance().dlegs;
   for(int i=0;i<4;i++){
-     trigz(lol[3*i],lol[3*i+1],lol[3*i+2],-(pos[0][i]-LEG_START_OFFSET[i*2]),-(pos[1][i]-LEG_START_OFFSET[i*2+1]),pos[2][i],Dlegs[i]);
+     trigz(lol[3*i],lol[3*i+1],lol[3*i+2],-(pos[0][i]-LEG_START_OFFSET[i*2]),-(pos[1][i]-LEG_START_OFFSET[i*2+1]),pos[2][i],dlegs[i]);
   }
   for(int i=4;i<8;i++){
-     trigz(lol[3*i],lol[3*i+1],lol[3*i+2],-(pos[0][i]-LEG_START_OFFSET[i*2]),pos[1][i]-LEG_START_OFFSET[i*2+1],pos[2][i],Dlegs[i]);
+     trigz(lol[3*i],lol[3*i+1],lol[3*i+2],-(pos[0][i]-LEG_START_OFFSET[i*2]),pos[1][i]-LEG_START_OFFSET[i*2+1],pos[2][i],dlegs[i]);
   }
   servoWrite(lol);
 }
