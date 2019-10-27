@@ -116,8 +116,8 @@ enum Gait {
   Ant,
 };
 
-using walk_patterns = void (Octapod::*)(float, float);
 void Octapod::step(const int walk_pattern, const float height, const float time) {
+  using walk_patterns = void (Octapod::*)(float, float);
   constexpr walk_patterns wps[] { 
     [Gait::Tarantula] = &Octapod::tarantula_gait, 
     [Gait::Scorpio]   = &Octapod::scorpio_gait, 
