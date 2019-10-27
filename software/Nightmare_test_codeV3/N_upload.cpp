@@ -156,5 +156,5 @@ void Task1code( void * parameter) {
 }
 
 void esp32server_setup() {
-  xTaskCreatePinnedToCore(Task1code, "Task1", 50000, NULL, 1, &Task1, 0);
+  xTaskCreatePinnedToCore(Task1code, "Task1", 50000, NULL, 0, &Task1, 0);
 }
