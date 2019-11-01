@@ -1,7 +1,6 @@
 #include "N_Octapod.h"
 #include "N_hc12.h"
 
-Octapod& Nightmare = Octapod::getInstance();
 TaskHandle_t Task3;
 lp_filter f1(0.1);
 lp_filter f2(0.1);
@@ -13,7 +12,7 @@ void setup() {
   Serial.begin(115200);
   hc12::init();
   xTaskCreatePinnedToCore(Task3code, "Task3", 10000, NULL, 0, &Task3, 0);
-  Nightmare.init();
+  Nightmare::init();
   disableCore0WDT();
   disableCore1WDT();
 }
@@ -21,15 +20,15 @@ void setup() {
 void loop() {
   if (hc12::active()) {
     if (!activated) {
-      Nightmare.standUp();
+      Nightmare::standUp();
       activated = true;
     }
     switch (hc12::state()) {
       case 0: {
           if (hc12::speed1() > 10 or hc12::speed2() > 10) {
-            Nightmare.step(hc12::state1(), 6, Nightmare.speed);
+            Nightmare::step(hc12::state1(), 6, Nightmare::speed);
           } else {
-            Nightmare.stand();
+            Nightmare::stand();
           }
         } break; 
       case 1: {
@@ -50,7 +49,7 @@ void loop() {
           float x_move = limit(fmap(f3.get_val(), -100, 100, 8, -8), -8, 8);
           float y_move = limit(fmap(f4.get_val(), -100, 100, 8, -8), -8, 8);
 
-          Nightmare.move(alpha, beta, 0, x_move, y_move, 0);
+          Nightmare::move(alpha, beta, 0, x_move, y_move, 0);
           delay(5);
         } break;
       case 2: {
@@ -68,7 +67,7 @@ void loop() {
   }
   else {
     if (activated) {
-      Nightmare.sit();
+      Nightmare::sit();
       activated = false;
     }
   }
@@ -82,31 +81,31 @@ void Task3code( void * parameter) {
         float y1 = (hc12::speed1() * sin(toRad(hc12::angle1())))/12;
         float x2 = (hc12::speed2() * cos(toRad(hc12::angle2())))/6;
         float y2 =  hc12::speed2() * sin(toRad(hc12::angle2()));
-        Nightmare.y_step = x1;
-        Nightmare.x_step = y1;
+        Nightmare::y_step = x1;
+        Nightmare::x_step = y1;
         if(x1+y1>10){
           if(x2 > 0){
-            Nightmare.angle = x2-(((x1+y1)-5)*10);
-            if(Nightmare.angle < 0){
-              Nightmare.angle = 0;
+            Nightmare::angle = x2-(((x1+y1)-5)*10);
+            if(Nightmare::angle < 0){
+              Nightmare::angle = 0;
             }
           }
           else{
-            Nightmare.angle = x2+(((x1+y1)-5)*10);
-            if(Nightmare.angle > 0){
-              Nightmare.angle = 0;
+            Nightmare::angle = x2+(((x1+y1)-5)*10);
+            if(Nightmare::angle > 0){
+              Nightmare::angle = 0;
             }
           }
         }
         else{
-          Nightmare.angle = x2;
+          Nightmare::angle = x2;
         }
-        Nightmare.angle = -Nightmare.angle;
+        Nightmare::angle = -Nightmare::angle;
         float speed_ = (hc12::speed1() > hc12::speed2() ? hc12::speed1() : hc12::speed2()) / 10.0;
         if(speed_ < 1.0){
           speed_ = 5.0;
         }
-        Nightmare.speed = ((1/(speed_ - 0.5)) * 2) + 0.22;
+        Nightmare::speed = ((1/(speed_ - 0.5)) * 2) + 0.22;
       }
       hc12::write();
     }

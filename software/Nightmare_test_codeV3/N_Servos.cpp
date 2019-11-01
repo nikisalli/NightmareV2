@@ -44,7 +44,7 @@ void servoInit(){
 
 bool bodyToServos(float pos[][8]){
   float lol[24];
-  const struct Dleg * dlegs = Octapod::getInstance().dlegs;
+  const struct Dleg * dlegs = Nightmare::dlegs;
   for(int i=0;i<4;i++){
      trigz(lol[3*i],lol[3*i+1],lol[3*i+2],-(pos[0][i]-LEG_START_OFFSET[i*2]),-(pos[1][i]-LEG_START_OFFSET[i*2+1]),pos[2][i],dlegs[i]);
   }
