@@ -2,18 +2,16 @@
 #include "N_hc12.h"
 
 Octapod& Nightmare = Octapod::getInstance();
-remote hc12;
 TaskHandle_t Task3;
 lp_filter f1(0.1);
 lp_filter f2(0.1);
 lp_filter f3(0.1);
 lp_filter f4(0.1);
 bool activated;
-int done;
 
 void setup() {
   Serial.begin(115200);
-  hc12.init();
+  hc12::init();
   xTaskCreatePinnedToCore(Task3code, "Task3", 10000, NULL, 0, &Task3, 0);
   Nightmare.init();
   disableCore0WDT();
@@ -21,15 +19,15 @@ void setup() {
 }
 
 void loop() {
-  if (hc12.active_) {
+  if (hc12::active()) {
     if (!activated) {
       Nightmare.standUp();
       activated = true;
     }
-    switch (hc12.state_) {
+    switch (hc12::state()) {
       case 0: {
-          if (hc12.speed1_ > 10 or hc12.speed2_ > 10) {
-            Nightmare.step(hc12.state1_, 6, Nightmare.speed);
+          if (hc12::speed1() > 10 or hc12::speed2() > 10) {
+            Nightmare.step(hc12::state1(), 6, Nightmare.speed);
           } else {
             Nightmare.stand();
           }
@@ -37,10 +35,10 @@ void loop() {
       case 1: {
           int dir[4];
 
-          dir[0] = hc12.speed1_ * sin(toRad(hc12.angle1_));
-          dir[1] = hc12.speed1_ * cos(toRad(hc12.angle1_));
-          dir[2] = hc12.speed2_ * sin(toRad(hc12.angle2_));
-          dir[3] = hc12.speed2_ * cos(toRad(hc12.angle2_));
+          dir[0] = hc12::speed1() * sin(toRad(hc12::angle1()));
+          dir[1] = hc12::speed1() * cos(toRad(hc12::angle1()));
+          dir[2] = hc12::speed2() * sin(toRad(hc12::angle2()));
+          dir[3] = hc12::speed2() * cos(toRad(hc12::angle2()));
 
           f1.set_input(dir[0]);
           f2.set_input(dir[1]);
@@ -78,12 +76,12 @@ void loop() {
 
 void Task3code( void * parameter) {
   for (;;) {
-    if(hc12.receive()){
-      if (hc12.state_ == 0) {
-        float x1 = (hc12.speed1_ * cos(toRad(hc12.angle1_)))/12;
-        float y1 = (hc12.speed1_ * sin(toRad(hc12.angle1_)))/12;
-        float x2 = (hc12.speed2_ * cos(toRad(hc12.angle2_)))/6;
-        float y2 = hc12.speed2_ * sin(toRad(hc12.angle2_));
+    if(hc12::receive()){
+      if (hc12::state() == 0) {
+        float x1 = (hc12::speed1() * cos(toRad(hc12::angle1())))/12;
+        float y1 = (hc12::speed1() * sin(toRad(hc12::angle1())))/12;
+        float x2 = (hc12::speed2() * cos(toRad(hc12::angle2())))/6;
+        float y2 =  hc12::speed2() * sin(toRad(hc12::angle2()));
         Nightmare.y_step = x1;
         Nightmare.x_step = y1;
         if(x1+y1>10){
@@ -104,13 +102,13 @@ void Task3code( void * parameter) {
           Nightmare.angle = x2;
         }
         Nightmare.angle = -Nightmare.angle;
-        float speed_ = (hc12.speed1_ > hc12.speed2_ ? hc12.speed1_ : hc12.speed2_) / 10.0;
+        float speed_ = (hc12::speed1() > hc12::speed2() ? hc12::speed1() : hc12::speed2()) / 10.0;
         if(speed_ < 1.0){
           speed_ = 5.0;
         }
         Nightmare.speed = ((1/(speed_ - 0.5)) * 2) + 0.22;
       }
-      hc12.write();
+      hc12::write();
     }
   }
 }

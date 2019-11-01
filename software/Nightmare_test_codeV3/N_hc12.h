@@ -3,19 +3,20 @@
 
 #include "Arduino.h"
 
-class remote{
-  public:
-    int angle1_;
-    int speed1_;
-    int angle2_;
-    int speed2_;
-    int active_;
-    int state_;
-    int state1_;
-    remote();
-    void init();
-    bool receive();
-    void write();
-};
+namespace hc12 {
+
+extern const int angle1();
+extern const int speed1();
+extern const int angle2();
+extern const int speed2();
+extern const int active();
+extern const int state();
+extern const int state1();
+
+extern void init();
+extern bool receive();
+extern void write();
+
+}
 
 #endif
