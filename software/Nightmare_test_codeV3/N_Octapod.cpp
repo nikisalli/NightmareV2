@@ -6,7 +6,26 @@
 #include "N_structs.h"
 #include "N_upload.h"
 
-Octapod::Octapod() {
+using namespace Nightmare;
+
+// private
+float pos[3][8] = {};
+float bpos[3][2] = {};
+float pbpos[3][8] = {};
+const int tarantula[8] = {4, 2, 7, 1, 3, 5, 0, 6};
+const int slow_gait[8] = {4, 2, 6, 0, 3, 5, 1, 7};
+unsigned long timing;
+boolean first_step = true;
+byte leg;
+
+// public
+float Nightmare::x_step;
+float Nightmare::y_step;
+float Nightmare::angle;
+float Nightmare::speed;
+Dleg  Nightmare::dlegs[8];
+
+void Nightmare::init() {
   for (int i = 0; i < 8; i++) {
     dlegs[i] = {
       LEG_DIMENSIONS[i * 3], 
@@ -17,14 +36,7 @@ Octapod::Octapod() {
       LEG_SIDE[i]
     };
   }
-}
 
-Octapod& Octapod::getInstance() {
-  static Octapod instance{};
-  return instance;
-}
-
-void Octapod::init() {
   esp32server_setup();
 
   pinMode(21, OUTPUT);
@@ -38,7 +50,7 @@ void Octapod::init() {
   servoInit();
 }
 
-void Octapod::standUp() {
+void Nightmare::standUp() {
   bodyAttach();
   delay(5);
   for (float j = 0; j < 1; j += 0.01) {
@@ -52,7 +64,7 @@ void Octapod::standUp() {
   }
 }
 
-void Octapod::sit() {
+void Nightmare::sit() {
   for (float j = 0; j < 1; j += 0.01) {
     for (int i = 0; i < 8; i++) {
       pos[0][i] = STAND_POS[0][i];
@@ -65,7 +77,7 @@ void Octapod::sit() {
   bodyDetach();
 }
 
-void Octapod::stand() {
+void Nightmare::stand() {
   first_step = true;
   if (!(compareMatrix(pos, STAND_POS))) {
     int l = millis() % 2;
@@ -100,7 +112,7 @@ void Octapod::stand() {
   }
 }
 
-void Octapod::force_stand() {
+void Nightmare::force_stand() {
   first_step = true;
   for (int i = 0; i < 8; i++) {
     pos[0][i] = STAND_POS[0][i];
@@ -116,16 +128,20 @@ enum Gait {
   Ant,
 };
 
-void Octapod::step(const int walk_pattern, const float height, const float time) {
-  using walk_patterns = void (Octapod::*)(float, float);
+void tarantula_gait(const float height, const float time);
+void scorpio_gait(const float height, const float time);
+void ant_gait(const float height, const float time);
+
+void Nightmare::step(const int walk_pattern, const float height, const float time) {
+  using walk_patterns = void (*)(float, float);
   constexpr walk_patterns wps[] { 
-    [Gait::Tarantula] = &Octapod::tarantula_gait, 
-    [Gait::Scorpio]   = &Octapod::scorpio_gait, 
-    [Gait::Ant]       = &Octapod::ant_gait };
-  (this->*wps[walk_pattern])(height, time);
+    [Gait::Tarantula] = tarantula_gait, 
+    [Gait::Scorpio]   = scorpio_gait, 
+    [Gait::Ant]       = ant_gait };
+  (wps[walk_pattern])(height, time);
 }
 
-void Octapod::tarantula_gait(const float height, const float time) {
+void tarantula_gait(const float height, const float time) {
   for (int a = 0; a < 8; a++) {
     const int fz = tarantula[a];
     const int pz = a == 0 ? tarantula[7] : tarantula[a-1];
@@ -139,25 +155,25 @@ void Octapod::tarantula_gait(const float height, const float time) {
       for (int c = 0; c < 8; c++) {
         if (!first_step) {
           if (c != fz && c != pz) {
-            RmatrixZ(pos[0][c], pos[1][c], pos[2][c], -(Octapod::angle / 120),
+            RmatrixZ(pos[0][c], pos[1][c], pos[2][c], -(angle / 120),
                       0, 0, 0);
-            Tmatrix(pos[0][c], pos[1][c], pos[2][c], -(Octapod::x_step / 120),
-                    -(Octapod::y_step / 120), 0);
+            Tmatrix(pos[0][c], pos[1][c], pos[2][c], -(x_step / 120),
+                    -(y_step / 120), 0);
           }
         } else {
           if (c != fz) {
-            RmatrixZ(pos[0][c], pos[1][c], pos[2][c], -(Octapod::angle / 120),
+            RmatrixZ(pos[0][c], pos[1][c], pos[2][c], -(angle / 120),
                       0, 0, 0);
-            Tmatrix(pos[0][c], pos[1][c], pos[2][c], -(Octapod::x_step / 120),
-                    -(Octapod::y_step / 120), 0);
+            Tmatrix(pos[0][c], pos[1][c], pos[2][c], -(x_step / 120),
+                    -(y_step / 120), 0);
           }
         }
       }
       if (!first_step) {
         float cr[3] = {STAND_POS[0][pz], STAND_POS[1][pz], STAND_POS[2][pz]};
-        RmatrixZ(cr[0], cr[1], cr[2], Octapod::angle / 2.0, 0, 0, 0); // prev
-        Tmatrix(cr[0], cr[1], cr[2], Octapod::x_step / 2.0,
-                Octapod::y_step / 2.0, 0);
+        RmatrixZ(cr[0], cr[1], cr[2], angle / 2.0, 0, 0, 0); // prev
+        Tmatrix(cr[0], cr[1], cr[2], x_step / 2.0,
+                y_step / 2.0, 0);
         float bm[3][4] = {
             // prev
             {cr[0], cr[0], bpos[0][1], bpos[0][1]},
@@ -169,9 +185,9 @@ void Octapod::tarantula_gait(const float height, const float time) {
                   pos[2][pz]); // prev
       }
       float br[3] = {STAND_POS[0][fz], STAND_POS[1][fz], STAND_POS[2][fz]};
-      RmatrixZ(br[0], br[1], br[2], Octapod::angle / 2.0, 0, 0, 0); // forw
-      Tmatrix(br[0], br[1], br[2], Octapod::x_step / 2.0,
-              Octapod::y_step / 2.0, 0);
+      RmatrixZ(br[0], br[1], br[2], angle / 2.0, 0, 0, 0); // forw
+      Tmatrix(br[0], br[1], br[2], x_step / 2.0,
+              y_step / 2.0, 0);
       float am[3][4] = {
           // forw
           {br[0], br[0], bpos[0][0], bpos[0][0]},
@@ -182,13 +198,13 @@ void Octapod::tarantula_gait(const float height, const float time) {
       Spline3D(am, b / 2.0, pos[0][fz], pos[1][fz], pos[2][fz]); // forw
 
       bodyToServos(pos);
-      delayMicroseconds(Octapod::speed * 18750);
+      delayMicroseconds(speed * 18750);
     }
     first_step = false;
   }
 }
 
-void Octapod::scorpio_gait(const float height, const float time) {
+void scorpio_gait(const float height, const float time) {
   const int slow_gait[] = {4, 2, 6, 0, 3, 5, 1, 7};
   for (int a = 0; a < 8; a++) {
     const int fz = slow_gait[a];
@@ -203,25 +219,25 @@ void Octapod::scorpio_gait(const float height, const float time) {
       for (int c = 0; c < 8; c++) {
         if (!first_step) {
           if (c != fz && c != pz) {
-            RmatrixZ(pos[0][c], pos[1][c], pos[2][c], -(Octapod::angle / 120),
+            RmatrixZ(pos[0][c], pos[1][c], pos[2][c], -(angle / 120),
                       0, 0, 0);
-            Tmatrix(pos[0][c], pos[1][c], pos[2][c], -(Octapod::x_step / 120),
-                    -(Octapod::y_step / 120), 0);
+            Tmatrix(pos[0][c], pos[1][c], pos[2][c], -(x_step / 120),
+                    -(y_step / 120), 0);
           }
         } else {
           if (c != fz) {
-            RmatrixZ(pos[0][c], pos[1][c], pos[2][c], -(Octapod::angle / 120),
+            RmatrixZ(pos[0][c], pos[1][c], pos[2][c], -(angle / 120),
                       0, 0, 0);
-            Tmatrix(pos[0][c], pos[1][c], pos[2][c], -(Octapod::x_step / 120),
-                    -(Octapod::y_step / 120), 0);
+            Tmatrix(pos[0][c], pos[1][c], pos[2][c], -(x_step / 120),
+                    -(y_step / 120), 0);
           }
         }
       }
       if (!first_step) {
         float cr[3] = {STAND_POS[0][pz], STAND_POS[1][pz], STAND_POS[2][pz]};
-        RmatrixZ(cr[0], cr[1], cr[2], Octapod::angle / 2.0, 0, 0, 0); // prev
-        Tmatrix(cr[0], cr[1], cr[2], Octapod::x_step / 2.0,
-                Octapod::y_step / 2.0, 0);
+        RmatrixZ(cr[0], cr[1], cr[2], angle / 2.0, 0, 0, 0); // prev
+        Tmatrix(cr[0], cr[1], cr[2], x_step / 2.0,
+                y_step / 2.0, 0);
         float bm[3][4] = {
             // prev
             {cr[0], cr[0], bpos[0][1], bpos[0][1]},
@@ -233,9 +249,9 @@ void Octapod::scorpio_gait(const float height, const float time) {
                   pos[2][pz]); // prev
       }
       float br[3] = {STAND_POS[0][fz], STAND_POS[1][fz], STAND_POS[2][fz]};
-      RmatrixZ(br[0], br[1], br[2], Octapod::angle / 2.0, 0, 0, 0); // forw
-      Tmatrix(br[0], br[1], br[2], Octapod::x_step / 2.0,
-              Octapod::y_step / 2.0, 0);
+      RmatrixZ(br[0], br[1], br[2], angle / 2.0, 0, 0, 0); // forw
+      Tmatrix(br[0], br[1], br[2], x_step / 2.0,
+              y_step / 2.0, 0);
       float am[3][4] = {
           // forw
           {br[0], br[0], bpos[0][0], bpos[0][0]},
@@ -246,13 +262,13 @@ void Octapod::scorpio_gait(const float height, const float time) {
       Spline3D(am, b / 2.0, pos[0][fz], pos[1][fz], pos[2][fz]); // forw
 
       bodyToServos(pos);
-      delayMicroseconds(Octapod::speed * 18750);
+      delayMicroseconds(speed * 18750);
     }
     first_step = false;
   }
 }
 
-void Octapod::ant_gait(const float height, const float time) {
+void ant_gait(const float height, const float time) {
   for (int a = 0; a < 2; a++) {
     for (int c = 0; c < 4; c++) {
       const int i = c * 2 + (1 - a);
@@ -263,17 +279,17 @@ void Octapod::ant_gait(const float height, const float time) {
     for (float b = 0; b < 1; b += 0.01) {
       for (int c = 0; c < 4; c++) {
         const int i = c * 2 + a;
-        RmatrixZ(pos[0][i], pos[1][i], pos[2][i], -(Octapod::angle / 100), 0,
+        RmatrixZ(pos[0][i], pos[1][i], pos[2][i], -(angle / 100), 0,
                   0, 0);
-        Tmatrix(pos[0][i], pos[1][i], pos[2][i], -(Octapod::x_step / 100),
-                -(Octapod::y_step / 100), 0);
+        Tmatrix(pos[0][i], pos[1][i], pos[2][i], -(x_step / 100),
+                -(y_step / 100), 0);
       }
       for (int c = 0; c < 4; c++) {
         const int i = c * 2 + (1 - a);
         float cr[3] = {STAND_POS[0][i], STAND_POS[1][i], STAND_POS[2][i]};
-        RmatrixZ(cr[0], cr[1], cr[2], Octapod::angle / 2.0, 0, 0, 0);
-        Tmatrix(cr[0], cr[1], cr[2], Octapod::x_step / 2.0,
-                Octapod::y_step / 2.0, 0);
+        RmatrixZ(cr[0], cr[1], cr[2], angle / 2.0, 0, 0, 0);
+        Tmatrix(cr[0], cr[1], cr[2], x_step / 2.0,
+                y_step / 2.0, 0);
         float bm[3][4] = {
             // prev
             {cr[0], cr[0], pbpos[0][i], pbpos[0][i]},
@@ -284,13 +300,13 @@ void Octapod::ant_gait(const float height, const float time) {
         Spline3D(bm, b, pos[0][i], pos[1][i], pos[2][i]);
       }
       bodyToServos(pos);
-      delayMicroseconds(Octapod::speed * 5000);
+      delayMicroseconds(speed * 5000);
     }
     first_step = false;
   }
 }
 
-void Octapod::moveleg(float dir0, float dir1, float dir2, float dir3) {
+void Nightmare::moveleg(float dir0, float dir1, float dir2, float dir3) {
   if (dir1 > 400 and (millis() - timing) > 300) {
     timing = millis();
     leg++;
@@ -320,7 +336,7 @@ void Octapod::moveleg(float dir0, float dir1, float dir2, float dir3) {
   bodyToServos(pos);
 }
 
-void Octapod::move(float alpha, float beta, float gamma, float x_move,
+void Nightmare::move(float alpha, float beta, float gamma, float x_move,
                    float y_move, float z_move) {
   for (int i = 0; i < 8; i++) {
     float actualpos[3][8] = {};
