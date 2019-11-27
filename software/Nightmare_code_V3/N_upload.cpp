@@ -107,7 +107,7 @@ void Task1code( void * parameter) {
     vTaskDelay(1);
   }
 
-  digitalWrite(4, HIGH);
+  //digitalWrite(4, HIGH);
 
   /*use mdns for host name resolution*/
   if (!MDNS.begin(host)) { //http://esp32.local

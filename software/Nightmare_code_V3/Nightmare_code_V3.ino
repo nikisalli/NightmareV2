@@ -13,6 +13,7 @@ void setup() {
   hc12::init();
   xTaskCreatePinnedToCore(Task3code, "Task3", 10000, NULL, 0, &Task3, 0);
   Nightmare::init();
+  Nightmare::startPanda();
   disableCore0WDT();
   disableCore1WDT();
 }

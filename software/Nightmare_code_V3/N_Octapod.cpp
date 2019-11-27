@@ -5,6 +5,7 @@
 #include "N_math.h"
 #include "N_structs.h"
 #include "N_upload.h"
+#include "N_panda.h"
 
 using namespace Nightmare;
 
@@ -37,17 +38,27 @@ void Nightmare::init() {
     };
   }
 
-  esp32server_setup();
+  // esp32server_setup();
 
-  pinMode(21, OUTPUT);
-  pinMode(22, OUTPUT);
-  pinMode(4, OUTPUT);
-  pinMode(5, OUTPUT);
+  pinMode(FAN1_PIN, OUTPUT);
+  pinMode(FAN2_PIN, OUTPUT);
+  pinMode(DEBUG_LED_PIN_1, OUTPUT);
+  pinMode(DEBUG_LED_PIN_2, OUTPUT);
 
-  digitalWrite(21, HIGH);
-  digitalWrite(22, LOW);
+  digitalWrite(FAN1_PIN, HIGH);
+  digitalWrite(FAN2_PIN, LOW);
 
   servoInit();
+  
+  pandaInit();
+}
+
+bool Nightmare::pandaIsOn() {
+  return pandaIsOnline();
+}
+
+void Nightmare::startPanda() {
+  pandaPowerOn();
 }
 
 void Nightmare::standUp() {
