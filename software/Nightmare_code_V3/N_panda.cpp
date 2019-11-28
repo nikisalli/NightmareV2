@@ -15,7 +15,7 @@ void Task4code(void * parameter) {
     digitalWrite(DEBUG_LED_PIN_1,HIGH);
     vTaskDelay(pdMS_TO_TICKS(5000));                                                                        // wait 3000ms to initialize the boot process
     digitalWrite(PANDA_POWER_PIN,LOW);   
-    digitalWrite(DEBUG_LED_PIN_1,LOW);          
+    digitalWrite(DEBUG_LED_PIN_1,LOW);      
     pandaOnline = true;                                             
     vTaskDelete(NULL);                                                                          // end this task
 }
