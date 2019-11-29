@@ -4,7 +4,6 @@
 #include "N_defines.h"
 #include "N_math.h"
 #include "N_structs.h"
-#include "N_upload.h"
 #include "N_panda.h"
 
 using namespace Nightmare;
@@ -37,8 +36,6 @@ void Nightmare::init() {
       LEG_SIDE[i]
     };
   }
-
-  // esp32server_setup();
 
   pinMode(FAN1_PIN, OUTPUT);
   pinMode(FAN2_PIN, OUTPUT);
