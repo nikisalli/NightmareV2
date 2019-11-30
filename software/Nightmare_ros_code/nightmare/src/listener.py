@@ -12,7 +12,7 @@ def talker():
     rospy.init_node('nightmare', anonymous=True)
     rate = rospy.Rate(10) # 10hz
     while not rospy.is_shutdown():
-        if(ord(robot.read()) == 0x55):
+        if(ord(robot.read()) == 0xAA):
             robot.read()
             voltage = ord(robot.read()) / 10.0
         rospy.loginfo(voltage)

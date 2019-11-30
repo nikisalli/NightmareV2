@@ -44,7 +44,7 @@ bool pandaIsOnline(){
 }
 
 void pandaWriteData(){
-    Serial.write(0x55);                                                                          //start byte
-    Serial.write(0x55);                                                                          //start byte
+    Serial.write(0xAA);                                                                          //start byte
+    Serial.write(0xAA);                                                                          //start byte
     Serial.write((byte)(read_battery_voltage()*10));                                             //byte containing the voltage value
 }
