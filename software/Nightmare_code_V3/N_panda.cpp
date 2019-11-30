@@ -1,13 +1,17 @@
 #include "N_panda.h"
 #include "Arduino.h"
 #include "N_defines.h"
+#include "N_sensors.h"
 
 TaskHandle_t Task4;
+TaskHandle_t Task5;
 
 bool pandaOnline;
 
 void pandaInit(){
+    Serial.begin(460800);
     pinMode(PANDA_POWER_PIN,OUTPUT);
+    digitalWrite(DEBUG_LED_PIN_2,HIGH);
 }
 
 void Task4code(void * parameter) {                                                             
@@ -20,10 +24,27 @@ void Task4code(void * parameter) {
     vTaskDelete(NULL);                                                                          // end this task
 }
 
+void Task5code( void * parameter) {
+    TickType_t xLastWakeTime;
+    const TickType_t xFrequency = pdMS_TO_TICKS(100);
+    xLastWakeTime = xTaskGetTickCount();
+    for (;;) {
+        pandaWriteData();
+        vTaskDelayUntil(&xLastWakeTime, xFrequency);
+    }
+}
+
 void pandaPowerOn(){
     xTaskCreatePinnedToCore(Task4code, "Task4", 10000, NULL, 1, &Task4, 0);                     // create task for powering up the lattepanda board
+    xTaskCreatePinnedToCore(Task5code, "Task5", 10000, NULL, 1, &Task4, 1);                     // create task for sending data to the ros node
 }
 
 bool pandaIsOnline(){
     return pandaOnline;
+}
+
+void pandaWriteData(){
+    Serial.write(0x55);                                                                          //start byte
+    Serial.write(0x55);                                                                          //start byte
+    Serial.write((byte)(read_battery_voltage()*10));                                             //byte containing the voltage value
 }
