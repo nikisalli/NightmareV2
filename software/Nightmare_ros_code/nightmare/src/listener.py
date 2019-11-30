@@ -19,7 +19,7 @@ def talker():
         if(ord(robot.read()) == 0xAA):
             robot.read()
             bytes = []
-            for i in range(2):
+            for _ in range(2):
                 bytes.append(ord(robot.read()))
             voltage = fmap(bytes[0],0,255,5,10)
             current = fmap(bytes[1],0,255,0,15)

@@ -27,7 +27,7 @@ void Task4code(void * parameter) {
 
 void Task5code( void * parameter) {
     TickType_t xLastWakeTime;
-    const TickType_t xFrequency = pdMS_TO_TICKS(100);
+    const TickType_t xFrequency = pdMS_TO_TICKS(50);
     xLastWakeTime = xTaskGetTickCount();
     for (;;) {
         pandaWriteData();
