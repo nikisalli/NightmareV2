@@ -2,6 +2,7 @@
 #include "Arduino.h"
 #include "N_defines.h"
 #include "N_sensors.h"
+#include "N_math.h"
 
 TaskHandle_t Task4;
 TaskHandle_t Task5;
@@ -26,7 +27,7 @@ void Task4code(void * parameter) {
 
 void Task5code( void * parameter) {
     TickType_t xLastWakeTime;
-    const TickType_t xFrequency = pdMS_TO_TICKS(100);
+    const TickType_t xFrequency = pdMS_TO_TICKS(50);
     xLastWakeTime = xTaskGetTickCount();
     for (;;) {
         pandaWriteData();
@@ -44,7 +45,8 @@ bool pandaIsOnline(){
 }
 
 void pandaWriteData(){
-    Serial.write(0x55);                                                                          //start byte
-    Serial.write(0x55);                                                                          //start byte
-    Serial.write((byte)(read_battery_voltage()*10));                                             //byte containing the voltage value
+    Serial.write(0xAA);                                                                          //start byte
+    Serial.write(0xAA);                                                                          //start byte
+    Serial.write((byte)(fmap(read_battery_voltage(),5.0,10.0,0,255)));                           //byte containing the voltage value
+    Serial.write((byte)(fmap(read_battery_current(),0.0,15.0,0,255)));                           //byte containing the current value
 }
