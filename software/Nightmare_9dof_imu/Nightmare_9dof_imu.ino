@@ -2,63 +2,43 @@
 #include <SPI.h>
 
 bool justStarted = true;
+unsigned long kek;
 
 GY953 mag = GY953(3, 2);
 
 void setup() {
-  Serial.begin(115200);
-  long unsigned debug_start = millis ();
-  while (!Serial && ((millis () - debug_start) <= 5000));
-  mag.begin();
-  //mag.changeRefreshRate(200);
-  Serial.println("started");
+	Serial.begin(115200);
+	long unsigned debug_start = millis ();
+	while (!Serial && ((millis () - debug_start) <= 5000));
+	mag.begin();
+	mag.setRefreshRate(200);
+	Serial.println("started");
+	while(!mag.update()){ }
+	int data[3];
+	byte data2[4];
+	byte data3[3];
+	memset(data,0,3);
+	memset(data2,0,4);
+	memset(data3,0,3);
 }
 
 void loop() {
-  if (mag.update()) {
-    int data[3];
-    if (justStarted) {
-      justStarted = false;
-      byte data2[4];
-      byte data3[3];
-      memset(data,0,3);
-      memset(data2,0,4);
-      memset(data3,0,3);
-      mag.readAccuracy(data2);
-      Serial.println("\nAccuracy");
-      Serial.print("ACC:");   //0..3 (less...more accurate)
-      Serial.print(data2[0]);
-      Serial.print(" | GYR:");//0..3 (less...more accurate)
-      Serial.print(data2[1]);
-      Serial.print(" | MAG:");//0..3 (less...more accurate)
-      Serial.print(data2[2]);
-      Serial.print(" | Freq:");//3:50Hz - 4:100Hz - 5:200Hz
-      Serial.print(data2[3]);
-
-      mag.readRange(data3);
-      Serial.println("\nRange");
-      Serial.print("ACC:");   //0---------------+-2g
-      Serial.print(data3[0]);
-      Serial.print(" | GYR:");//3---------------+-2000dps/s
-      Serial.print(data3[1]);
-      Serial.print(" | MAG:");//1:---------16bit
-      Serial.print(data3[2]);
-    } else {
-      mag.getRPY(data);
-      /*
-        Natively, range is:
-        Roll:
-        Pitch:
-        Yaw:
-      */
- 
-      Serial.println();
-      Serial.print("Roll:");
-      Serial.print(data[0]);
-      Serial.print(" | Pitch:");
-      Serial.print(data[1]);
-      Serial.print(" | Yaw:");
-      Serial.print(data[2]);
-    }
-  }
+	if (mag.update()) {
+		int data[3];
+		mag.getRPY(data);
+		Serial.write(0xBB);
+		Serial.write(0xBB);
+		Serial.write((byte)(map(data[0],-18000,18000,0,255))); //roll
+		Serial.write((byte)(map(data[1],-18000,18000,0,255))); //pitch
+		Serial.write((byte)(map(data[2],-18000,18000,0,255))); //yaw
+		/*Serial.print("roll: ");
+		Serial.print(data[0]/100.0);
+		Serial.print(" pitch: ");
+		Serial.print(data[1]/100.0);
+		Serial.print(" yaw: ");
+		Serial.print(data[2]/100.0);
+		Serial.print(" fps: ");
+		Serial.println(1000.0/(millis()-kek));
+		kek=millis();*/
+	}
 }
