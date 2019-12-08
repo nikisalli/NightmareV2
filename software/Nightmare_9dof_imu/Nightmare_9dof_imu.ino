@@ -1,9 +1,6 @@
 #include <GY953.h>
 #include <SPI.h>
 
-bool justStarted = true;
-unsigned long kek;
-
 GY953 mag = GY953(3, 2);
 
 void setup() {
@@ -31,14 +28,5 @@ void loop() {
 		Serial.write((byte)(map(data[0],-18000,18000,0,255))); //roll
 		Serial.write((byte)(map(data[1],-18000,18000,0,255))); //pitch
 		Serial.write((byte)(map(data[2],-18000,18000,0,255))); //yaw
-		/*Serial.print("roll: ");
-		Serial.print(data[0]/100.0);
-		Serial.print(" pitch: ");
-		Serial.print(data[1]/100.0);
-		Serial.print(" yaw: ");
-		Serial.print(data[2]/100.0);
-		Serial.print(" fps: ");
-		Serial.println(1000.0/(millis()-kek));
-		kek=millis();*/
 	}
 }
