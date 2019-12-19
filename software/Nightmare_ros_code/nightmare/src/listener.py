@@ -5,9 +5,12 @@ import serial
 import numpy as np
 import tf
 import math
-from std_msgs.msg import Float32
+
 from threading import Thread
+from std_msgs.msg import Float32
 from sensor_msgs.msg import Imu
+from sensor_msgs.msg import JointState
+from std_msgs.msg import Header
 from geometry_msgs.msg import Quaternion
 from tf.broadcaster import TransformBroadcaster
 
@@ -65,12 +68,27 @@ class nightmare_node():
         self.publish_transform = rospy.get_param('~publish_transform', False)
 
         self.pub_imu = rospy.Publisher("nightmare/imu", Imu, queue_size=1)
-        self.odomBroadcaster_imu = TransformBroadcaster()
+        self.pub_vol = rospy.Publisher("nightmare/battery/voltage", Float32, queue_size=1)
+        self.pub_cur = rospy.Publisher("nightmare/battery/current", Float32, queue_size=1)
+        self.pub_jnt = rospy.Publisher("nightmare_v2/joint_states", JointState, queue_size=10)
 
+        self.odomBroadcaster_imu = TransformBroadcaster()
         self.imu_msg = Imu()
-        #self.imu_msg.orientation_covariance[0] = -1
-        #self.imu_msg.angular_velocity_covariance[0] = -1
-        #self.imu_msg.linear_acceleration_covariance[0] = -1
+
+        self.jnt_msg = JointState()
+        self.jnt_msg.header = Header()
+        self.jnt_msg.velocity = []
+        self.jnt_msg.effort = []
+        self.jnt_msg.name = ['Rigid14', 'Rigid15', 'Rigid16', 'Rigid17', 'Rigid18', 'Rigid19', 'Rigid20', 
+                             'Rigid21', 'Rigid22', 'Rigid23', 'Rigid40', 'Rigid41', 'Rigid42', 'Rigid43', 
+                             'Rigid44', 'Rigid46', 'Rigid47', 'Rigid57', 'Rigid59', 'Rigid60', 'Rigid61', 
+                             'Rigid62', 'Rigid63', 'Rigid64', 'Rigid67', 'Rigid68',
+                             'Rev24', 'Rev25', 'Rev26', 'Rev27', 'Rev28', 'Rev29', 'Rev30', 'Rev31', 'Rev32', 
+                             'Rev33', 'Rev34', 'Rev35', 'Rev36', 'Rev37', 'Rev38', 'Rev39', 'Rev48', 'Rev49', 
+                             'Rev50', 'Rev51', 'Rev52', 'Rev53', 'Rev54', 'Rev55', 'Rev65', 'Rev66', 'Rev69']
+        self.jnt_msg.position = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+                                 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+                                 0, 0, 0, ]
 
         self.current_time = rospy.get_time()
         self.last_time = rospy.get_time()
@@ -78,9 +96,9 @@ class nightmare_node():
         self.seq = 0
 
         rospy.on_shutdown(self.shutdown_node)
-        rate = rospy.Rate(100) # 100hz
+        rate = rospy.Rate(50) # 100hz
 
-        rospy.loginfo("Ready for publishing imu")
+        rospy.loginfo("Ready for publishing")
 
         while not rospy.is_shutdown():
             self.current_time = rospy.get_time()
@@ -97,6 +115,10 @@ class nightmare_node():
                 )
             
             self.publish_imu()
+            self.publish_vol()
+            self.publish_cur()
+            self.publish_jnt()
+
             rate.sleep()
 
     def publish_imu(self):
@@ -121,6 +143,16 @@ class nightmare_node():
 
         self.pub_imu.publish(self.imu_msg)
         self.seq += 1
+
+    def publish_vol(self):
+        self.pub_vol.publish(robot_listener.voltage)
+
+    def publish_cur(self):
+        self.pub_cur.publish(robot_listener.current)
+
+    def publish_jnt(self):
+        self.jnt_msg.header.stamp = rospy.Time.now()
+        self.pub_jnt.publish(self.jnt_msg)
 
     def shutdown_node(self):
         rospy.loginfo("Turning off node: robot_imu_publisher")

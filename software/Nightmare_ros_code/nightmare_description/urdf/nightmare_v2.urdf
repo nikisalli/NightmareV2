@@ -1,11 +1,6 @@
 <?xml version="1.0" ?>
 <robot name="nightmare_v2">
 <link name="base_link">
-  <inertial>
-    <origin rpy="0 0 0" xyz="0.05 0.0395 0.094"/>
-    <mass value="1.536457"/>
-    <inertia ixx="0.006536" ixy="-0.0" ixz="0.001516" iyy="0.003408" iyz="-0.001516" izz="0.008833"/>
-  </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
