@@ -1,0 +1,2011 @@
+<?xml version="1.0" ?>
+<robot name="nightmare_v2">
+<link name="base_link">
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/base_link.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/base_link.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_8_motor_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.020134 -0.005285000000000005 -0.017271999999999996"/>
+    <mass value="0.315076"/>
+    <inertia ixx="7e-05" ixy="-1.9e-05" ixz="0.001637" iyy="7e-05" iyz="-0.001637" izz="6.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.010319 0.059677 -0.1115"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_8_motor_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.010319 0.059677 -0.1115"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_8_motor_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_1_motor_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.020134 -0.005284999999999998 -0.017271999999999996"/>
+    <mass value="0.315076"/>
+    <inertia ixx="7e-05" ixy="1.9e-05" ixz="0.005357" iyy="7e-05" iyz="-0.005357" izz="6.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.09251 0.062505 -0.1115"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_1_motor_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.09251 0.062505 -0.1115"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_1_motor_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="tail_motor_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.010499999999999995 -0.017974000000000004 -0.017271999999999996"/>
+    <mass value="0.315076"/>
+    <inertia ixx="8.8e-05" ixy="-0.0" ixz="0.004371" iyy="5.1e-05" iyz="-0.004371" izz="6.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.06025 0.0795 -0.1115"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/tail_motor_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.06025 0.0795 -0.1115"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/tail_motor_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_2_motor_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.019523999999999986 0.007219 -0.017271999999999996"/>
+    <mass value="0.315076"/>
+    <inertia ixx="5.2e-05" ixy="6e-06" ixz="0.004295" iyy="8.7e-05" iyz="-0.004295" izz="6.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.127311 0.005052 -0.1115"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_2_motor_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.127311 0.005052 -0.1115"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_2_motor_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_3_motor_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.019523999999999986 -0.007219000000000003 -0.017271999999999996"/>
+    <mass value="0.315076"/>
+    <inertia ixx="5.2e-05" ixy="-6e-06" ixz="0.002078" iyy="8.7e-05" iyz="-0.002078" izz="6.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.127311 -0.084052 -0.1115"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_3_motor_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.127311 -0.084052 -0.1115"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_3_motor_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_4_motor_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.020134 0.005285000000000012 -0.017271999999999996"/>
+    <mass value="0.315076"/>
+    <inertia ixx="7e-05" ixy="-1.9e-05" ixz="-0.001014" iyy="7e-05" iyz="0.001014" izz="6.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.09251 -0.141505 -0.1115"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_4_motor_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.09251 -0.141505 -0.1115"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_4_motor_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="head_motor_pan_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.010500000000000002 0.01797399999999999 -0.017271999999999996"/>
+    <mass value="0.315076"/>
+    <inertia ixx="8.8e-05" ixy="0.0" ixz="-0.003747" iyy="5.1e-05" iyz="0.003747" izz="6.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.03975 -0.1585 -0.1115"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/head_motor_pan_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.03975 -0.1585 -0.1115"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/head_motor_pan_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_5_motor_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.020134 0.005285000000000012 -0.017271999999999996"/>
+    <mass value="0.315076"/>
+    <inertia ixx="7e-05" ixy="1.9e-05" ixz="-0.004733" iyy="7e-05" iyz="0.004733" izz="6.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.00749 -0.141505 -0.1115"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_5_motor_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.00749 -0.141505 -0.1115"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_5_motor_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_6_motor_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.019524000000000003 -0.007219000000000003 -0.017271999999999996"/>
+    <mass value="0.315076"/>
+    <inertia ixx="5.2e-05" ixy="6e-06" ixz="-0.003672" iyy="8.7e-05" iyz="0.003671" izz="6.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.027311 -0.084052 -0.1115"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_6_motor_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.027311 -0.084052 -0.1115"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_6_motor_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_7_motor_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.019524000000000003 0.007219 -0.017271999999999996"/>
+    <mass value="0.315076"/>
+    <inertia ixx="5.2e-05" ixy="-6e-06" ixz="-0.001455" iyy="8.7e-05" iyz="0.001455" izz="6.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.027311 0.005052 -0.1115"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_7_motor_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.027311 0.005052 -0.1115"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_7_motor_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_1_coxa_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.02405299999999999 -0.024052000000000004 -0.020500000000000004"/>
+    <mass value="0.073783"/>
+    <inertia ixx="3.2e-05" ixy="3e-06" ixz="0.001703" iyy="3.2e-05" iyz="-0.001703" izz="3.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.121147 0.076294 -0.1145"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_1_coxa_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.121147 0.076294 -0.1145"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_1_coxa_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_8_coxa_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.024052 -0.02405299999999999 -0.020500000000000004"/>
+    <mass value="0.073783"/>
+    <inertia ixx="3.2e-05" ixy="-3e-06" ixz="0.000382" iyy="3.2e-05" iyz="-0.000382" izz="3.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.018319 0.073465 -0.1145"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_8_coxa_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.018319 0.073465 -0.1145"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_8_coxa_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_7_coxa_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.03349799999999999 -0.005907 -0.020500000000000004"/>
+    <mass value="0.073783"/>
+    <inertia ixx="3e-05" ixy="-1e-06" ixz="-0.000599" iyy="3.5e-05" iyz="0.000599" izz="3.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.058679 -7.9e-05 -0.1145"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_7_coxa_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.058679 -7.9e-05 -0.1145"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_7_coxa_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_6_coxa_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.03349799999999999 0.005906999999999996 -0.020500000000000004"/>
+    <mass value="0.073783"/>
+    <inertia ixx="3e-05" ixy="1e-06" ixz="-0.001228" iyy="3.5e-05" iyz="0.001228" izz="3.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.058679 -0.078921 -0.1145"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_6_coxa_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.058679 -0.078921 -0.1145"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_6_coxa_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_5_coxa_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.024052999999999998 0.024052000000000018 -0.020500000000000004"/>
+    <mass value="0.073783"/>
+    <inertia ixx="3.2e-05" ixy="3e-06" ixz="-0.001557" iyy="3.2e-05" iyz="0.001557" izz="3.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.021147 -0.155294 -0.1145"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_5_coxa_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.021147 -0.155294 -0.1145"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_5_coxa_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_4_coxa_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.02405299999999999 0.024052000000000018 -0.020500000000000004"/>
+    <mass value="0.073783"/>
+    <inertia ixx="3.2e-05" ixy="-3e-06" ixz="-0.000237" iyy="3.2e-05" iyz="0.000237" izz="3.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.121147 -0.155294 -0.1145"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_4_coxa_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.121147 -0.155294 -0.1145"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_4_coxa_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_3_coxa_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.033498 0.005906999999999996 -0.020500000000000004"/>
+    <mass value="0.073783"/>
+    <inertia ixx="3e-05" ixy="-1e-06" ixz="0.000745" iyy="3.5e-05" iyz="-0.000745" izz="3.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.158679 -0.078921 -0.1145"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_3_coxa_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.158679 -0.078921 -0.1145"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_3_coxa_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_2_coxa_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.033498 -0.005907 -0.020500000000000004"/>
+    <mass value="0.073783"/>
+    <inertia ixx="3e-05" ixy="1e-06" ixz="0.001373" iyy="3.5e-05" iyz="-0.001373" izz="3.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.158679 -7.9e-05 -0.1145"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_2_coxa_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.158679 -7.9e-05 -0.1145"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_2_coxa_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_8_motor__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.023161 0.006152999999999992 0.0"/>
+    <mass value="0.315076"/>
+    <inertia ixx="6e-05" ixy="-9e-06" ixz="0.001624" iyy="6e-05" iyz="-0.001624" izz="8.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.051928 0.136066 -0.094"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_8_motor__1__1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.051928 0.136066 -0.094"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_8_motor__1__1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_7_motor__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.015442999999999985 0.018324 0.0"/>
+    <mass value="0.315076"/>
+    <inertia ixx="5.2e-05" ixy="-3e-06" ixz="-0.003671" iyy="6.9e-05" iyz="0.003671" izz="8.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.122116 0.031923 -0.094"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_7_motor__1__1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.122116 0.031923 -0.094"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_7_motor__1__1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_6_motor__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.008244000000000001 0.022501000000000007 0.0"/>
+    <mass value="0.315076"/>
+    <inertia ixx="5.2e-05" ixy="3e-06" ixz="-0.006828" iyy="6.8e-05" iyz="0.006828" izz="8.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.129236 -0.070546 -0.094"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_6_motor__1__1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.129236 -0.070546 -0.094"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_6_motor__1__1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_5_motor__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.006153000000000006 0.023160000000000014 0.0"/>
+    <mass value="0.315076"/>
+    <inertia ixx="6e-05" ixy="9e-06" ixz="-0.008579" iyy="6e-05" iyz="0.008579" izz="8.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.083748 -0.188903 -0.094"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_5_motor__1__1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.083748 -0.188903 -0.094"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_5_motor__1__1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_1_motor__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.022837999999999997 0.005831000000000003 0.0"/>
+    <mass value="0.315076"/>
+    <inertia ixx="6e-05" ixy="9e-06" ixz="0.009201" iyy="6e-05" iyz="-0.009201" izz="8.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.154757 0.138894 -0.094"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_1_motor__1__1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.154757 0.138894 -0.094"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_1_motor__1__1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_2_motor__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.015363999999999989 0.017876 0.0"/>
+    <mass value="0.315076"/>
+    <inertia ixx="5.2e-05" ixy="3e-06" ixz="0.00745" iyy="6.8e-05" iyz="-0.007449" izz="8.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.222116 0.031923 -0.094"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_2_motor__1__1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.222116 0.031923 -0.094"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_2_motor__1__1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_3_motor__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.008322999999999997 0.022053000000000003 0.0"/>
+    <mass value="0.315076"/>
+    <inertia ixx="5.2e-05" ixy="-3e-06" ixz="0.004293" iyy="6.9e-05" iyz="-0.004293" izz="8.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.229236 -0.070546 -0.094"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_3_motor__1__1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.229236 -0.070546 -0.094"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_3_motor__1__1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_4_motor__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.005831000000000003 0.022839000000000026 0.0"/>
+    <mass value="0.315076"/>
+    <inertia ixx="6e-05" ixy="-9e-06" ixz="-0.001002" iyy="6e-05" iyz="0.001002" izz="8.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.183748 -0.188903 -0.094"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_4_motor__1__1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.183748 -0.188903 -0.094"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_4_motor__1__1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_1_femur_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.017867999999999995 -0.04230299999999998 -0.01063299999999999"/>
+    <mass value="0.077868"/>
+    <inertia ixx="4.3e-05" ixy="2.4e-05" ixz="0.002927" iyy="4.5e-05" iyz="-0.002927" izz="8.3e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.204961 0.135359 -0.1045"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_1_femur_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.204961 0.135359 -0.1045"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_1_femur_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_2_femur_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.03889999999999999 -0.024404000000000002 -0.01063299999999999"/>
+    <mass value="0.077868"/>
+    <inertia ixx="2.1e-05" ixy="7e-06" ixz="0.002374" iyy="6.7e-05" iyz="-0.002374" izz="8.3e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.261214 0.000231 -0.1045"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_2_femur_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.261214 0.000231 -0.1045"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_2_femur_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_3_femur_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.04490200000000005 -0.009626999999999997 -0.01063299999999999"/>
+    <mass value="0.077868"/>
+    <inertia ixx="2.2e-05" ixy="-9e-06" ixz="0.001432" iyy="6.7e-05" iyz="-0.001432" izz="8.3e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.255136 -0.113699 -0.1045"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_3_femur_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.255136 -0.113699 -0.1045"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_3_femur_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_4_femur_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.04230299999999998 0.017867999999999995 -0.01063299999999999"/>
+    <mass value="0.077868"/>
+    <inertia ixx="4.5e-05" ixy="-2.4e-05" ixz="-0.000252" iyy="4.3e-05" iyz="0.000252" izz="8.3e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.180213 -0.239108 -0.1045"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_4_femur_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.180213 -0.239108 -0.1045"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_4_femur_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_8_femur_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.04230400000000001 -0.017867999999999995 -0.01063299999999999"/>
+    <mass value="0.077868"/>
+    <inertia ixx="4.5e-05" ixy="-2.4e-05" ixz="0.000405" iyy="4.3e-05" iyz="-0.000405" izz="8.3e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.077384 0.157279 -0.1045"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_8_femur_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.077384 0.157279 -0.1045"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_8_femur_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_6_femur_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.03889999999999999 0.02440400000000001 -0.01063299999999999"/>
+    <mass value="0.077868"/>
+    <inertia ixx="2.1e-05" ixy="7e-06" ixz="-0.00222" iyy="6.7e-05" iyz="0.00222" izz="8.3e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.161214 -0.079231 -0.1045"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_6_femur_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.161214 -0.079231 -0.1045"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_6_femur_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_5_femur_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.017867999999999995 0.04230300000000001 -0.01063299999999999"/>
+    <mass value="0.077868"/>
+    <inertia ixx="4.3e-05" ixy="2.4e-05" ixz="-0.002774" iyy="4.5e-05" iyz="0.002774" izz="8.3e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.104961 -0.214359 -0.1045"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_5_femur_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.104961 -0.214359 -0.1045"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_5_femur_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_1_motor__2__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.022838999999999998 0.005831000000000003 0.0"/>
+    <mass value="0.315076"/>
+    <inertia ixx="6e-05" ixy="9e-06" ixz="0.014363" iyy="6e-05" iyz="-0.014363" izz="8.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.242724 0.226155 -0.093821"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_1_motor__2__1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.242724 0.226155 -0.093821"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_1_motor__2__1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_2_motor__2__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.015363000000000016 0.017876000000000003 0.0"/>
+    <mass value="0.315076"/>
+    <inertia ixx="5.2e-05" ixy="3e-06" ixz="0.011666" iyy="6.8e-05" iyz="-0.011666" izz="8.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.344226 0.052947 -0.093821"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_2_motor__2__1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.344226 0.052947 -0.093821"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_2_motor__2__1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_3_motor__2__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.008323999999999998 0.022053000000000003 0.0"/>
+    <mass value="0.315076"/>
+    <inertia ixx="5.2e-05" ixy="-3e-06" ixz="0.007239" iyy="6.8e-05" iyz="-0.007239" izz="8.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.351171 -0.092554 -0.093821"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_3_motor__2__1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.351171 -0.092554 -0.093821"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_3_motor__2__1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_4_motor__2__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.005831000000000031 0.022838000000000025 0.0"/>
+    <mass value="0.315076"/>
+    <inertia ixx="6e-05" ixy="-9e-06" ixz="-0.001021" iyy="6e-05" iyz="0.001021" izz="8.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.271008 -0.276871 -0.093821"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_4_motor__2__1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.271008 -0.276871 -0.093821"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_4_motor__2__1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_5_motor__2__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0061530000000000196 0.02315999999999996 0.0"/>
+    <mass value="0.315076"/>
+    <inertia ixx="6e-05" ixy="9e-06" ixz="-0.013742" iyy="6e-05" iyz="0.013742" izz="8.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.171716 -0.276164 -0.093821"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_5_motor__2__1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.171716 -0.276164 -0.093821"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_5_motor__2__1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_6_motor__2__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.008244000000000029 0.022501000000000007 0.0"/>
+    <mass value="0.315076"/>
+    <inertia ixx="5.2e-05" ixy="3e-06" ixz="-0.011046" iyy="6.8e-05" iyz="0.011046" izz="8.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.251345 -0.09157 -0.093821"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_6_motor__2__1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.251345 -0.09157 -0.093821"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_6_motor__2__1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_7_motor__2__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.015442999999999985 0.018325 0.0"/>
+    <mass value="0.315076"/>
+    <inertia ixx="5.2e-05" ixy="-3e-06" ixz="-0.006618" iyy="6.9e-05" iyz="0.006618" izz="8.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.244052 0.053932 -0.093821"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_7_motor__2__1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.244052 0.053932 -0.093821"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_7_motor__2__1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_8_motor__2__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.023159999999999986 0.0061530000000000196 0.0"/>
+    <mass value="0.315076"/>
+    <inertia ixx="6e-05" ixy="-9e-06" ixz="0.001642" iyy="6e-05" iyz="-0.001642" izz="8.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.139189 0.224034 -0.093821"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_8_motor__2__1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.139189 0.224034 -0.093821"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_8_motor__2__1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_8_tibia_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.06303599999999998 -0.03870699999999999 -0.010863999999999999"/>
+    <mass value="0.106884"/>
+    <inertia ixx="0.000121" ixy="-0.000111" ixz="0.000562" iyy="0.000118" iyz="-0.000563" izz="0.000233"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.164645 0.245247 -0.104321"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_8_tibia_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.164645 0.245247 -0.104321"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_8_tibia_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_6_tibia_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.067863 0.029435000000000003 -0.010863999999999999"/>
+    <mass value="0.106884"/>
+    <inertia ixx="1.5e-05" ixy="3.6e-05" ixz="-0.004803" iyy="0.000224" iyz="0.004803" izz="0.000233"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.283323 -0.100254 -0.104321"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_6_tibia_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.283323 -0.100254 -0.104321"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_6_tibia_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_5_tibia_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.03870700000000002 0.06303699999999995 -0.010863999999999999"/>
+    <mass value="0.106884"/>
+    <inertia ixx="0.000118" ixy="0.000111" ixz="-0.005956" iyy="0.000121" iyz="0.005956" izz="0.000233"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.192929 -0.301619 -0.104321"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_5_tibia_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.192929 -0.301619 -0.104321"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_5_tibia_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_4_tibia_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.06303599999999998 0.03870800000000002 -0.010863999999999999"/>
+    <mass value="0.106884"/>
+    <inertia ixx="0.000121" ixy="-0.000111" ixz="-0.000352" iyy="0.000118" iyz="0.000353" izz="0.000233"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.267473 -0.327075 -0.104321"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_4_tibia_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.267473 -0.327075 -0.104321"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_4_tibia_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_3_tibia_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.07383799999999996 -0.0044490000000000085 -0.010863999999999999"/>
+    <mass value="0.106884"/>
+    <inertia ixx="1.6e-05" ixy="-3.9e-05" ixz="0.003193" iyy="0.000223" iyz="-0.003192" izz="0.000233"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.377072 -0.135708 -0.104321"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_3_tibia_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.377072 -0.135708 -0.104321"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_3_tibia_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_2_tibia_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.06786299999999995 -0.029435 -0.010863999999999999"/>
+    <mass value="0.106884"/>
+    <inertia ixx="1.5e-05" ixy="3.6e-05" ixz="0.005013" iyy="0.000224" iyz="-0.005013" izz="0.000233"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.383323 0.021254 -0.104321"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_2_tibia_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.383323 0.021254 -0.104321"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_2_tibia_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_1_tibia_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.03870699999999999 -0.06303700000000001 -0.010863999999999999"/>
+    <mass value="0.106884"/>
+    <inertia ixx="0.000118" ixy="0.000111" ixz="0.006166" iyy="0.000121" iyz="-0.006166" izz="0.000233"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.292929 0.222619 -0.104321"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_1_tibia_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.292929 0.222619 -0.104321"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_1_tibia_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="Component62_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="6.399999999999462e-05 -0.08348199999999999 -0.02024200000000001"/>
+    <mass value="0.502392"/>
+    <inertia ixx="0.001514" ixy="0.0" ixz="0.011489" iyy="0.000379" iyz="-0.011497" izz="0.001285"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.04975 0.1095 -0.1145"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/Component62_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.04975 0.1095 -0.1145"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/Component62_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="head_neck_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0017829999999999999 0.03881100000000001 -0.019412"/>
+    <mass value="0.21541"/>
+    <inertia ixx="6.1e-05" ixy="-1e-06" ixz="-0.003591" iyy="6e-05" iyz="0.00359" izz="4.1e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.05025 -0.1885 -0.1145"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/head_neck_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.05025 -0.1885 -0.1145"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/head_neck_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_7_femur_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.044902 0.009627 -0.01063299999999999"/>
+    <mass value="0.077868"/>
+    <inertia ixx="2.2e-05" ixy="-9e-06" ixz="-0.001279" iyy="6.7e-05" iyz="0.001279" izz="8.3e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.155136 0.034699 -0.1045"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_7_femur_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.155136 0.034699 -0.1045"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_7_femur_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="leg_7_tibia_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.07383899999999999 0.0044490000000000016 -0.010863999999999999"/>
+    <mass value="0.106884"/>
+    <inertia ixx="1.6e-05" ixy="-3.9e-05" ixz="-0.002983" iyy="0.000223" iyz="0.002983" izz="0.000233"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.277071 0.056708 -0.104321"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_7_tibia_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.277071 0.056708 -0.104321"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/leg_7_tibia_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="head_link_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.025273999999999998 0.03397799999999998 0.0013080000000000036"/>
+    <mass value="0.386958"/>
+    <inertia ixx="5.3e-05" ixy="-1e-06" ixz="-0.008832" iyy="0.000245" iyz="0.008831" izz="0.000265"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.02525 -0.2335 -0.103878"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/head_link_1.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.02525 -0.2335 -0.103878"/>
+    <geometry>
+      <mesh filename="package://nightmare_description/meshes/head_link_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+<joint name="Rigid14" type="fixed">
+  <origin rpy="0 0 0" xyz="0.010319 -0.059677 0.1115"/>
+  <parent link="base_link"/>
+  <child link="leg_8_motor_1"/>
+</joint>
+<transmission name="Rigid14_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid14">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid14_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid15" type="fixed">
+  <origin rpy="0 0 0" xyz="0.09251 -0.062505 0.1115"/>
+  <parent link="base_link"/>
+  <child link="leg_1_motor_1"/>
+</joint>
+<transmission name="Rigid15_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid15">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid15_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid16" type="fixed">
+  <origin rpy="0 0 0" xyz="0.06025 -0.0795 0.1115"/>
+  <parent link="base_link"/>
+  <child link="tail_motor_1"/>
+</joint>
+<transmission name="Rigid16_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid16">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid16_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid17" type="fixed">
+  <origin rpy="0 0 0" xyz="0.127311 -0.005052 0.1115"/>
+  <parent link="base_link"/>
+  <child link="leg_2_motor_1"/>
+</joint>
+<transmission name="Rigid17_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid17">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid17_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid18" type="fixed">
+  <origin rpy="0 0 0" xyz="0.127311 0.084052 0.1115"/>
+  <parent link="base_link"/>
+  <child link="leg_3_motor_1"/>
+</joint>
+<transmission name="Rigid18_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid18">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid18_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid19" type="fixed">
+  <origin rpy="0 0 0" xyz="0.09251 0.141505 0.1115"/>
+  <parent link="base_link"/>
+  <child link="leg_4_motor_1"/>
+</joint>
+<transmission name="Rigid19_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid19">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid19_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid20" type="fixed">
+  <origin rpy="0 0 0" xyz="0.03975 0.1585 0.1115"/>
+  <parent link="base_link"/>
+  <child link="head_motor_pan_1"/>
+</joint>
+<transmission name="Rigid20_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid20">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid20_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid21" type="fixed">
+  <origin rpy="0 0 0" xyz="0.00749 0.141505 0.1115"/>
+  <parent link="base_link"/>
+  <child link="leg_5_motor_1"/>
+</joint>
+<transmission name="Rigid21_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid21">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid21_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid22" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.027311 0.084052 0.1115"/>
+  <parent link="base_link"/>
+  <child link="leg_6_motor_1"/>
+</joint>
+<transmission name="Rigid22_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid22">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid22_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid23" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.027311 -0.005052 0.1115"/>
+  <parent link="base_link"/>
+  <child link="leg_7_motor_1"/>
+</joint>
+<transmission name="Rigid23_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid23">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid23_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev24" type="continuous">
+  <origin rpy="0 0 0" xyz="0.028637 -0.013789 0.003"/>
+  <parent link="leg_1_motor_1"/>
+  <child link="leg_1_coxa_1"/>
+  <axis xyz="-0.0 0.0 -0.01"/>
+</joint>
+<transmission name="Rev24_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev24">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev24_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev25" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.028638 -0.013788 0.003"/>
+  <parent link="leg_8_motor_1"/>
+  <child link="leg_8_coxa_1"/>
+  <axis xyz="-0.0 0.0 -0.01"/>
+</joint>
+<transmission name="Rev25_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev25">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev25_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev26" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.031368 0.005131 0.003"/>
+  <parent link="leg_7_motor_1"/>
+  <child link="leg_7_coxa_1"/>
+  <axis xyz="-0.0 0.0 -0.01"/>
+</joint>
+<transmission name="Rev26_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev26">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev26_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev27" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.031368 -0.005131 0.003"/>
+  <parent link="leg_6_motor_1"/>
+  <child link="leg_6_coxa_1"/>
+  <axis xyz="0.0 0.0 -0.01"/>
+</joint>
+<transmission name="Rev27_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev27">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev27_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev28" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.028637 0.013789 0.003"/>
+  <parent link="leg_5_motor_1"/>
+  <child link="leg_5_coxa_1"/>
+  <axis xyz="-0.0 0.0 -0.01"/>
+</joint>
+<transmission name="Rev28_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev28">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev28_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev29" type="continuous">
+  <origin rpy="0 0 0" xyz="0.028637 0.013789 0.003"/>
+  <parent link="leg_4_motor_1"/>
+  <child link="leg_4_coxa_1"/>
+  <axis xyz="-0.0 0.0 -0.01"/>
+</joint>
+<transmission name="Rev29_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev29">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev29_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev30" type="continuous">
+  <origin rpy="0 0 0" xyz="0.031368 -0.005131 0.003"/>
+  <parent link="leg_3_motor_1"/>
+  <child link="leg_3_coxa_1"/>
+  <axis xyz="-0.0 0.0 -0.01"/>
+</joint>
+<transmission name="Rev30_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev30">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev30_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev31" type="continuous">
+  <origin rpy="0 0 0" xyz="0.031368 0.005131 0.003"/>
+  <parent link="leg_2_motor_1"/>
+  <child link="leg_2_coxa_1"/>
+  <axis xyz="-0.0 0.0 -0.01"/>
+</joint>
+<transmission name="Rev31_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev31">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev31_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev32" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.033609 -0.062601 -0.0205"/>
+  <parent link="leg_8_coxa_1"/>
+  <child link="leg_8_motor__1__1"/>
+  <axis xyz="-0.007071 0.007071 -0.0"/>
+</joint>
+<transmission name="Rev32_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev32">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev32_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev33" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.063437 -0.032002 -0.0205"/>
+  <parent link="leg_7_coxa_1"/>
+  <child link="leg_7_motor__1__1"/>
+  <axis xyz="-0.001736 0.009848 -0.0"/>
+</joint>
+<transmission name="Rev33_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev33">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev33_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev34" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.070557 -0.008375 -0.0205"/>
+  <parent link="leg_6_coxa_1"/>
+  <child link="leg_6_motor__1__1"/>
+  <axis xyz="0.001736 0.009848 -0.0"/>
+</joint>
+<transmission name="Rev34_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev34">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev34_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev35" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.062601 0.033609 -0.0205"/>
+  <parent link="leg_5_coxa_1"/>
+  <child link="leg_5_motor__1__1"/>
+  <axis xyz="0.007071 0.007071 -0.0"/>
+</joint>
+<transmission name="Rev35_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev35">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev35_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev36" type="continuous">
+  <origin rpy="0 0 0" xyz="0.03361 -0.0626 -0.0205"/>
+  <parent link="leg_1_coxa_1"/>
+  <child link="leg_1_motor__1__1"/>
+  <axis xyz="-0.007071 -0.007071 -0.0"/>
+</joint>
+<transmission name="Rev36_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev36">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev36_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev37" type="continuous">
+  <origin rpy="0 0 0" xyz="0.063437 -0.032002 -0.0205"/>
+  <parent link="leg_2_coxa_1"/>
+  <child link="leg_2_motor__1__1"/>
+  <axis xyz="-0.001736 -0.009848 -0.0"/>
+</joint>
+<transmission name="Rev37_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev37">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev37_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev38" type="continuous">
+  <origin rpy="0 0 0" xyz="0.070557 -0.008375 -0.0205"/>
+  <parent link="leg_3_coxa_1"/>
+  <child link="leg_3_motor__1__1"/>
+  <axis xyz="0.001736 -0.009848 -0.0"/>
+</joint>
+<transmission name="Rev38_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev38">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev38_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev39" type="continuous">
+  <origin rpy="0 0 0" xyz="0.062601 0.033609 -0.0205"/>
+  <parent link="leg_4_coxa_1"/>
+  <child link="leg_4_motor__1__1"/>
+  <axis xyz="0.007071 -0.007071 -0.0"/>
+</joint>
+<transmission name="Rev39_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev39">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev39_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid40" type="fixed">
+  <origin rpy="0 0 0" xyz="0.050204 0.003535 0.0105"/>
+  <parent link="leg_1_motor__1__1"/>
+  <child link="leg_1_femur_1"/>
+</joint>
+<transmission name="Rigid40_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid40">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid40_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid41" type="fixed">
+  <origin rpy="0 0 0" xyz="0.039098 0.031692 0.0105"/>
+  <parent link="leg_2_motor__1__1"/>
+  <child link="leg_2_femur_1"/>
+</joint>
+<transmission name="Rigid41_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid41">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid41_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid42" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0259 0.043153 0.0105"/>
+  <parent link="leg_3_motor__1__1"/>
+  <child link="leg_3_femur_1"/>
+</joint>
+<transmission name="Rigid42_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid42">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid42_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid43" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.003535 0.050205 0.0105"/>
+  <parent link="leg_4_motor__1__1"/>
+  <child link="leg_4_femur_1"/>
+</joint>
+<transmission name="Rigid43_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid43">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid43_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid44" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.025456 -0.021213 0.0105"/>
+  <parent link="leg_8_motor__1__1"/>
+  <child link="leg_8_femur_1"/>
+</joint>
+<transmission name="Rigid44_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid44">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid44_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid46" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.031978 0.008685 0.0105"/>
+  <parent link="leg_6_motor__1__1"/>
+  <child link="leg_6_femur_1"/>
+</joint>
+<transmission name="Rigid46_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid46">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid46_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid47" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.021213 0.025456 0.0105"/>
+  <parent link="leg_5_motor__1__1"/>
+  <child link="leg_5_femur_1"/>
+</joint>
+<transmission name="Rigid47_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid47">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid47_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev48" type="continuous">
+  <origin rpy="0 0 0" xyz="0.037763 -0.090796 -0.010679"/>
+  <parent link="leg_1_femur_1"/>
+  <child link="leg_1_motor__2__1"/>
+  <axis xyz="-0.007071 -0.007071 -0.0"/>
+</joint>
+<transmission name="Rev48_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev48">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev48_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev49" type="continuous">
+  <origin rpy="0 0 0" xyz="0.083012 -0.052716 -0.010679"/>
+  <parent link="leg_2_femur_1"/>
+  <child link="leg_2_motor__2__1"/>
+  <axis xyz="-0.001736 -0.009848 -0.0"/>
+</joint>
+<transmission name="Rev49_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev49">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev49_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev50" type="continuous">
+  <origin rpy="0 0 0" xyz="0.096035 -0.021145 -0.010679"/>
+  <parent link="leg_3_femur_1"/>
+  <child link="leg_3_motor__2__1"/>
+  <axis xyz="0.001736 -0.009848 -0.0"/>
+</joint>
+<transmission name="Rev50_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev50">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev50_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev51" type="continuous">
+  <origin rpy="0 0 0" xyz="0.090795 0.037763 -0.010679"/>
+  <parent link="leg_4_femur_1"/>
+  <child link="leg_4_motor__2__1"/>
+  <axis xyz="0.007071 -0.007071 -0.0"/>
+</joint>
+<transmission name="Rev51_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev51">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev51_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev52" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.066755 0.061805 -0.010679"/>
+  <parent link="leg_5_femur_1"/>
+  <child link="leg_5_motor__2__1"/>
+  <axis xyz="0.007071 0.007071 -0.0"/>
+</joint>
+<transmission name="Rev52_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev52">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev52_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev53" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.090131 0.012339 -0.010679"/>
+  <parent link="leg_6_femur_1"/>
+  <child link="leg_6_motor__2__1"/>
+  <axis xyz="0.001736 0.009848 -0.0"/>
+</joint>
+<transmission name="Rev53_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev53">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev53_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev54" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.088916 -0.019233 -0.010679"/>
+  <parent link="leg_7_femur_1"/>
+  <child link="leg_7_motor__2__1"/>
+  <axis xyz="-0.001736 0.009848 -0.0"/>
+</joint>
+<transmission name="Rev54_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev54">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev54_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev55" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.061805 -0.066755 -0.010679"/>
+  <parent link="leg_8_femur_1"/>
+  <child link="leg_8_motor__2__1"/>
+  <axis xyz="-0.007071 0.007071 -0.0"/>
+</joint>
+<transmission name="Rev55_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev55">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev55_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid57" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.025456 -0.021213 0.0105"/>
+  <parent link="leg_8_motor__2__1"/>
+  <child link="leg_8_tibia_1"/>
+</joint>
+<transmission name="Rigid57_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid57">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid57_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid59" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.031978 0.008684 0.0105"/>
+  <parent link="leg_6_motor__2__1"/>
+  <child link="leg_6_tibia_1"/>
+</joint>
+<transmission name="Rigid59_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid59">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid59_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid60" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.021213 0.025455 0.0105"/>
+  <parent link="leg_5_motor__2__1"/>
+  <child link="leg_5_tibia_1"/>
+</joint>
+<transmission name="Rigid60_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid60">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid60_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid61" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.003535 0.050204 0.0105"/>
+  <parent link="leg_4_motor__2__1"/>
+  <child link="leg_4_tibia_1"/>
+</joint>
+<transmission name="Rigid61_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid61">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid61_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid62" type="fixed">
+  <origin rpy="0 0 0" xyz="0.025901 0.043154 0.0105"/>
+  <parent link="leg_3_motor__2__1"/>
+  <child link="leg_3_tibia_1"/>
+</joint>
+<transmission name="Rigid62_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid62">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid62_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid63" type="fixed">
+  <origin rpy="0 0 0" xyz="0.039097 0.031693 0.0105"/>
+  <parent link="leg_2_motor__2__1"/>
+  <child link="leg_2_tibia_1"/>
+</joint>
+<transmission name="Rigid63_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid63">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid63_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid64" type="fixed">
+  <origin rpy="0 0 0" xyz="0.050205 0.003536 0.0105"/>
+  <parent link="leg_1_motor__2__1"/>
+  <child link="leg_1_tibia_1"/>
+</joint>
+<transmission name="Rigid64_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid64">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid64_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev65" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.0105 -0.03 0.003"/>
+  <parent link="tail_motor_1"/>
+  <child link="Component62_1"/>
+  <axis xyz="-0.0 0.0 -0.01"/>
+</joint>
+<transmission name="Rev65_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev65">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev65_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev66" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0105 0.03 0.003"/>
+  <parent link="head_motor_pan_1"/>
+  <child link="head_neck_1"/>
+  <axis xyz="-0.0 0.0 -0.01"/>
+</joint>
+<transmission name="Rev66_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev66">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev66_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid67" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.03302 -0.002776 0.0105"/>
+  <parent link="leg_7_motor__1__1"/>
+  <child link="leg_7_femur_1"/>
+</joint>
+<transmission name="Rigid67_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid67">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid67_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rigid68" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.033019 -0.002776 0.0105"/>
+  <parent link="leg_7_motor__2__1"/>
+  <child link="leg_7_tibia_1"/>
+</joint>
+<transmission name="Rigid68_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rigid68">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rigid68_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="Rev69" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.025 0.045 -0.010622"/>
+  <parent link="head_neck_1"/>
+  <child link="head_link_1"/>
+  <axis xyz="0.01 -0.0 0.0"/>
+</joint>
+<transmission name="Rev69_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev69">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev69_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<gazebo>
+  <plugin filename="libgazebo_ros_control.so" name="control"/>
+</gazebo>
+</robot>

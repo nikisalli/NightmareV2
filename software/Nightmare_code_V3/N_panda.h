@@ -3,6 +3,7 @@
 
 void pandaInit();
 void pandaPowerOn();
+void pandaWriteData();
 bool pandaIsOnline();
 
 #endif
