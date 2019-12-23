@@ -3,6 +3,8 @@
 #include "N_defines.h"
 #include "N_sensors.h"
 #include "N_math.h"
+#include "N_Octapod.h"
+#include "N_structs.h"
 
 TaskHandle_t Task4;
 TaskHandle_t Task5;
@@ -45,8 +47,15 @@ bool pandaIsOnline(){
 }
 
 void pandaWriteData(){
+    const struct Dleg * dlegs = Nightmare::dlegs;
+
     Serial.write(0xAA);                                                                          //start byte
     Serial.write(0xAA);                                                                          //start byte
     Serial.write((byte)(fmap(read_battery_voltage(),5.0,10.0,0,255)));                           //byte containing the voltage value
     Serial.write((byte)(fmap(read_battery_current(),0.0,15.0,0,255)));                           //byte containing the current value
+    for(int i=0;i<8;i++){                                                                        //bytes containing the servos' raw angles
+        Serial.write((byte)(fmap(dlegs[i].CX_ANGLE,-120,120,0,255)));
+        Serial.write((byte)(fmap(dlegs[i].FM_ANGLE,-120,120,0,255)));
+        Serial.write((byte)(fmap(dlegs[i].TB_ANGLE,-120,120,0,255)));
+    }
 }

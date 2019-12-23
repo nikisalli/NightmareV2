@@ -33,7 +33,10 @@ void Nightmare::init() {
       LEG_DIMENSIONS[i * 3 + 2], 
       LEG_START_OFFSET[i * 2], 
       LEG_START_OFFSET[i * 2 + 1], 
-      LEG_SIDE[i]
+      LEG_SIDE[i],
+      0,
+      0,
+      0
     };
   }
 
