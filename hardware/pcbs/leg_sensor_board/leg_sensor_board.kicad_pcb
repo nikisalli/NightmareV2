@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 20)
+    (drawings 22)
     (tracks 92)
     (zones 0)
     (modules 9)
@@ -478,6 +478,12 @@
       (net 2 UART))
   )
 
+  (gr_text "gnd vcc uart" (at 117.221 111.887) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (gr_text "gnd S" (at 110.871 101.219) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
   (gr_text "by Nik" (at 119.126 99.06) (layer F.SilkS)
     (effects (font (size 1.8 1.8) (thickness 0.3)))
   )

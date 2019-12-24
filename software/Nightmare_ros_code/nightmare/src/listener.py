@@ -5,6 +5,7 @@ import serial
 import numpy as np
 import tf
 import math
+import time
 
 from threading import Thread
 from std_msgs.msg import Float32
@@ -30,12 +31,13 @@ class robot_listener(Thread):
     def run(self):
         while 1:
             if(ord(robot.read()) == 0xAA):
-                robot.read()
-                bytes = []
-                for _ in range(2):
-                    bytes.append(ord(robot.read()))
-                robot_listener.voltage = fmap(bytes[0],0,255,5,10)
-                robot_listener.current = fmap(bytes[1],0,255,0,15)
+                if(ord(robot.read()) == 0xBB):
+                    bytes = []
+                    for _ in range(26):
+                        bytes.append(ord(robot.read()))
+                    robot_listener.voltage = fmap(bytes[0],0,255,5,10)
+                    robot_listener.current = fmap(bytes[1],0,255,0,15)
+                    robot_listener.joints = bytes[2:26]
 
 class imu_listener(Thread):
     def __init__(self):
@@ -77,18 +79,11 @@ class nightmare_node():
 
         self.jnt_msg = JointState()
         self.jnt_msg.header = Header()
-        self.jnt_msg.velocity = []
-        self.jnt_msg.effort = []
-        self.jnt_msg.name = ['Rigid14', 'Rigid15', 'Rigid16', 'Rigid17', 'Rigid18', 'Rigid19', 'Rigid20', 
-                             'Rigid21', 'Rigid22', 'Rigid23', 'Rigid40', 'Rigid41', 'Rigid42', 'Rigid43', 
-                             'Rigid44', 'Rigid46', 'Rigid47', 'Rigid57', 'Rigid59', 'Rigid60', 'Rigid61', 
-                             'Rigid62', 'Rigid63', 'Rigid64', 'Rigid67', 'Rigid68',
-                             'Rev24', 'Rev25', 'Rev26', 'Rev27', 'Rev28', 'Rev29', 'Rev30', 'Rev31', 'Rev32', 
+        self.jnt_msg.name = ['Rev24', 'Rev25', 'Rev26', 'Rev27', 'Rev28', 'Rev29', 'Rev30', 'Rev31', 'Rev32', 
                              'Rev33', 'Rev34', 'Rev35', 'Rev36', 'Rev37', 'Rev38', 'Rev39', 'Rev48', 'Rev49', 
                              'Rev50', 'Rev51', 'Rev52', 'Rev53', 'Rev54', 'Rev55', 'Rev65', 'Rev66', 'Rev69']
-        self.jnt_msg.position = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
-                                 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
-                                 0, 0, 0, ]
+        self.jnt_msg.velocity = []
+        self.jnt_msg.effort = []
 
         self.current_time = rospy.get_time()
         self.last_time = rospy.get_time()
@@ -151,6 +146,17 @@ class nightmare_node():
         self.pub_cur.publish(robot_listener.current)
 
     def publish_jnt(self):
+        res = robot_listener.joints
+        tmp = [fmap(i,0,255,120,-120)*self.degrees2rad for i in res] 
+
+        #self.jnt_msg.position = [tmp[9], tmp[12], tmp[15], tmp[18], tmp[21], tmp[0], tmp[3], tmp[6], tmp[13],
+        #                         tmp[16], tmp[19], tmp[22], tmp[10], tmp[7], tmp[4], tmp[1], tmp[11], tmp[8],
+        #                         tmp[5], tmp[2], tmp[23], tmp[20], tmp[17], tmp[14], 0, 0, 0]
+        
+        self.jnt_msg.position = [-tmp[12], -tmp[9], -tmp[6], -tmp[3], -tmp[0], -tmp[21], -tmp[18], -tmp[15], tmp[10],
+                                 tmp[7], tmp[4], tmp[1], tmp[13], tmp[16], tmp[19], tmp[22], tmp[14], tmp[17],
+                                 tmp[20], tmp[23], tmp[2], tmp[5], tmp[8], tmp[11], 0, 0, 0]
+
         self.jnt_msg.header.stamp = rospy.Time.now()
         self.pub_jnt.publish(self.jnt_msg)
 
