@@ -4,7 +4,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/base_link.stl"/>
+      <mesh filename="package://nightmare_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -13,7 +13,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/base_link.stl"/>
+      <mesh filename="package://nightmare_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -26,7 +26,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.010319 0.059677 -0.1115"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_8_motor_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_8_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -35,7 +35,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.010319 0.059677 -0.1115"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_8_motor_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_8_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -48,7 +48,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.09251 0.062505 -0.1115"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_1_motor_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_1_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -57,7 +57,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.09251 0.062505 -0.1115"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_1_motor_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_1_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -70,7 +70,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.06025 0.0795 -0.1115"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/tail_motor_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/tail_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -79,7 +79,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.06025 0.0795 -0.1115"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/tail_motor_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/tail_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -92,7 +92,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.127311 0.005052 -0.1115"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_2_motor_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_2_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -101,7 +101,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.127311 0.005052 -0.1115"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_2_motor_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_2_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -114,7 +114,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.127311 -0.084052 -0.1115"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_3_motor_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_3_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -123,7 +123,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.127311 -0.084052 -0.1115"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_3_motor_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_3_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -136,7 +136,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.09251 -0.141505 -0.1115"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_4_motor_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_4_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -145,7 +145,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.09251 -0.141505 -0.1115"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_4_motor_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_4_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -158,7 +158,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.03975 -0.1585 -0.1115"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/head_motor_pan_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/head_motor_pan_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -167,7 +167,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.03975 -0.1585 -0.1115"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/head_motor_pan_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/head_motor_pan_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -180,7 +180,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.00749 -0.141505 -0.1115"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_5_motor_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_5_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -189,7 +189,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.00749 -0.141505 -0.1115"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_5_motor_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_5_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -202,7 +202,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.027311 -0.084052 -0.1115"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_6_motor_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_6_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -211,7 +211,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.027311 -0.084052 -0.1115"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_6_motor_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_6_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -224,7 +224,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.027311 0.005052 -0.1115"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_7_motor_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_7_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -233,7 +233,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.027311 0.005052 -0.1115"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_7_motor_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_7_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -246,7 +246,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.121147 0.076294 -0.1145"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_1_coxa_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_1_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -255,7 +255,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.121147 0.076294 -0.1145"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_1_coxa_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_1_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -268,7 +268,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.018319 0.073465 -0.1145"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_8_coxa_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_8_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -277,7 +277,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.018319 0.073465 -0.1145"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_8_coxa_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_8_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -290,7 +290,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.058679 -7.9e-05 -0.1145"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_7_coxa_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_7_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -299,7 +299,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.058679 -7.9e-05 -0.1145"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_7_coxa_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_7_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -312,7 +312,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.058679 -0.078921 -0.1145"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_6_coxa_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_6_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -321,7 +321,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.058679 -0.078921 -0.1145"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_6_coxa_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_6_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -334,7 +334,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.021147 -0.155294 -0.1145"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_5_coxa_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_5_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -343,7 +343,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.021147 -0.155294 -0.1145"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_5_coxa_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_5_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -356,7 +356,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.121147 -0.155294 -0.1145"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_4_coxa_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_4_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -365,7 +365,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.121147 -0.155294 -0.1145"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_4_coxa_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_4_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -378,7 +378,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.158679 -0.078921 -0.1145"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_3_coxa_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_3_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -387,7 +387,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.158679 -0.078921 -0.1145"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_3_coxa_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_3_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -400,7 +400,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.158679 -7.9e-05 -0.1145"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_2_coxa_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_2_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -409,7 +409,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.158679 -7.9e-05 -0.1145"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_2_coxa_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_2_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -422,7 +422,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.051928 0.136066 -0.094"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_8_motor__1__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_8_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -431,7 +431,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.051928 0.136066 -0.094"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_8_motor__1__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_8_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -444,7 +444,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.122116 0.031923 -0.094"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_7_motor__1__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_7_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -453,7 +453,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.122116 0.031923 -0.094"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_7_motor__1__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_7_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -466,7 +466,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.129236 -0.070546 -0.094"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_6_motor__1__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_6_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -475,7 +475,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.129236 -0.070546 -0.094"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_6_motor__1__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_6_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -488,7 +488,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.083748 -0.188903 -0.094"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_5_motor__1__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_5_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -497,7 +497,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.083748 -0.188903 -0.094"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_5_motor__1__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_5_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -510,7 +510,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.154757 0.138894 -0.094"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_1_motor__1__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_1_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -519,7 +519,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.154757 0.138894 -0.094"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_1_motor__1__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_1_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -532,7 +532,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.222116 0.031923 -0.094"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_2_motor__1__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_2_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -541,7 +541,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.222116 0.031923 -0.094"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_2_motor__1__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_2_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -554,7 +554,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.229236 -0.070546 -0.094"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_3_motor__1__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_3_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -563,7 +563,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.229236 -0.070546 -0.094"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_3_motor__1__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_3_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -576,7 +576,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.183748 -0.188903 -0.094"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_4_motor__1__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_4_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -585,7 +585,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.183748 -0.188903 -0.094"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_4_motor__1__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_4_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -598,7 +598,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.204961 0.135359 -0.1045"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_1_femur_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_1_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -607,7 +607,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.204961 0.135359 -0.1045"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_1_femur_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_1_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -620,7 +620,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.261214 0.000231 -0.1045"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_2_femur_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_2_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -629,7 +629,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.261214 0.000231 -0.1045"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_2_femur_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_2_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -642,7 +642,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.255136 -0.113699 -0.1045"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_3_femur_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_3_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -651,7 +651,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.255136 -0.113699 -0.1045"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_3_femur_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_3_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -664,7 +664,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.180213 -0.239108 -0.1045"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_4_femur_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_4_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -673,7 +673,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.180213 -0.239108 -0.1045"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_4_femur_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_4_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -686,7 +686,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.077384 0.157279 -0.1045"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_8_femur_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_8_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -695,7 +695,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.077384 0.157279 -0.1045"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_8_femur_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_8_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -708,7 +708,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.161214 -0.079231 -0.1045"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_6_femur_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_6_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -717,7 +717,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.161214 -0.079231 -0.1045"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_6_femur_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_6_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -730,7 +730,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.104961 -0.214359 -0.1045"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_5_femur_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_5_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -739,7 +739,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.104961 -0.214359 -0.1045"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_5_femur_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_5_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -752,7 +752,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.242724 0.226155 -0.093821"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_1_motor__2__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_1_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -761,7 +761,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.242724 0.226155 -0.093821"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_1_motor__2__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_1_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -774,7 +774,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.344226 0.052947 -0.093821"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_2_motor__2__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_2_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -783,7 +783,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.344226 0.052947 -0.093821"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_2_motor__2__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_2_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -796,7 +796,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.351171 -0.092554 -0.093821"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_3_motor__2__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_3_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -805,7 +805,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.351171 -0.092554 -0.093821"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_3_motor__2__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_3_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -818,7 +818,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.271008 -0.276871 -0.093821"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_4_motor__2__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_4_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -827,7 +827,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.271008 -0.276871 -0.093821"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_4_motor__2__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_4_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -840,7 +840,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.171716 -0.276164 -0.093821"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_5_motor__2__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_5_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -849,7 +849,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.171716 -0.276164 -0.093821"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_5_motor__2__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_5_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -862,7 +862,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.251345 -0.09157 -0.093821"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_6_motor__2__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_6_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -871,7 +871,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.251345 -0.09157 -0.093821"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_6_motor__2__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_6_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -884,7 +884,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.244052 0.053932 -0.093821"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_7_motor__2__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_7_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -893,7 +893,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.244052 0.053932 -0.093821"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_7_motor__2__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_7_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -906,7 +906,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.139189 0.224034 -0.093821"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_8_motor__2__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_8_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -915,7 +915,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.139189 0.224034 -0.093821"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_8_motor__2__1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_8_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -928,7 +928,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.164645 0.245247 -0.104321"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_8_tibia_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_8_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -937,7 +937,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.164645 0.245247 -0.104321"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_8_tibia_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_8_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -950,7 +950,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.283323 -0.100254 -0.104321"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_6_tibia_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_6_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -959,7 +959,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.283323 -0.100254 -0.104321"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_6_tibia_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_6_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -972,7 +972,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.192929 -0.301619 -0.104321"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_5_tibia_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_5_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -981,7 +981,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.192929 -0.301619 -0.104321"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_5_tibia_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_5_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -994,7 +994,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.267473 -0.327075 -0.104321"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_4_tibia_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_4_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -1003,7 +1003,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.267473 -0.327075 -0.104321"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_4_tibia_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_4_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -1016,7 +1016,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.377072 -0.135708 -0.104321"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_3_tibia_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_3_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -1025,7 +1025,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.377072 -0.135708 -0.104321"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_3_tibia_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_3_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -1038,7 +1038,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.383323 0.021254 -0.104321"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_2_tibia_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_2_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -1047,7 +1047,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.383323 0.021254 -0.104321"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_2_tibia_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_2_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -1060,7 +1060,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.292929 0.222619 -0.104321"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_1_tibia_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_1_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -1069,7 +1069,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.292929 0.222619 -0.104321"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_1_tibia_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_1_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -1082,7 +1082,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.04975 0.1095 -0.1145"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/Component62_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/Component62_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -1091,7 +1091,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.04975 0.1095 -0.1145"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/Component62_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/Component62_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -1104,7 +1104,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.05025 -0.1885 -0.1145"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/head_neck_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/head_neck_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -1113,7 +1113,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.05025 -0.1885 -0.1145"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/head_neck_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/head_neck_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -1126,7 +1126,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.155136 0.034699 -0.1045"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_7_femur_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_7_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -1135,7 +1135,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.155136 0.034699 -0.1045"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_7_femur_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_7_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -1148,7 +1148,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.277071 0.056708 -0.104321"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_7_tibia_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_7_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -1157,7 +1157,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="0.277071 0.056708 -0.104321"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/leg_7_tibia_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/leg_7_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -1170,7 +1170,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.02525 -0.2335 -0.103878"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/head_link_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/head_link_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver">
       <color rgba="1 0 0 1"/>
@@ -1179,7 +1179,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.02525 -0.2335 -0.103878"/>
     <geometry>
-      <mesh filename="package://nightmare_description/meshes/head_link_1.stl"/>
+      <mesh filename="package://nightmare_description/meshes/head_link_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>

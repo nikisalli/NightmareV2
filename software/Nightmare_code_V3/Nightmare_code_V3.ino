@@ -70,6 +70,8 @@ void loop() {
       Nightmare::sit();
       activated = false;
     }
+    Nightmare::readBody();
+    delay(50);
   }
 }
 

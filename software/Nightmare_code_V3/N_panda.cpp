@@ -29,7 +29,7 @@ void Task4code(void * parameter) {
 
 void Task5code( void * parameter) {
     TickType_t xLastWakeTime;
-    const TickType_t xFrequency = pdMS_TO_TICKS(50);
+    const TickType_t xFrequency = pdMS_TO_TICKS(10);
     xLastWakeTime = xTaskGetTickCount();
     for (;;) {
         pandaWriteData();
@@ -50,7 +50,7 @@ void pandaWriteData(){
     const struct Dleg * dlegs = Nightmare::dlegs;
 
     Serial.write(0xAA);                                                                          //start byte
-    Serial.write(0xAA);                                                                          //start byte
+    Serial.write(0xBB);                                                                          //second start byte
     Serial.write((byte)(fmap(read_battery_voltage(),5.0,10.0,0,255)));                           //byte containing the voltage value
     Serial.write((byte)(fmap(read_battery_current(),0.0,15.0,0,255)));                           //byte containing the current value
     for(int i=0;i<8;i++){                                                                        //bytes containing the servos' raw angles
@@ -58,4 +58,5 @@ void pandaWriteData(){
         Serial.write((byte)(fmap(dlegs[i].FM_ANGLE,-120,120,0,255)));
         Serial.write((byte)(fmap(dlegs[i].TB_ANGLE,-120,120,0,255)));
     }
+    Serial.flush();
 }
