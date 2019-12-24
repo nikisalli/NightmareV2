@@ -20,6 +20,9 @@ extern void standUp();
 extern void move(float alpha, float beta, float gamma, float x_move, float y_move, float z_move);
 extern void moveleg(float dir0, float dir1, float dir2, float dir3);
 extern void sit();
+extern bool pandaIsOn();
+extern void startPanda();
+extern void readBody();
 
 };
 

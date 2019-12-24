@@ -37,7 +37,7 @@ const float LEG_DIMENSIONS[24] = {  6.5, 13.0, 17.0, 6.5, 13.0, 17.0, 6.5, 13.0,
 
 // Offset of each servo in degrees.
 //                                 L1C   L1F L1T  L2C  L2F L2T L3C  L3F L3T L4C   L4F L4T L5C    L5F L5T L6C   L6F L6T L7C  L7F L7T L8C   L8F L8T
-const int SERVO_OFFSETS[24]    = {-45.3, 0,  0,  -9.1, 0,  0,  9.1, 0,  0,  45.3, 0,  0,  -45.3, 0,  0,  -9.1, 0,  0,  9.1, 0,  0,  45.3, 0,  0};
+const float SERVO_OFFSETS[24]    = {-45.3, 0,  0,  -9.1, 0,  0,  9.1, 0,  0,  45.3, 0,  0,  -45.3, 0,  0,  -9.1, 0,  0,  9.1, 0,  0,  45.3, 0,  0};
 
 // Side of each leg in  respect to the body.
 //                        LEG1  LEG2  LEG3  LEG4  LEG5   LEG6   LEG7   LEG8
@@ -129,6 +129,8 @@ const int   SERVO_PIN_RX_ENB = 19;
 const int   HC12_PIN_TX = 2;
 const int   HC12_PIN_RX = 15;
 const int   HC12_PIN_SET = 13;
+const int   DEBUG_LED_PIN_1 = 4;
+const int   DEBUG_LED_PIN_2 = 5;
 const int   BATT_VOLTAGE_READ_PIN = 35;
 const int   BATT_VOLTAGE_READ_FILTER_CONSTANT = 2;
 const int   BATT_CURR_READ_PIN = 32;
@@ -136,12 +138,9 @@ const int   BATT_CURR_READ_FILTER_CONSTANT = 1;
 const int   HC12_BAUD_RATE = 9600;
 const int   DEF_FAN_SPEED = 100;
 const int   MAX_FAN_SPEED = 255;
+const int   PANDA_POWER_PIN = 23;
+const int   PANDA_POWER_TIME = 3000;
 const float BATT_MIN_VOLTAGE = 7.0f;
 const float BATT_MAX_VOLTAGE = 8.5f;
-
-
-#define OTA_WIFI_PWD  "12344321"
-#define OTA_WIFI_SSID "nik"
-#define OTA_WIFI_HOST "esp32"
 
 #endif

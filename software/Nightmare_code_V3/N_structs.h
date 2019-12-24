@@ -1,0 +1,20 @@
+#ifndef N_STRUCTS_H
+#define N_STRUCTS_H
+
+struct Dleg{
+  float CX_LENGHT,FM_LENGHT,TB_LENGHT,START_X_OFFSET,START_Y_OFFSET,CX_ANGLE,FM_ANGLE,TB_ANGLE;
+  bool SIDE;
+  Dleg() = default;
+  Dleg(float CX_LENGHT, float FM_LENGHT, float TB_LENGHT, float START_X_OFFSET, float START_Y_OFFSET, float CX_ANGLE, float FM_ANGLE, float TB_ANGLE, bool SIDE) :
+    CX_LENGHT(CX_LENGHT),
+    FM_LENGHT(FM_LENGHT),
+    TB_LENGHT(TB_LENGHT),
+    START_X_OFFSET(START_X_OFFSET),
+    START_Y_OFFSET(START_Y_OFFSET),
+    CX_ANGLE(CX_ANGLE),
+    FM_ANGLE(FM_ANGLE),
+    TB_ANGLE(TB_ANGLE),
+    SIDE(SIDE) {}
+};
+  
+#endif
