@@ -3,6 +3,7 @@
 
 #include "Arduino.h"
 #include "N_structs.h"
+
 //
 //                        /
 //                      /    ______
@@ -23,9 +24,8 @@
 //                                          LEG 4  |       || ||       |  LEG 5
 //                                                         |___|
 
-
-const bool LEFT  = true;  //just because it makes the code look better
-const bool RIGHT = false; //same ^
+const bool LEFT  = true;  //macros for code cleaness.
+const bool RIGHT = false;
 
 //==========================================//
 //===========BODY & LEGS DIMENSIONS=========//
@@ -88,12 +88,12 @@ const float LEG_START_OFFSET[16] = {
 const float MAX_STEP_LENGHT   = 7.0; //maximum arc lenght covered by two points of a natural spline while walking
 const float MAX_STEP_HEIGHT   = 5.0; //natural spline max point height from ground
 const float MINIMUM_STEP_TIME = 0.5; //minimum time for executing a step
-const float WALK_FRAMES       = 30;
-const float START_Z           = -4;
-const float STAND_Z           = -12;
-const float BODY_X_SHIFT      = 0;
+const float WALK_FRAMES       = 30;  //maximum frames to compute while walking
+const float START_Z           = -4;  //initial leg height
+const float STAND_Z           = -12; //stand position leg height
+const float BODY_X_SHIFT      = 0;   //bias added to 
 
-const int RANDOM_SEQ[2][8] = { //i made this by randomly pushing keys on my keyboard so it's random enough
+const int RANDOM_SEQ[2][8] = { //sequences to follow while adjusting leg positions
   {0,2,1,3, 4,6,5,7},
   {2,1,3,0, 7,5,6,4},
 };
@@ -105,18 +105,6 @@ const float STAND_POS[3][8] = {
   {-17,     -27 ,     -27,      -17,       17,       27,       27,       17},      //Y
   {STAND_Z,  STAND_Z,  STAND_Z,  STAND_Z,  STAND_Z,  STAND_Z,  STAND_Z,  STAND_Z}, //Z
 };
-
-//      C       BEZIER CURVE NATURAL SPLINE     D
-//        O-----------------------------------O
-//         \         XXXXXXXXXXXXXXX         /
-//          \      XX               XX      /
-//           \    X                   X    /
-//            \   X                   X   /
-//             \   X                 X   /
-//              \   XX             XX   /
-//               O----^^^^^^@^^^^^^----O
-//             B     A     0,0     F     E
-
 
 //==========================================//
 //===========ELECTRONICS SETTINGS===========//
