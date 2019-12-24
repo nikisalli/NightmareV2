@@ -42,7 +42,7 @@ void servoInit(){
   xTaskCreatePinnedToCore(Task2code, "Task2", 10000, NULL, 1, &Task2, 1);
 }
 
-bool bodyToServos(float pos[][8]){
+void bodyToServos(float pos[][8]){
   float lol[24];
   struct Dleg * dlegs = Nightmare::dlegs;
   for(int i=0;i<4;i++){
@@ -60,7 +60,7 @@ bool bodyToServos(float pos[][8]){
   servoWrite(lol);
 }
 
-bool servoWrite(float angles[]){
+void servoWrite(float angles[]){
   for (int i = 0; i < 24; i++) {
     written = true;
     variable_angles[i] = angles[i];

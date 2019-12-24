@@ -9,8 +9,8 @@ void servoDetach(byte id);
 void servoAttach(byte id);
 int servoReadPos(byte id);
 
-bool bodyToServos(float pos[][8]);
-bool servoWrite(float angles[]);
+void bodyToServos(float pos[][8]);
+void servoWrite(float angles[]);
 void bodyDetach();
 void bodyAttach();
 
