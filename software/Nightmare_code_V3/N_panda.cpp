@@ -39,7 +39,7 @@ void Task5code( void * parameter) {
 
 void pandaPowerOn(){
     xTaskCreatePinnedToCore(Task4code, "Task4", 10000, NULL, 1, &Task4, 0);                     // create task for powering up the lattepanda board
-    xTaskCreatePinnedToCore(Task5code, "Task5", 10000, NULL, 1, &Task4, 1);                     // create task for sending data to the ros node
+    xTaskCreatePinnedToCore(Task5code, "Task5", 10000, NULL, 1, &Task4, 0);                     // create task for sending data to the ros node
 }
 
 bool pandaIsOnline(){
