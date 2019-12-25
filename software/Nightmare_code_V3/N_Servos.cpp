@@ -23,7 +23,7 @@ void Task2code( void * parameter) {
       }
     }
     else{
-      delay(10);
+      vTaskDelay(pdMS_TO_TICKS(10));
     }
   }
 }

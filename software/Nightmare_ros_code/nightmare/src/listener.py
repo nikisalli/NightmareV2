@@ -147,7 +147,7 @@ class nightmare_node():
 
     def publish_jnt(self):
         res = robot_listener.joints
-        tmp = [fmap(i,0,255,120,-120)*self.degrees2rad for i in res] 
+        tmp = [fmap(i,0,255,180,-180)*self.degrees2rad for i in res] 
 
         #self.jnt_msg.position = [tmp[9], tmp[12], tmp[15], tmp[18], tmp[21], tmp[0], tmp[3], tmp[6], tmp[13],
         #                         tmp[16], tmp[19], tmp[22], tmp[10], tmp[7], tmp[4], tmp[1], tmp[11], tmp[8],
