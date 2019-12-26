@@ -19,12 +19,12 @@
 </link>
 <link name="leg_8_motor_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.020134 -0.005285000000000005 -0.017271999999999996"/>
+    <origin rpy="0 0 0" xyz="-0.020134 -0.005284999999999998 -0.017272"/>
     <mass value="0.315076"/>
-    <inertia ixx="7e-05" ixy="-1.9e-05" ixz="0.001637" iyy="7e-05" iyz="-0.001637" izz="6.9e-05"/>
+    <inertia ixx="7e-05" ixy="-1.9e-05" ixz="0.000291" iyy="7e-05" iyz="-0.000292" izz="6.9e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.010319 0.059677 -0.1115"/>
+    <origin rpy="0 0 0" xyz="0.039681 0.099177 -0.038"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_8_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -33,7 +33,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.010319 0.059677 -0.1115"/>
+    <origin rpy="0 0 0" xyz="0.039681 0.099177 -0.038"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_8_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -41,12 +41,12 @@
 </link>
 <link name="leg_1_motor_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.020134 -0.005284999999999998 -0.017271999999999996"/>
+    <origin rpy="0 0 0" xyz="0.020134000000000006 -0.005284999999999998 -0.017272"/>
     <mass value="0.315076"/>
-    <inertia ixx="7e-05" ixy="1.9e-05" ixz="0.005357" iyy="7e-05" iyz="-0.005357" izz="6.9e-05"/>
+    <inertia ixx="7e-05" ixy="1.9e-05" ixz="0.00111" iyy="7e-05" iyz="-0.00111" izz="6.9e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.09251 0.062505 -0.1115"/>
+    <origin rpy="0 0 0" xyz="-0.04251 0.102005 -0.038"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_1_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -55,7 +55,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.09251 0.062505 -0.1115"/>
+    <origin rpy="0 0 0" xyz="-0.04251 0.102005 -0.038"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_1_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -63,12 +63,12 @@
 </link>
 <link name="tail_motor_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.010499999999999995 -0.017974000000000004 -0.017271999999999996"/>
+    <origin rpy="0 0 0" xyz="-0.0105 -0.017974000000000018 -0.017272"/>
     <mass value="0.315076"/>
-    <inertia ixx="8.8e-05" ixy="-0.0" ixz="0.004371" iyy="5.1e-05" iyz="-0.004371" izz="6.9e-05"/>
+    <inertia ixx="8.8e-05" ixy="-0.0" ixz="0.000893" iyy="5.1e-05" iyz="-0.000893" izz="6.9e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.06025 0.0795 -0.1115"/>
+    <origin rpy="0 0 0" xyz="-0.01025 0.119 -0.038"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/tail_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -77,7 +77,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.06025 0.0795 -0.1115"/>
+    <origin rpy="0 0 0" xyz="-0.01025 0.119 -0.038"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/tail_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -85,12 +85,12 @@
 </link>
 <link name="leg_2_motor_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.019523999999999986 0.007219 -0.017271999999999996"/>
+    <origin rpy="0 0 0" xyz="0.019524 0.007219000000000003 -0.017272"/>
     <mass value="0.315076"/>
-    <inertia ixx="5.2e-05" ixy="6e-06" ixz="0.004295" iyy="8.7e-05" iyz="-0.004295" izz="6.9e-05"/>
+    <inertia ixx="5.2e-05" ixy="6e-06" ixz="0.000876" iyy="8.7e-05" iyz="-0.000876" izz="6.9e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.127311 0.005052 -0.1115"/>
+    <origin rpy="0 0 0" xyz="-0.077311 0.044552 -0.038"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_2_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -99,7 +99,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.127311 0.005052 -0.1115"/>
+    <origin rpy="0 0 0" xyz="-0.077311 0.044552 -0.038"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_2_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -107,12 +107,12 @@
 </link>
 <link name="leg_3_motor_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.019523999999999986 -0.007219000000000003 -0.017271999999999996"/>
+    <origin rpy="0 0 0" xyz="0.019524 -0.007219000000000003 -0.017272"/>
     <mass value="0.315076"/>
-    <inertia ixx="5.2e-05" ixy="-6e-06" ixz="0.002078" iyy="8.7e-05" iyz="-0.002078" izz="6.9e-05"/>
+    <inertia ixx="5.2e-05" ixy="-6e-06" ixz="0.000389" iyy="8.7e-05" iyz="-0.000388" izz="6.9e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.127311 -0.084052 -0.1115"/>
+    <origin rpy="0 0 0" xyz="-0.077311 -0.044552 -0.038"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_3_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -121,7 +121,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.127311 -0.084052 -0.1115"/>
+    <origin rpy="0 0 0" xyz="-0.077311 -0.044552 -0.038"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_3_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -129,12 +129,12 @@
 </link>
 <link name="leg_4_motor_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.020134 0.005285000000000012 -0.017271999999999996"/>
+    <origin rpy="0 0 0" xyz="0.020134000000000006 0.005284999999999998 -0.017272"/>
     <mass value="0.315076"/>
-    <inertia ixx="7e-05" ixy="-1.9e-05" ixz="-0.001014" iyy="7e-05" iyz="0.001014" izz="6.9e-05"/>
+    <inertia ixx="7e-05" ixy="-1.9e-05" ixz="-0.000291" iyy="7e-05" iyz="0.000292" izz="6.9e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.09251 -0.141505 -0.1115"/>
+    <origin rpy="0 0 0" xyz="-0.04251 -0.102005 -0.038"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_4_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -143,7 +143,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.09251 -0.141505 -0.1115"/>
+    <origin rpy="0 0 0" xyz="-0.04251 -0.102005 -0.038"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_4_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -151,12 +151,12 @@
 </link>
 <link name="head_motor_pan_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.010500000000000002 0.01797399999999999 -0.017271999999999996"/>
+    <origin rpy="0 0 0" xyz="0.0105 0.017974000000000018 -0.017272"/>
     <mass value="0.315076"/>
-    <inertia ixx="8.8e-05" ixy="0.0" ixz="-0.003747" iyy="5.1e-05" iyz="0.003747" izz="6.9e-05"/>
+    <inertia ixx="8.8e-05" ixy="-0.0" ixz="-0.000893" iyy="5.1e-05" iyz="0.000893" izz="6.9e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.03975 -0.1585 -0.1115"/>
+    <origin rpy="0 0 0" xyz="0.01025 -0.119 -0.038"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/head_motor_pan_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -165,7 +165,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.03975 -0.1585 -0.1115"/>
+    <origin rpy="0 0 0" xyz="0.01025 -0.119 -0.038"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/head_motor_pan_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -173,12 +173,12 @@
 </link>
 <link name="leg_5_motor_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.020134 0.005285000000000012 -0.017271999999999996"/>
+    <origin rpy="0 0 0" xyz="-0.020134000000000006 0.005284999999999998 -0.017272"/>
     <mass value="0.315076"/>
-    <inertia ixx="7e-05" ixy="1.9e-05" ixz="-0.004733" iyy="7e-05" iyz="0.004733" izz="6.9e-05"/>
+    <inertia ixx="7e-05" ixy="1.9e-05" ixz="-0.00111" iyy="7e-05" iyz="0.00111" izz="6.9e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.00749 -0.141505 -0.1115"/>
+    <origin rpy="0 0 0" xyz="0.04251 -0.102005 -0.038"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_5_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -187,7 +187,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.00749 -0.141505 -0.1115"/>
+    <origin rpy="0 0 0" xyz="0.04251 -0.102005 -0.038"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_5_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -195,12 +195,12 @@
 </link>
 <link name="leg_6_motor_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.019524000000000003 -0.007219000000000003 -0.017271999999999996"/>
+    <origin rpy="0 0 0" xyz="-0.019524 -0.007219000000000003 -0.017272"/>
     <mass value="0.315076"/>
-    <inertia ixx="5.2e-05" ixy="6e-06" ixz="-0.003672" iyy="8.7e-05" iyz="0.003671" izz="6.9e-05"/>
+    <inertia ixx="5.2e-05" ixy="6e-06" ixz="-0.000876" iyy="8.7e-05" iyz="0.000876" izz="6.9e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.027311 -0.084052 -0.1115"/>
+    <origin rpy="0 0 0" xyz="0.077311 -0.044552 -0.038"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_6_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -209,7 +209,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.027311 -0.084052 -0.1115"/>
+    <origin rpy="0 0 0" xyz="0.077311 -0.044552 -0.038"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_6_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -217,12 +217,12 @@
 </link>
 <link name="leg_7_motor_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.019524000000000003 0.007219 -0.017271999999999996"/>
+    <origin rpy="0 0 0" xyz="-0.019524 0.007219000000000003 -0.017272"/>
     <mass value="0.315076"/>
-    <inertia ixx="5.2e-05" ixy="-6e-06" ixz="-0.001455" iyy="8.7e-05" iyz="0.001455" izz="6.9e-05"/>
+    <inertia ixx="5.2e-05" ixy="-6e-06" ixz="-0.000389" iyy="8.7e-05" iyz="0.000388" izz="6.9e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.027311 0.005052 -0.1115"/>
+    <origin rpy="0 0 0" xyz="0.077311 0.044552 -0.038"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_7_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -231,7 +231,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.027311 0.005052 -0.1115"/>
+    <origin rpy="0 0 0" xyz="0.077311 0.044552 -0.038"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_7_motor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -239,12 +239,12 @@
 </link>
 <link name="leg_1_coxa_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.02405299999999999 -0.024052000000000004 -0.020500000000000004"/>
+    <origin rpy="0 0 0" xyz="0.024053000000000005 -0.024052000000000004 -0.0205"/>
     <mass value="0.073783"/>
-    <inertia ixx="3.2e-05" ixy="3e-06" ixz="0.001703" iyy="3.2e-05" iyz="-0.001703" izz="3.5e-05"/>
+    <inertia ixx="3.2e-05" ixy="3e-06" ixz="0.000356" iyy="3.2e-05" iyz="-0.000356" izz="3.5e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.121147 0.076294 -0.1145"/>
+    <origin rpy="0 0 0" xyz="-0.071147 0.115794 -0.041"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_1_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -253,7 +253,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.121147 0.076294 -0.1145"/>
+    <origin rpy="0 0 0" xyz="-0.071147 0.115794 -0.041"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_1_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -261,12 +261,12 @@
 </link>
 <link name="leg_8_coxa_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.024052 -0.02405299999999999 -0.020500000000000004"/>
+    <origin rpy="0 0 0" xyz="-0.02405199999999999 -0.024053000000000005 -0.0205"/>
     <mass value="0.073783"/>
-    <inertia ixx="3.2e-05" ixy="-3e-06" ixz="0.000382" iyy="3.2e-05" iyz="-0.000382" izz="3.5e-05"/>
+    <inertia ixx="3.2e-05" ixy="-3e-06" ixz="6.8e-05" iyy="3.2e-05" iyz="-6.8e-05" izz="3.5e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.018319 0.073465 -0.1145"/>
+    <origin rpy="0 0 0" xyz="0.068319 0.112965 -0.041"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_8_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -275,7 +275,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.018319 0.073465 -0.1145"/>
+    <origin rpy="0 0 0" xyz="0.068319 0.112965 -0.041"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_8_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -283,12 +283,12 @@
 </link>
 <link name="leg_7_coxa_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.03349799999999999 -0.005907 -0.020500000000000004"/>
+    <origin rpy="0 0 0" xyz="-0.033498 -0.0059070000000000025 -0.0205"/>
     <mass value="0.073783"/>
-    <inertia ixx="3e-05" ixy="-1e-06" ixz="-0.000599" iyy="3.5e-05" iyz="0.000599" izz="3.5e-05"/>
+    <inertia ixx="3e-05" ixy="-1e-06" ixz="-0.000146" iyy="3.5e-05" iyz="0.000146" izz="3.5e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.058679 -7.9e-05 -0.1145"/>
+    <origin rpy="0 0 0" xyz="0.108679 0.039421 -0.041"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_7_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -297,7 +297,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.058679 -7.9e-05 -0.1145"/>
+    <origin rpy="0 0 0" xyz="0.108679 0.039421 -0.041"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_7_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -305,12 +305,12 @@
 </link>
 <link name="leg_6_coxa_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.03349799999999999 0.005906999999999996 -0.020500000000000004"/>
+    <origin rpy="0 0 0" xyz="-0.033498 0.0059070000000000025 -0.0205"/>
     <mass value="0.073783"/>
-    <inertia ixx="3e-05" ixy="1e-06" ixz="-0.001228" iyy="3.5e-05" iyz="0.001228" izz="3.5e-05"/>
+    <inertia ixx="3e-05" ixy="1e-06" ixz="-0.000284" iyy="3.5e-05" iyz="0.000284" izz="3.5e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.058679 -0.078921 -0.1145"/>
+    <origin rpy="0 0 0" xyz="0.108679 -0.039421 -0.041"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_6_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -319,7 +319,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.058679 -0.078921 -0.1145"/>
+    <origin rpy="0 0 0" xyz="0.108679 -0.039421 -0.041"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_6_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -327,12 +327,12 @@
 </link>
 <link name="leg_5_coxa_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.024052999999999998 0.024052000000000018 -0.020500000000000004"/>
+    <origin rpy="0 0 0" xyz="-0.024053000000000005 0.024052000000000004 -0.0205"/>
     <mass value="0.073783"/>
-    <inertia ixx="3.2e-05" ixy="3e-06" ixz="-0.001557" iyy="3.2e-05" iyz="0.001557" izz="3.5e-05"/>
+    <inertia ixx="3.2e-05" ixy="3e-06" ixz="-0.000356" iyy="3.2e-05" iyz="0.000356" izz="3.5e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.021147 -0.155294 -0.1145"/>
+    <origin rpy="0 0 0" xyz="0.071147 -0.115794 -0.041"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_5_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -341,7 +341,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.021147 -0.155294 -0.1145"/>
+    <origin rpy="0 0 0" xyz="0.071147 -0.115794 -0.041"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_5_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -349,12 +349,12 @@
 </link>
 <link name="leg_4_coxa_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.02405299999999999 0.024052000000000018 -0.020500000000000004"/>
+    <origin rpy="0 0 0" xyz="0.024053000000000005 0.024052000000000004 -0.0205"/>
     <mass value="0.073783"/>
-    <inertia ixx="3.2e-05" ixy="-3e-06" ixz="-0.000237" iyy="3.2e-05" iyz="0.000237" izz="3.5e-05"/>
+    <inertia ixx="3.2e-05" ixy="-3e-06" ixz="-6.8e-05" iyy="3.2e-05" iyz="6.8e-05" izz="3.5e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.121147 -0.155294 -0.1145"/>
+    <origin rpy="0 0 0" xyz="-0.071147 -0.115794 -0.041"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_4_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -363,7 +363,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.121147 -0.155294 -0.1145"/>
+    <origin rpy="0 0 0" xyz="-0.071147 -0.115794 -0.041"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_4_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -371,12 +371,12 @@
 </link>
 <link name="leg_3_coxa_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.033498 0.005906999999999996 -0.020500000000000004"/>
+    <origin rpy="0 0 0" xyz="0.033498 0.0059070000000000025 -0.0205"/>
     <mass value="0.073783"/>
-    <inertia ixx="3e-05" ixy="-1e-06" ixz="0.000745" iyy="3.5e-05" iyz="-0.000745" izz="3.5e-05"/>
+    <inertia ixx="3e-05" ixy="-1e-06" ixz="0.000146" iyy="3.5e-05" iyz="-0.000146" izz="3.5e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.158679 -0.078921 -0.1145"/>
+    <origin rpy="0 0 0" xyz="-0.108679 -0.039421 -0.041"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_3_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -385,7 +385,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.158679 -0.078921 -0.1145"/>
+    <origin rpy="0 0 0" xyz="-0.108679 -0.039421 -0.041"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_3_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -393,12 +393,12 @@
 </link>
 <link name="leg_2_coxa_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.033498 -0.005907 -0.020500000000000004"/>
+    <origin rpy="0 0 0" xyz="0.033498 -0.0059070000000000025 -0.0205"/>
     <mass value="0.073783"/>
-    <inertia ixx="3e-05" ixy="1e-06" ixz="0.001373" iyy="3.5e-05" iyz="-0.001373" izz="3.5e-05"/>
+    <inertia ixx="3e-05" ixy="1e-06" ixz="0.000284" iyy="3.5e-05" iyz="-0.000284" izz="3.5e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.158679 -7.9e-05 -0.1145"/>
+    <origin rpy="0 0 0" xyz="-0.108679 0.039421 -0.041"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_2_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -407,7 +407,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.158679 -7.9e-05 -0.1145"/>
+    <origin rpy="0 0 0" xyz="-0.108679 0.039421 -0.041"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_2_coxa_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -417,10 +417,10 @@
   <inertial>
     <origin rpy="0 0 0" xyz="-0.023161 0.006152999999999992 0.0"/>
     <mass value="0.315076"/>
-    <inertia ixx="6e-05" ixy="-9e-06" ixz="0.001624" iyy="6e-05" iyz="-0.001624" izz="8.8e-05"/>
+    <inertia ixx="6e-05" ixy="-9e-06" ixz="0.000286" iyy="6e-05" iyz="-0.000286" izz="8.8e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.051928 0.136066 -0.094"/>
+    <origin rpy="0 0 0" xyz="0.101928 0.175566 -0.0205"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_8_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -429,7 +429,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.051928 0.136066 -0.094"/>
+    <origin rpy="0 0 0" xyz="0.101928 0.175566 -0.0205"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_8_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -437,12 +437,12 @@
 </link>
 <link name="leg_7_motor__1__1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.015442999999999985 0.018324 0.0"/>
+    <origin rpy="0 0 0" xyz="-0.015443000000000012 0.018324 0.0"/>
     <mass value="0.315076"/>
-    <inertia ixx="5.2e-05" ixy="-3e-06" ixz="-0.003671" iyy="6.9e-05" iyz="0.003671" izz="8.8e-05"/>
+    <inertia ixx="5.2e-05" ixy="-3e-06" ixz="-0.000868" iyy="6.9e-05" iyz="0.000868" izz="8.8e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.122116 0.031923 -0.094"/>
+    <origin rpy="0 0 0" xyz="0.172116 0.071423 -0.0205"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_7_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -451,7 +451,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.122116 0.031923 -0.094"/>
+    <origin rpy="0 0 0" xyz="0.172116 0.071423 -0.0205"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_7_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -459,12 +459,12 @@
 </link>
 <link name="leg_6_motor__1__1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.008244000000000001 0.022501000000000007 0.0"/>
+    <origin rpy="0 0 0" xyz="-0.008244000000000001 0.022500999999999997 0.0"/>
     <mass value="0.315076"/>
-    <inertia ixx="5.2e-05" ixy="3e-06" ixz="-0.006828" iyy="6.8e-05" iyz="0.006828" izz="8.8e-05"/>
+    <inertia ixx="5.2e-05" ixy="3e-06" ixz="-0.001557" iyy="6.8e-05" iyz="0.001557" izz="8.8e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.129236 -0.070546 -0.094"/>
+    <origin rpy="0 0 0" xyz="0.179236 -0.031046 -0.0205"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_6_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -473,7 +473,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.129236 -0.070546 -0.094"/>
+    <origin rpy="0 0 0" xyz="0.179236 -0.031046 -0.0205"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_6_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -481,12 +481,12 @@
 </link>
 <link name="leg_5_motor__1__1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.006153000000000006 0.023160000000000014 0.0"/>
+    <origin rpy="0 0 0" xyz="0.0061530000000000196 0.023159999999999986 0.0"/>
     <mass value="0.315076"/>
-    <inertia ixx="6e-05" ixy="9e-06" ixz="-0.008579" iyy="6e-05" iyz="0.008579" izz="8.9e-05"/>
+    <inertia ixx="6e-05" ixy="9e-06" ixz="-0.001939" iyy="6e-05" iyz="0.001939" izz="8.9e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.083748 -0.188903 -0.094"/>
+    <origin rpy="0 0 0" xyz="0.133748 -0.149403 -0.0205"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_5_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -495,7 +495,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.083748 -0.188903 -0.094"/>
+    <origin rpy="0 0 0" xyz="0.133748 -0.149403 -0.0205"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_5_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -503,12 +503,12 @@
 </link>
 <link name="leg_1_motor__1__1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.022837999999999997 0.005831000000000003 0.0"/>
+    <origin rpy="0 0 0" xyz="0.022837999999999983 0.005831000000000003 0.0"/>
     <mass value="0.315076"/>
-    <inertia ixx="6e-05" ixy="9e-06" ixz="0.009201" iyy="6e-05" iyz="-0.009201" izz="8.9e-05"/>
+    <inertia ixx="6e-05" ixy="9e-06" ixz="0.001939" iyy="6e-05" iyz="-0.001939" izz="8.9e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.154757 0.138894 -0.094"/>
+    <origin rpy="0 0 0" xyz="-0.104757 0.178394 -0.0205"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_1_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -517,7 +517,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.154757 0.138894 -0.094"/>
+    <origin rpy="0 0 0" xyz="-0.104757 0.178394 -0.0205"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_1_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -525,12 +525,12 @@
 </link>
 <link name="leg_2_motor__1__1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.015363999999999989 0.017876 0.0"/>
+    <origin rpy="0 0 0" xyz="0.015364000000000017 0.017876000000000003 0.0"/>
     <mass value="0.315076"/>
-    <inertia ixx="5.2e-05" ixy="3e-06" ixz="0.00745" iyy="6.8e-05" iyz="-0.007449" izz="8.8e-05"/>
+    <inertia ixx="5.2e-05" ixy="3e-06" ixz="0.001557" iyy="6.8e-05" iyz="-0.001557" izz="8.8e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.222116 0.031923 -0.094"/>
+    <origin rpy="0 0 0" xyz="-0.172116 0.071423 -0.0205"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_2_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -539,7 +539,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.222116 0.031923 -0.094"/>
+    <origin rpy="0 0 0" xyz="-0.172116 0.071423 -0.0205"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_2_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -547,12 +547,12 @@
 </link>
 <link name="leg_3_motor__1__1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.008322999999999997 0.022053000000000003 0.0"/>
+    <origin rpy="0 0 0" xyz="0.008322999999999997 0.022053 0.0"/>
     <mass value="0.315076"/>
-    <inertia ixx="5.2e-05" ixy="-3e-06" ixz="0.004293" iyy="6.9e-05" iyz="-0.004293" izz="8.8e-05"/>
+    <inertia ixx="5.2e-05" ixy="-3e-06" ixz="0.000868" iyy="6.9e-05" iyz="-0.000868" izz="8.8e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.229236 -0.070546 -0.094"/>
+    <origin rpy="0 0 0" xyz="-0.179236 -0.031046 -0.0205"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_3_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -561,7 +561,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.229236 -0.070546 -0.094"/>
+    <origin rpy="0 0 0" xyz="-0.179236 -0.031046 -0.0205"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_3_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -569,12 +569,12 @@
 </link>
 <link name="leg_4_motor__1__1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.005831000000000003 0.022839000000000026 0.0"/>
+    <origin rpy="0 0 0" xyz="-0.005831000000000003 0.022838999999999998 0.0"/>
     <mass value="0.315076"/>
-    <inertia ixx="6e-05" ixy="-9e-06" ixz="-0.001002" iyy="6e-05" iyz="0.001002" izz="8.8e-05"/>
+    <inertia ixx="6e-05" ixy="-9e-06" ixz="-0.000286" iyy="6e-05" iyz="0.000286" izz="8.8e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.183748 -0.188903 -0.094"/>
+    <origin rpy="0 0 0" xyz="-0.133748 -0.149403 -0.0205"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_4_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -583,7 +583,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.183748 -0.188903 -0.094"/>
+    <origin rpy="0 0 0" xyz="-0.133748 -0.149403 -0.0205"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_4_motor__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -591,12 +591,12 @@
 </link>
 <link name="leg_1_femur_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.017867999999999995 -0.04230299999999998 -0.01063299999999999"/>
+    <origin rpy="0 0 0" xyz="0.017868000000000023 -0.04230300000000001 -0.010633"/>
     <mass value="0.077868"/>
-    <inertia ixx="4.3e-05" ixy="2.4e-05" ixz="0.002927" iyy="4.5e-05" iyz="-0.002927" izz="8.3e-05"/>
+    <inertia ixx="4.3e-05" ixy="2.4e-05" ixz="0.000618" iyy="4.5e-05" iyz="-0.000618" izz="8.3e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.204961 0.135359 -0.1045"/>
+    <origin rpy="0 0 0" xyz="-0.154961 0.174859 -0.031"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_1_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -605,7 +605,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.204961 0.135359 -0.1045"/>
+    <origin rpy="0 0 0" xyz="-0.154961 0.174859 -0.031"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_1_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -613,12 +613,12 @@
 </link>
 <link name="leg_2_femur_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.03889999999999999 -0.024404000000000002 -0.01063299999999999"/>
+    <origin rpy="0 0 0" xyz="0.03889999999999999 -0.024403999999999995 -0.010633"/>
     <mass value="0.077868"/>
-    <inertia ixx="2.1e-05" ixy="7e-06" ixz="0.002374" iyy="6.7e-05" iyz="-0.002374" izz="8.3e-05"/>
+    <inertia ixx="2.1e-05" ixy="7e-06" ixz="0.000498" iyy="6.7e-05" iyz="-0.000498" izz="8.3e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.261214 0.000231 -0.1045"/>
+    <origin rpy="0 0 0" xyz="-0.211214 0.039731 -0.031"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_2_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -627,7 +627,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.261214 0.000231 -0.1045"/>
+    <origin rpy="0 0 0" xyz="-0.211214 0.039731 -0.031"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_2_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -635,12 +635,12 @@
 </link>
 <link name="leg_3_femur_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.04490200000000005 -0.009626999999999997 -0.01063299999999999"/>
+    <origin rpy="0 0 0" xyz="0.04490199999999997 -0.009626999999999997 -0.010633"/>
     <mass value="0.077868"/>
-    <inertia ixx="2.2e-05" ixy="-9e-06" ixz="0.001432" iyy="6.7e-05" iyz="-0.001432" izz="8.3e-05"/>
+    <inertia ixx="2.2e-05" ixy="-9e-06" ixz="0.000294" iyy="6.7e-05" iyz="-0.000294" izz="8.3e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.255136 -0.113699 -0.1045"/>
+    <origin rpy="0 0 0" xyz="-0.205136 -0.074199 -0.031"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_3_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -649,7 +649,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.255136 -0.113699 -0.1045"/>
+    <origin rpy="0 0 0" xyz="-0.205136 -0.074199 -0.031"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_3_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -657,12 +657,12 @@
 </link>
 <link name="leg_4_femur_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.04230299999999998 0.017867999999999995 -0.01063299999999999"/>
+    <origin rpy="0 0 0" xyz="0.04230300000000001 0.017867999999999995 -0.010633"/>
     <mass value="0.077868"/>
-    <inertia ixx="4.5e-05" ixy="-2.4e-05" ixz="-0.000252" iyy="4.3e-05" iyz="0.000252" izz="8.3e-05"/>
+    <inertia ixx="4.5e-05" ixy="-2.4e-05" ixz="-7.1e-05" iyy="4.3e-05" iyz="7.1e-05" izz="8.3e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.180213 -0.239108 -0.1045"/>
+    <origin rpy="0 0 0" xyz="-0.130213 -0.199608 -0.031"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_4_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -671,7 +671,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.180213 -0.239108 -0.1045"/>
+    <origin rpy="0 0 0" xyz="-0.130213 -0.199608 -0.031"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_4_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -679,12 +679,12 @@
 </link>
 <link name="leg_8_femur_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.04230400000000001 -0.017867999999999995 -0.01063299999999999"/>
+    <origin rpy="0 0 0" xyz="-0.04230400000000001 -0.017867999999999995 -0.010633"/>
     <mass value="0.077868"/>
-    <inertia ixx="4.5e-05" ixy="-2.4e-05" ixz="0.000405" iyy="4.3e-05" iyz="-0.000405" izz="8.3e-05"/>
+    <inertia ixx="4.5e-05" ixy="-2.4e-05" ixz="7.1e-05" iyy="4.3e-05" iyz="-7.1e-05" izz="8.3e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.077384 0.157279 -0.1045"/>
+    <origin rpy="0 0 0" xyz="0.127384 0.196779 -0.031"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_8_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -693,7 +693,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.077384 0.157279 -0.1045"/>
+    <origin rpy="0 0 0" xyz="0.127384 0.196779 -0.031"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_8_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -701,12 +701,12 @@
 </link>
 <link name="leg_6_femur_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.03889999999999999 0.02440400000000001 -0.01063299999999999"/>
+    <origin rpy="0 0 0" xyz="-0.03889999999999999 0.024403999999999995 -0.010633"/>
     <mass value="0.077868"/>
-    <inertia ixx="2.1e-05" ixy="7e-06" ixz="-0.00222" iyy="6.7e-05" iyz="0.00222" izz="8.3e-05"/>
+    <inertia ixx="2.1e-05" ixy="7e-06" ixz="-0.000498" iyy="6.7e-05" iyz="0.000498" izz="8.3e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.161214 -0.079231 -0.1045"/>
+    <origin rpy="0 0 0" xyz="0.211214 -0.039731 -0.031"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_6_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -715,7 +715,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.161214 -0.079231 -0.1045"/>
+    <origin rpy="0 0 0" xyz="0.211214 -0.039731 -0.031"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_6_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -723,12 +723,12 @@
 </link>
 <link name="leg_5_femur_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.017867999999999995 0.04230300000000001 -0.01063299999999999"/>
+    <origin rpy="0 0 0" xyz="-0.017868000000000023 0.04230300000000001 -0.010633"/>
     <mass value="0.077868"/>
-    <inertia ixx="4.3e-05" ixy="2.4e-05" ixz="-0.002774" iyy="4.5e-05" iyz="0.002774" izz="8.3e-05"/>
+    <inertia ixx="4.3e-05" ixy="2.4e-05" ixz="-0.000618" iyy="4.5e-05" iyz="0.000618" izz="8.3e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.104961 -0.214359 -0.1045"/>
+    <origin rpy="0 0 0" xyz="0.154961 -0.174859 -0.031"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_5_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -737,7 +737,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.104961 -0.214359 -0.1045"/>
+    <origin rpy="0 0 0" xyz="0.154961 -0.174859 -0.031"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_5_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -745,12 +745,12 @@
 </link>
 <link name="leg_1_motor__2__1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.022838999999999998 0.005831000000000003 0.0"/>
+    <origin rpy="0 0 0" xyz="0.022838999999999998 0.005830999999999975 0.0"/>
     <mass value="0.315076"/>
-    <inertia ixx="6e-05" ixy="9e-06" ixz="0.014363" iyy="6e-05" iyz="-0.014363" izz="8.8e-05"/>
+    <inertia ixx="6e-05" ixy="9e-06" ixz="0.003044" iyy="6e-05" iyz="-0.003044" izz="8.8e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.242724 0.226155 -0.093821"/>
+    <origin rpy="0 0 0" xyz="-0.192724 0.265655 -0.020321"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_1_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -759,7 +759,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.242724 0.226155 -0.093821"/>
+    <origin rpy="0 0 0" xyz="-0.192724 0.265655 -0.020321"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_1_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -769,10 +769,10 @@
   <inertial>
     <origin rpy="0 0 0" xyz="0.015363000000000016 0.017876000000000003 0.0"/>
     <mass value="0.315076"/>
-    <inertia ixx="5.2e-05" ixy="3e-06" ixz="0.011666" iyy="6.8e-05" iyz="-0.011666" izz="8.8e-05"/>
+    <inertia ixx="5.2e-05" ixy="3e-06" ixz="0.00246" iyy="6.8e-05" iyz="-0.00246" izz="8.8e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.344226 0.052947 -0.093821"/>
+    <origin rpy="0 0 0" xyz="-0.294226 0.092447 -0.020321"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_2_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -781,7 +781,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.344226 0.052947 -0.093821"/>
+    <origin rpy="0 0 0" xyz="-0.294226 0.092447 -0.020321"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_2_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -789,12 +789,12 @@
 </link>
 <link name="leg_3_motor__2__1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.008323999999999998 0.022053000000000003 0.0"/>
+    <origin rpy="0 0 0" xyz="0.008323999999999998 0.022052999999999996 0.0"/>
     <mass value="0.315076"/>
-    <inertia ixx="5.2e-05" ixy="-3e-06" ixz="0.007239" iyy="6.8e-05" iyz="-0.007239" izz="8.8e-05"/>
+    <inertia ixx="5.2e-05" ixy="-3e-06" ixz="0.001501" iyy="6.8e-05" iyz="-0.001501" izz="8.8e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.351171 -0.092554 -0.093821"/>
+    <origin rpy="0 0 0" xyz="-0.301171 -0.053054 -0.020321"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_3_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -803,7 +803,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.351171 -0.092554 -0.093821"/>
+    <origin rpy="0 0 0" xyz="-0.301171 -0.053054 -0.020321"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_3_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -811,12 +811,12 @@
 </link>
 <link name="leg_4_motor__2__1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.005831000000000031 0.022838000000000025 0.0"/>
+    <origin rpy="0 0 0" xyz="-0.005831000000000003 0.022838000000000025 0.0"/>
     <mass value="0.315076"/>
-    <inertia ixx="6e-05" ixy="-9e-06" ixz="-0.001021" iyy="6e-05" iyz="0.001021" izz="8.9e-05"/>
+    <inertia ixx="6e-05" ixy="-9e-06" ixz="-0.000288" iyy="6e-05" iyz="0.000288" izz="8.9e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.271008 -0.276871 -0.093821"/>
+    <origin rpy="0 0 0" xyz="-0.221008 -0.237371 -0.020321"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_4_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -825,7 +825,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.271008 -0.276871 -0.093821"/>
+    <origin rpy="0 0 0" xyz="-0.221008 -0.237371 -0.020321"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_4_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -833,12 +833,12 @@
 </link>
 <link name="leg_5_motor__2__1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.0061530000000000196 0.02315999999999996 0.0"/>
+    <origin rpy="0 0 0" xyz="0.006152999999999992 0.023159999999999986 0.0"/>
     <mass value="0.315076"/>
-    <inertia ixx="6e-05" ixy="9e-06" ixz="-0.013742" iyy="6e-05" iyz="0.013742" izz="8.8e-05"/>
+    <inertia ixx="6e-05" ixy="9e-06" ixz="-0.003044" iyy="6e-05" iyz="0.003044" izz="8.8e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.171716 -0.276164 -0.093821"/>
+    <origin rpy="0 0 0" xyz="0.221716 -0.236664 -0.020321"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_5_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -847,7 +847,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.171716 -0.276164 -0.093821"/>
+    <origin rpy="0 0 0" xyz="0.221716 -0.236664 -0.020321"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_5_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -855,12 +855,12 @@
 </link>
 <link name="leg_6_motor__2__1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.008244000000000029 0.022501000000000007 0.0"/>
+    <origin rpy="0 0 0" xyz="-0.008244000000000029 0.022501 0.0"/>
     <mass value="0.315076"/>
-    <inertia ixx="5.2e-05" ixy="3e-06" ixz="-0.011046" iyy="6.8e-05" iyz="0.011046" izz="8.8e-05"/>
+    <inertia ixx="5.2e-05" ixy="3e-06" ixz="-0.00246" iyy="6.8e-05" iyz="0.00246" izz="8.8e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.251345 -0.09157 -0.093821"/>
+    <origin rpy="0 0 0" xyz="0.301345 -0.05207 -0.020321"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_6_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -869,7 +869,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.251345 -0.09157 -0.093821"/>
+    <origin rpy="0 0 0" xyz="0.301345 -0.05207 -0.020321"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_6_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -877,12 +877,12 @@
 </link>
 <link name="leg_7_motor__2__1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.015442999999999985 0.018325 0.0"/>
+    <origin rpy="0 0 0" xyz="-0.01544300000000004 0.018325000000000008 0.0"/>
     <mass value="0.315076"/>
-    <inertia ixx="5.2e-05" ixy="-3e-06" ixz="-0.006618" iyy="6.9e-05" iyz="0.006618" izz="8.8e-05"/>
+    <inertia ixx="5.2e-05" ixy="-3e-06" ixz="-0.001501" iyy="6.8e-05" iyz="0.001501" izz="8.8e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.244052 0.053932 -0.093821"/>
+    <origin rpy="0 0 0" xyz="0.294052 0.093432 -0.020321"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_7_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -891,7 +891,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.244052 0.053932 -0.093821"/>
+    <origin rpy="0 0 0" xyz="0.294052 0.093432 -0.020321"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_7_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -899,12 +899,12 @@
 </link>
 <link name="leg_8_motor__2__1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.023159999999999986 0.0061530000000000196 0.0"/>
+    <origin rpy="0 0 0" xyz="-0.023160000000000014 0.006152999999999964 0.0"/>
     <mass value="0.315076"/>
-    <inertia ixx="6e-05" ixy="-9e-06" ixz="0.001642" iyy="6e-05" iyz="-0.001642" izz="8.8e-05"/>
+    <inertia ixx="6e-05" ixy="-9e-06" ixz="0.000288" iyy="6e-05" iyz="-0.000288" izz="8.8e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.139189 0.224034 -0.093821"/>
+    <origin rpy="0 0 0" xyz="0.189189 0.263534 -0.020321"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_8_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -913,7 +913,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.139189 0.224034 -0.093821"/>
+    <origin rpy="0 0 0" xyz="0.189189 0.263534 -0.020321"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_8_motor__2__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -921,12 +921,12 @@
 </link>
 <link name="leg_8_tibia_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.06303599999999998 -0.03870699999999999 -0.010863999999999999"/>
+    <origin rpy="0 0 0" xyz="-0.06303600000000001 -0.03870700000000005 -0.010864000000000002"/>
     <mass value="0.106884"/>
-    <inertia ixx="0.000121" ixy="-0.000111" ixz="0.000562" iyy="0.000118" iyz="-0.000563" izz="0.000233"/>
+    <inertia ixx="0.000121" ixy="-0.000111" ixz="9.7e-05" iyy="0.000118" iyz="-9.8e-05" izz="0.000233"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.164645 0.245247 -0.104321"/>
+    <origin rpy="0 0 0" xyz="0.214645 0.284747 -0.030821"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_8_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -935,7 +935,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.164645 0.245247 -0.104321"/>
+    <origin rpy="0 0 0" xyz="0.214645 0.284747 -0.030821"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_8_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -943,12 +943,12 @@
 </link>
 <link name="leg_6_tibia_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.067863 0.029435000000000003 -0.010863999999999999"/>
+    <origin rpy="0 0 0" xyz="-0.067863 0.029435000000000003 -0.010864000000000002"/>
     <mass value="0.106884"/>
-    <inertia ixx="1.5e-05" ixy="3.6e-05" ixz="-0.004803" iyy="0.000224" iyz="0.004803" izz="0.000233"/>
+    <inertia ixx="1.5e-05" ixy="3.6e-05" ixz="-0.001048" iyy="0.000224" iyz="0.001048" izz="0.000233"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.283323 -0.100254 -0.104321"/>
+    <origin rpy="0 0 0" xyz="0.333323 -0.060754 -0.030821"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_6_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -957,7 +957,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.283323 -0.100254 -0.104321"/>
+    <origin rpy="0 0 0" xyz="0.333323 -0.060754 -0.030821"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_6_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -965,12 +965,12 @@
 </link>
 <link name="leg_5_tibia_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.03870700000000002 0.06303699999999995 -0.010863999999999999"/>
+    <origin rpy="0 0 0" xyz="-0.03870699999999999 0.06303700000000001 -0.010864000000000002"/>
     <mass value="0.106884"/>
-    <inertia ixx="0.000118" ixy="0.000111" ixz="-0.005956" iyy="0.000121" iyz="0.005956" izz="0.000233"/>
+    <inertia ixx="0.000118" ixy="0.000111" ixz="-0.001294" iyy="0.000121" iyz="0.001294" izz="0.000233"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.192929 -0.301619 -0.104321"/>
+    <origin rpy="0 0 0" xyz="0.242929 -0.262119 -0.030821"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_5_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -979,7 +979,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.192929 -0.301619 -0.104321"/>
+    <origin rpy="0 0 0" xyz="0.242929 -0.262119 -0.030821"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_5_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -987,12 +987,12 @@
 </link>
 <link name="leg_4_tibia_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.06303599999999998 0.03870800000000002 -0.010863999999999999"/>
+    <origin rpy="0 0 0" xyz="0.06303600000000001 0.038707999999999965 -0.010864000000000002"/>
     <mass value="0.106884"/>
-    <inertia ixx="0.000121" ixy="-0.000111" ixz="-0.000352" iyy="0.000118" iyz="0.000353" izz="0.000233"/>
+    <inertia ixx="0.000121" ixy="-0.000111" ixz="-9.7e-05" iyy="0.000118" iyz="9.8e-05" izz="0.000233"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.267473 -0.327075 -0.104321"/>
+    <origin rpy="0 0 0" xyz="-0.217473 -0.287575 -0.030821"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_4_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -1001,7 +1001,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.267473 -0.327075 -0.104321"/>
+    <origin rpy="0 0 0" xyz="-0.217473 -0.287575 -0.030821"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_4_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -1009,12 +1009,12 @@
 </link>
 <link name="leg_3_tibia_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.07383799999999996 -0.0044490000000000085 -0.010863999999999999"/>
+    <origin rpy="0 0 0" xyz="0.07383800000000001 -0.0044490000000000085 -0.010864000000000002"/>
     <mass value="0.106884"/>
-    <inertia ixx="1.6e-05" ixy="-3.9e-05" ixz="0.003193" iyy="0.000223" iyz="-0.003192" izz="0.000233"/>
+    <inertia ixx="1.6e-05" ixy="-3.9e-05" ixz="0.00066" iyy="0.000223" iyz="-0.000659" izz="0.000233"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.377072 -0.135708 -0.104321"/>
+    <origin rpy="0 0 0" xyz="-0.327072 -0.096208 -0.030821"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_3_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -1023,7 +1023,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.377072 -0.135708 -0.104321"/>
+    <origin rpy="0 0 0" xyz="-0.327072 -0.096208 -0.030821"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_3_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -1031,12 +1031,12 @@
 </link>
 <link name="leg_2_tibia_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.06786299999999995 -0.029435 -0.010863999999999999"/>
+    <origin rpy="0 0 0" xyz="0.067863 -0.029435000000000003 -0.010864000000000002"/>
     <mass value="0.106884"/>
-    <inertia ixx="1.5e-05" ixy="3.6e-05" ixz="0.005013" iyy="0.000224" iyz="-0.005013" izz="0.000233"/>
+    <inertia ixx="1.5e-05" ixy="3.6e-05" ixz="0.001048" iyy="0.000224" iyz="-0.001048" izz="0.000233"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.383323 0.021254 -0.104321"/>
+    <origin rpy="0 0 0" xyz="-0.333323 0.060754 -0.030821"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_2_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -1045,7 +1045,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.383323 0.021254 -0.104321"/>
+    <origin rpy="0 0 0" xyz="-0.333323 0.060754 -0.030821"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_2_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -1053,12 +1053,12 @@
 </link>
 <link name="leg_1_tibia_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.03870699999999999 -0.06303700000000001 -0.010863999999999999"/>
+    <origin rpy="0 0 0" xyz="0.03870699999999999 -0.06303700000000001 -0.010864000000000002"/>
     <mass value="0.106884"/>
-    <inertia ixx="0.000118" ixy="0.000111" ixz="0.006166" iyy="0.000121" iyz="-0.006166" izz="0.000233"/>
+    <inertia ixx="0.000118" ixy="0.000111" ixz="0.001294" iyy="0.000121" iyz="-0.001294" izz="0.000233"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.292929 0.222619 -0.104321"/>
+    <origin rpy="0 0 0" xyz="-0.242929 0.262119 -0.030821"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_1_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -1067,7 +1067,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.292929 0.222619 -0.104321"/>
+    <origin rpy="0 0 0" xyz="-0.242929 0.262119 -0.030821"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_1_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -1075,12 +1075,12 @@
 </link>
 <link name="Component62_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="6.399999999999462e-05 -0.08348199999999999 -0.02024200000000001"/>
+    <origin rpy="0 0 0" xyz="6.400000000000001e-05 -0.083482 -0.020242000000000003"/>
     <mass value="0.502392"/>
-    <inertia ixx="0.001514" ixy="0.0" ixz="0.011489" iyy="0.000379" iyz="-0.011497" izz="0.001285"/>
+    <inertia ixx="0.001514" ixy="0.0" ixz="0.002414" iyy="0.000379" iyz="-0.002422" izz="0.001285"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.04975 0.1095 -0.1145"/>
+    <origin rpy="0 0 0" xyz="0.00025 0.149 -0.041"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/Component62_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -1089,7 +1089,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.04975 0.1095 -0.1145"/>
+    <origin rpy="0 0 0" xyz="0.00025 0.149 -0.041"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/Component62_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -1097,12 +1097,12 @@
 </link>
 <link name="head_neck_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.0017829999999999999 0.03881100000000001 -0.019412"/>
+    <origin rpy="0 0 0" xyz="0.001783 0.03881100000000001 -0.019412000000000002"/>
     <mass value="0.21541"/>
-    <inertia ixx="6.1e-05" ixy="-1e-06" ixz="-0.003591" iyy="6e-05" iyz="0.00359" izz="4.1e-05"/>
+    <inertia ixx="6.1e-05" ixy="-1e-06" ixz="-0.000865" iyy="6e-05" iyz="0.000864" izz="4.1e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.05025 -0.1885 -0.1145"/>
+    <origin rpy="0 0 0" xyz="-0.00025 -0.149 -0.041"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/head_neck_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -1111,7 +1111,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.05025 -0.1885 -0.1145"/>
+    <origin rpy="0 0 0" xyz="-0.00025 -0.149 -0.041"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/head_neck_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -1119,12 +1119,12 @@
 </link>
 <link name="leg_7_femur_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.044902 0.009627 -0.01063299999999999"/>
+    <origin rpy="0 0 0" xyz="-0.04490199999999997 0.009626999999999997 -0.010633"/>
     <mass value="0.077868"/>
-    <inertia ixx="2.2e-05" ixy="-9e-06" ixz="-0.001279" iyy="6.7e-05" iyz="0.001279" izz="8.3e-05"/>
+    <inertia ixx="2.2e-05" ixy="-9e-06" ixz="-0.000294" iyy="6.7e-05" iyz="0.000294" izz="8.3e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.155136 0.034699 -0.1045"/>
+    <origin rpy="0 0 0" xyz="0.205136 0.074199 -0.031"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_7_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -1133,7 +1133,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.155136 0.034699 -0.1045"/>
+    <origin rpy="0 0 0" xyz="0.205136 0.074199 -0.031"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_7_femur_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -1141,12 +1141,12 @@
 </link>
 <link name="leg_7_tibia_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.07383899999999999 0.0044490000000000016 -0.010863999999999999"/>
+    <origin rpy="0 0 0" xyz="-0.07383899999999999 0.0044490000000000085 -0.010864000000000002"/>
     <mass value="0.106884"/>
-    <inertia ixx="1.6e-05" ixy="-3.9e-05" ixz="-0.002983" iyy="0.000223" iyz="0.002983" izz="0.000233"/>
+    <inertia ixx="1.6e-05" ixy="-3.9e-05" ixz="-0.00066" iyy="0.000223" iyz="0.000659" izz="0.000233"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.277071 0.056708 -0.104321"/>
+    <origin rpy="0 0 0" xyz="0.327071 0.096208 -0.030821"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_7_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -1155,7 +1155,7 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.277071 0.056708 -0.104321"/>
+    <origin rpy="0 0 0" xyz="0.327071 0.096208 -0.030821"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/leg_7_tibia_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -1163,12 +1163,12 @@
 </link>
 <link name="head_link_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.025273999999999998 0.03397799999999998 0.0013080000000000036"/>
+    <origin rpy="0 0 0" xyz="0.025274 0.03397799999999998 0.0013080000000000001"/>
     <mass value="0.386958"/>
-    <inertia ixx="5.3e-05" ixy="-1e-06" ixz="-0.008832" iyy="0.000245" iyz="0.008831" izz="0.000265"/>
+    <inertia ixx="5.3e-05" ixy="-1e-06" ixz="-0.00279" iyy="0.000245" iyz="0.002789" izz="0.000265"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.02525 -0.2335 -0.103878"/>
+    <origin rpy="0 0 0" xyz="0.02475 -0.194 -0.030378"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/head_link_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -1177,14 +1177,14 @@
     </material>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.02525 -0.2335 -0.103878"/>
+    <origin rpy="0 0 0" xyz="0.02475 -0.194 -0.030378"/>
     <geometry>
       <mesh filename="package://nightmare_description/meshes/head_link_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 <joint name="Rigid14" type="fixed">
-  <origin rpy="0 0 0" xyz="0.010319 -0.059677 0.1115"/>
+  <origin rpy="0 0 0" xyz="-0.039681 -0.099177 0.038"/>
   <parent link="base_link"/>
   <child link="leg_8_motor_1"/>
 </joint>
@@ -1199,7 +1199,7 @@
   </actuator>
 </transmission>
 <joint name="Rigid15" type="fixed">
-  <origin rpy="0 0 0" xyz="0.09251 -0.062505 0.1115"/>
+  <origin rpy="0 0 0" xyz="0.04251 -0.102005 0.038"/>
   <parent link="base_link"/>
   <child link="leg_1_motor_1"/>
 </joint>
@@ -1214,7 +1214,7 @@
   </actuator>
 </transmission>
 <joint name="Rigid16" type="fixed">
-  <origin rpy="0 0 0" xyz="0.06025 -0.0795 0.1115"/>
+  <origin rpy="0 0 0" xyz="0.01025 -0.119 0.038"/>
   <parent link="base_link"/>
   <child link="tail_motor_1"/>
 </joint>
@@ -1229,7 +1229,7 @@
   </actuator>
 </transmission>
 <joint name="Rigid17" type="fixed">
-  <origin rpy="0 0 0" xyz="0.127311 -0.005052 0.1115"/>
+  <origin rpy="0 0 0" xyz="0.077311 -0.044552 0.038"/>
   <parent link="base_link"/>
   <child link="leg_2_motor_1"/>
 </joint>
@@ -1244,7 +1244,7 @@
   </actuator>
 </transmission>
 <joint name="Rigid18" type="fixed">
-  <origin rpy="0 0 0" xyz="0.127311 0.084052 0.1115"/>
+  <origin rpy="0 0 0" xyz="0.077311 0.044552 0.038"/>
   <parent link="base_link"/>
   <child link="leg_3_motor_1"/>
 </joint>
@@ -1259,7 +1259,7 @@
   </actuator>
 </transmission>
 <joint name="Rigid19" type="fixed">
-  <origin rpy="0 0 0" xyz="0.09251 0.141505 0.1115"/>
+  <origin rpy="0 0 0" xyz="0.04251 0.102005 0.038"/>
   <parent link="base_link"/>
   <child link="leg_4_motor_1"/>
 </joint>
@@ -1274,7 +1274,7 @@
   </actuator>
 </transmission>
 <joint name="Rigid20" type="fixed">
-  <origin rpy="0 0 0" xyz="0.03975 0.1585 0.1115"/>
+  <origin rpy="0 0 0" xyz="-0.01025 0.119 0.038"/>
   <parent link="base_link"/>
   <child link="head_motor_pan_1"/>
 </joint>
@@ -1289,7 +1289,7 @@
   </actuator>
 </transmission>
 <joint name="Rigid21" type="fixed">
-  <origin rpy="0 0 0" xyz="0.00749 0.141505 0.1115"/>
+  <origin rpy="0 0 0" xyz="-0.04251 0.102005 0.038"/>
   <parent link="base_link"/>
   <child link="leg_5_motor_1"/>
 </joint>
@@ -1304,7 +1304,7 @@
   </actuator>
 </transmission>
 <joint name="Rigid22" type="fixed">
-  <origin rpy="0 0 0" xyz="-0.027311 0.084052 0.1115"/>
+  <origin rpy="0 0 0" xyz="-0.077311 0.044552 0.038"/>
   <parent link="base_link"/>
   <child link="leg_6_motor_1"/>
 </joint>
@@ -1319,7 +1319,7 @@
   </actuator>
 </transmission>
 <joint name="Rigid23" type="fixed">
-  <origin rpy="0 0 0" xyz="-0.027311 -0.005052 0.1115"/>
+  <origin rpy="0 0 0" xyz="-0.077311 -0.044552 0.038"/>
   <parent link="base_link"/>
   <child link="leg_7_motor_1"/>
 </joint>
