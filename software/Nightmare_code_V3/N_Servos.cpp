@@ -23,7 +23,7 @@ void Task2code( void * parameter) {
       }
     }
     else{
-      delay(10);
+      vTaskDelay(pdMS_TO_TICKS(10));
     }
   }
 }
@@ -42,25 +42,25 @@ void servoInit(){
   xTaskCreatePinnedToCore(Task2code, "Task2", 10000, NULL, 1, &Task2, 1);
 }
 
-bool bodyToServos(float pos[][8]){
+void bodyToServos(float pos[][8]){
   float lol[24];
   struct Dleg * dlegs = Nightmare::dlegs;
   for(int i=0;i<4;i++){
      trigz(lol[3*i],lol[3*i+1],lol[3*i+2],-(pos[0][i]-LEG_START_OFFSET[i*2]),-(pos[1][i]-LEG_START_OFFSET[i*2+1]),pos[2][i],dlegs[i]);
-     dlegs[i].CX_ANGLE=lol[3*i];
-     dlegs[i].FM_ANGLE=lol[3*i+1];
-     dlegs[i].TB_ANGLE=lol[3*i+2];
+     dlegs[i].CX_ANGLE=lol[3*i]+SERVO_OFFSETS[3*i];
+     dlegs[i].FM_ANGLE=lol[3*i+1]+SERVO_OFFSETS[3*i+1];
+     dlegs[i].TB_ANGLE=lol[3*i+2]+SERVO_OFFSETS[3*i+2];
   }
   for(int i=4;i<8;i++){
      trigz(lol[3*i],lol[3*i+1],lol[3*i+2],-(pos[0][i]-LEG_START_OFFSET[i*2]),pos[1][i]-LEG_START_OFFSET[i*2+1],pos[2][i],dlegs[i]);
-     dlegs[i].CX_ANGLE=lol[3*i];
-     dlegs[i].FM_ANGLE=lol[3*i+1];
-     dlegs[i].TB_ANGLE=lol[3*i+2];
+     dlegs[i].CX_ANGLE=lol[3*i]+SERVO_OFFSETS[3*i];
+     dlegs[i].FM_ANGLE=lol[3*i+1]+SERVO_OFFSETS[3*i+1];
+     dlegs[i].TB_ANGLE=lol[3*i+2]+SERVO_OFFSETS[3*i+2];
   }
   servoWrite(lol);
 }
 
-bool servoWrite(float angles[]){
+void servoWrite(float angles[]){
   for (int i = 0; i < 24; i++) {
     written = true;
     variable_angles[i] = angles[i];

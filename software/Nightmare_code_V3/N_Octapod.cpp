@@ -33,10 +33,10 @@ void Nightmare::init() {
       LEG_DIMENSIONS[i * 3 + 2], 
       LEG_START_OFFSET[i * 2], 
       LEG_START_OFFSET[i * 2 + 1], 
-      LEG_SIDE[i],
       0,
       0,
-      0
+      0,
+      LEG_SIDE[i]
     };
   }
 
@@ -72,6 +72,23 @@ void Nightmare::standUp() {
     }
     bodyToServos(pos);
     delay(20);
+  }
+}
+
+void Nightmare::readBody() {
+  for(int i=0;i<8;i++){
+    int coxa_angle = servoReadPos(3*i+1);
+    int femur_angle = servoReadPos(3*i+2);
+    int tibia_angle = servoReadPos(3*i+3);
+    if(coxa_angle != 4000){
+      dlegs[i].CX_ANGLE = coxa_angle;
+    }
+    if(femur_angle != 4000){
+      dlegs[i].FM_ANGLE = femur_angle;
+    }
+    if(tibia_angle != 4000){
+      dlegs[i].TB_ANGLE = tibia_angle;
+    }
   }
 }
 
