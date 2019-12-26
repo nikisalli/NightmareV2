@@ -29,7 +29,7 @@ void Task4code(void * parameter) {
 
 void Task5code( void * parameter) {
     TickType_t xLastWakeTime;
-    const TickType_t xFrequency = pdMS_TO_TICKS(10);
+    const TickType_t xFrequency = pdMS_TO_TICKS(50);
     xLastWakeTime = xTaskGetTickCount();
     for (;;) {
         pandaWriteData();
@@ -38,8 +38,8 @@ void Task5code( void * parameter) {
 }
 
 void pandaPowerOn(){
-    xTaskCreatePinnedToCore(Task4code, "Task4", 10000, NULL, 1, &Task4, 0);                     // create task for powering up the lattepanda board
-    xTaskCreatePinnedToCore(Task5code, "Task5", 10000, NULL, 1, &Task4, 0);                     // create task for sending data to the ros node
+    xTaskCreatePinnedToCore(Task4code, "Task4", 10000, NULL, 1, &Task4, 1);                     // create task for powering up the lattepanda board
+    xTaskCreatePinnedToCore(Task5code, "Task5", 10000, NULL, 1, &Task5, 1);                     // create task for sending data to the ros node
 }
 
 bool pandaIsOnline(){
@@ -54,9 +54,9 @@ void pandaWriteData(){
     Serial.write((byte)(fmap(read_battery_voltage(),5.0,10.0,0,255)));                           //byte containing the voltage value
     Serial.write((byte)(fmap(read_battery_current(),0.0,15.0,0,255)));                           //byte containing the current value
     for(int i=0;i<8;i++){                                                                        //bytes containing the servos' raw angles
-        Serial.write((byte)(fmap(dlegs[i].CX_ANGLE,-120,120,0,255)));
-        Serial.write((byte)(fmap(dlegs[i].FM_ANGLE,-120,120,0,255)));
-        Serial.write((byte)(fmap(dlegs[i].TB_ANGLE,-120,120,0,255)));
+        Serial.write((byte)(fmap(dlegs[i].CX_ANGLE,-180,180,0,255)));
+        Serial.write((byte)(fmap(dlegs[i].FM_ANGLE,-180,180,0,255)));
+        Serial.write((byte)(fmap(dlegs[i].TB_ANGLE,-180,180,0,255)));
     }
     Serial.flush();
 }
