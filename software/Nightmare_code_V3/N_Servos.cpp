@@ -193,6 +193,7 @@ void servoDetach(byte id){
 }
 
 int servoReadPos(byte id){
+  writing = true;
   servo_tx_enb();
 
   servo_write(
@@ -225,5 +226,6 @@ int servoReadPos(byte id){
   if(checksum == checksum_){
     return fmap((low|(high<<8)),0,1000,-120,120);
   }
+  writing = false;
 }
 

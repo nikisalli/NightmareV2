@@ -62,7 +62,37 @@ void Nightmare::startPanda() {
 }
 
 void Nightmare::standUp() {
+  Nightmare::readBody();
   bodyAttach();
+
+  int l = millis() % 2;
+  for (int k = 0; k < 4; k++) {
+    int j = RANDOM_SEQ[l][k];
+    int q = RANDOM_SEQ[l][k + 4];
+    float p[3][4] = {
+        {STAND_POS[0][j], STAND_POS[0][j], pos[0][j], pos[0][j]},
+        {STAND_POS[1][j], STAND_POS[1][j], pos[1][j], pos[1][j]},
+        {START_Z, START_Z + 4, pos[2][j] + 4, pos[2][j]},
+    };
+    float t[3][4] = {
+        {STAND_POS[0][q], STAND_POS[0][q], pos[0][q], pos[0][q]},
+        {STAND_POS[1][q], STAND_POS[1][q], pos[1][q], pos[1][q]},
+        {START_Z, START_Z + 4, pos[2][q] + 4, pos[2][q]},
+    };
+    for (float i = 0; i <= 1; i += 0.01) {
+      Spline3D(p, i, pos[0][j], pos[1][j], pos[2][j]);
+      Spline3D(t, i, pos[0][q], pos[1][q], pos[2][q]);
+      bodyToServos(pos);
+      delay(3);
+    }
+    pos[0][j] = STAND_POS[0][j];
+    pos[1][j] = STAND_POS[1][j];
+    pos[2][j] = START_Z;
+    pos[0][q] = STAND_POS[0][q];
+    pos[1][q] = STAND_POS[1][q];
+    pos[2][q] = START_Z;
+  }
+
   delay(5);
   for (float j = 0; j < 1; j += 0.01) {
     for (int i = 0; i < 8; i++) {
@@ -80,6 +110,22 @@ void Nightmare::readBody() {
     int coxa_angle = servoReadPos(3*i+1);
     int femur_angle = servoReadPos(3*i+2);
     int tibia_angle = servoReadPos(3*i+3);
+    if(coxa_angle != 4000 && femur_angle != 4000 && tibia_angle != 4000){
+      if(i<4){
+        float temp[3];
+        ftrigz(temp[0], temp[1], temp[2], coxa_angle-SERVO_OFFSETS[3*i], femur_angle-SERVO_OFFSETS[3*i+1], tibia_angle-SERVO_OFFSETS[3*i+2], dlegs[i]);
+        pos[0][i] = temp[0]+LEG_START_OFFSET[i*2];
+        pos[1][i] = temp[1]+LEG_START_OFFSET[i*2+1];
+        pos[2][i] = temp[2];
+      }
+      else{
+        float temp[3];
+        ftrigz(temp[0], temp[1], temp[2], coxa_angle-SERVO_OFFSETS[3*i], femur_angle-SERVO_OFFSETS[3*i+1], tibia_angle-SERVO_OFFSETS[3*i+2], dlegs[i]);
+        pos[0][i] = temp[0]+LEG_START_OFFSET[i*2];
+        pos[1][i] = -(temp[1]+LEG_START_OFFSET[i*2+1]);
+        pos[2][i] = temp[2];
+      }
+    }
     if(coxa_angle != 4000){
       dlegs[i].CX_ANGLE = coxa_angle;
     }
@@ -90,6 +136,12 @@ void Nightmare::readBody() {
       dlegs[i].TB_ANGLE = tibia_angle;
     }
   }
+  bodyAttach();
+  delay(10);
+  bodyToServos(pos);
+  delay(1000);
+  bodyDetach();
+  delay(1000);
 }
 
 void Nightmare::sit() {
@@ -138,16 +190,6 @@ void Nightmare::stand() {
   } else {
     bodyToServos(pos);
   }
-}
-
-void Nightmare::force_stand() {
-  first_step = true;
-  for (int i = 0; i < 8; i++) {
-    pos[0][i] = STAND_POS[0][i];
-    pos[1][i] = STAND_POS[1][i];
-    pos[2][i] = STAND_POS[2][i];
-  }
-  bodyToServos(pos);
 }
 
 enum Gait {

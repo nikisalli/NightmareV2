@@ -14,7 +14,6 @@ extern struct Dleg dlegs[8];
 
 extern void init();
 extern void stand();
-extern void force_stand();
 extern void step(const int walk_pattern, const float height, const float time);
 extern void standUp();
 extern void move(float alpha, float beta, float gamma, float x_move, float y_move, float z_move);
