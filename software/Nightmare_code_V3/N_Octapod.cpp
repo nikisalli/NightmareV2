@@ -38,6 +38,7 @@ void Nightmare::init() {
       0,
       LEG_SIDE[i]
     };
+    bodyAttach(); //REMOVE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
   }
 
   pinMode(FAN1_PIN, OUTPUT);
@@ -65,7 +66,7 @@ void Nightmare::standUp() {
   Nightmare::readBody();
   bodyAttach();
 
-  int l = millis() % 2;
+  /*int l = millis() % 2;
   for (int k = 0; k < 4; k++) {
     int j = RANDOM_SEQ[l][k];
     int q = RANDOM_SEQ[l][k + 4];
@@ -91,7 +92,7 @@ void Nightmare::standUp() {
     pos[0][q] = STAND_POS[0][q];
     pos[1][q] = STAND_POS[1][q];
     pos[2][q] = START_Z;
-  }
+  }*/
 
   delay(5);
   for (float j = 0; j < 1; j += 0.01) {
@@ -110,7 +111,7 @@ void Nightmare::readBody() {
     int coxa_angle = servoReadPos(3*i+1);
     int femur_angle = servoReadPos(3*i+2);
     int tibia_angle = servoReadPos(3*i+3);
-    if(coxa_angle != 4000 && femur_angle != 4000 && tibia_angle != 4000){
+    /*if(coxa_angle != 4000 && femur_angle != 4000 && tibia_angle != 4000){
       if(i<4){
         float temp[3];
         ftrigz(temp[0], temp[1], temp[2], coxa_angle-SERVO_OFFSETS[3*i], femur_angle-SERVO_OFFSETS[3*i+1], tibia_angle-SERVO_OFFSETS[3*i+2], dlegs[i]);
@@ -120,12 +121,12 @@ void Nightmare::readBody() {
       }
       else{
         float temp[3];
-        ftrigz(temp[0], temp[1], temp[2], coxa_angle-SERVO_OFFSETS[3*i], femur_angle-SERVO_OFFSETS[3*i+1], tibia_angle-SERVO_OFFSETS[3*i+2], dlegs[i]);
+        ftrigz(temp[0], temp[1], temp[2], -(coxa_angle-SERVO_OFFSETS[3*i]), femur_angle-SERVO_OFFSETS[3*i+1], tibia_angle-SERVO_OFFSETS[3*i+2], dlegs[i]);
         pos[0][i] = temp[0]+LEG_START_OFFSET[i*2];
-        pos[1][i] = -(temp[1]+LEG_START_OFFSET[i*2+1]);
+        pos[1][i] = temp[1]+LEG_START_OFFSET[i*2+1];
         pos[2][i] = temp[2];
       }
-    }
+    }*/
     if(coxa_angle != 4000){
       dlegs[i].CX_ANGLE = coxa_angle;
     }
@@ -136,12 +137,7 @@ void Nightmare::readBody() {
       dlegs[i].TB_ANGLE = tibia_angle;
     }
   }
-  bodyAttach();
-  delay(10);
-  bodyToServos(pos);
-  delay(1000);
-  bodyDetach();
-  delay(1000);
+  //bodyToServos(pos);
 }
 
 void Nightmare::sit() {

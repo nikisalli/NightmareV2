@@ -28,7 +28,7 @@ void trigz(float &gama, float &alpha, float &beta, float x, float y, float z, st
 }
 
 //Forward kinematics
-void ftrigz(float &x, float &y, float &z, float alpha, float beta, float gama, struct Dleg dim){
+void ftrigz(float &x, float &y, float &z, float gama, float alpha, float beta, struct Dleg dim){
   if(dim.SIDE) { //LEFT
     float L2 = dim.CX_LENGHT + cos(toRad(alpha))*dim.FM_LENGHT + cos(toRad((beta)+alpha))*dim.TB_LENGHT;
     x = sin(toRad(-gama))*L2;

@@ -17,7 +17,7 @@ void Task2code( void * parameter) {
       if (!writing){
         for (int i = 0; i < 24; i++) {
           if (active_servo[i]){
-            servoMove((variable_angles[i]+SERVO_OFFSETS[i]),i+1);
+            //servoMove((variable_angles[i]+SERVO_OFFSETS[i]),i+1); REMOVE COMMENT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
           }
         }
       }
@@ -207,15 +207,8 @@ int servoReadPos(byte id){
   servo_rx_enb();
 
   unsigned long time = micros();
-  while(!Serial2.available()){
-    if((micros()-time)>3000){
-      return 4000;
-    }
-  }
-  byte tentatives = 0;
   while(Serial2.read() != 0x1C){
-    tentatives++;
-    if(tentatives>10){
+    if((micros()-time)>20000){
       return 4000;
     }
   }

@@ -19,6 +19,7 @@ void setup() {
 
 void loop() {
   Nightmare::readBody();
+  delay(50);
   /*if (hc12::active()) {
     if (!activated) {
       Nightmare::standUp();
