@@ -8,10 +8,13 @@
 
 using namespace Nightmare;
 
+TaskHandle_t Task6; // cambiare nome
+
 // private
-float pos[3][8] = {};
+float pos[3][8] = {}; // togliere e mettere in dlegs
 float bpos[3][2] = {};
 float pbpos[3][8] = {};
+float angold[24] = {}; // togliere e usare dlegs
 const int tarantula[8] = {4, 2, 7, 1, 3, 5, 0, 6};
 const int slow_gait[8] = {4, 2, 6, 0, 3, 5, 1, 7};
 unsigned long timing;
@@ -38,7 +41,6 @@ void Nightmare::init() {
       0,
       LEG_SIDE[i]
     };
-    bodyAttach(); //REMOVE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
   }
 
   pinMode(FAN1_PIN, OUTPUT);
@@ -107,37 +109,39 @@ void Nightmare::standUp() {
 }
 
 void Nightmare::readBody() {
+  pauseStream();
   for(int i=0;i<8;i++){
     int coxa_angle = servoReadPos(3*i+1);
     int femur_angle = servoReadPos(3*i+2);
     int tibia_angle = servoReadPos(3*i+3);
-    /*if(coxa_angle != 4000 && femur_angle != 4000 && tibia_angle != 4000){
-      if(i<4){
-        float temp[3];
-        ftrigz(temp[0], temp[1], temp[2], coxa_angle-SERVO_OFFSETS[3*i], femur_angle-SERVO_OFFSETS[3*i+1], tibia_angle-SERVO_OFFSETS[3*i+2], dlegs[i]);
-        pos[0][i] = temp[0]+LEG_START_OFFSET[i*2];
-        pos[1][i] = temp[1]+LEG_START_OFFSET[i*2+1];
-        pos[2][i] = temp[2];
-      }
-      else{
-        float temp[3];
-        ftrigz(temp[0], temp[1], temp[2], -(coxa_angle-SERVO_OFFSETS[3*i]), femur_angle-SERVO_OFFSETS[3*i+1], tibia_angle-SERVO_OFFSETS[3*i+2], dlegs[i]);
-        pos[0][i] = temp[0]+LEG_START_OFFSET[i*2];
-        pos[1][i] = temp[1]+LEG_START_OFFSET[i*2+1];
-        pos[2][i] = temp[2];
-      }
-    }*/
+
     if(coxa_angle != 4000){
-      dlegs[i].CX_ANGLE = coxa_angle;
+      angold[i*3] = coxa_angle;
     }
     if(femur_angle != 4000){
-      dlegs[i].FM_ANGLE = femur_angle;
+      angold[i*3+1] = femur_angle;
     }
     if(tibia_angle != 4000){
-      dlegs[i].TB_ANGLE = tibia_angle;
+      angold[i*3+2] = tibia_angle;
+    }
+
+    if(i<4){
+      float temp[3];
+      ftrigz(temp[0], temp[1], temp[2], angold[i*3]-SERVO_OFFSETS[i*3], angold[i*3+1]-SERVO_OFFSETS[i*3+1], angold[i*3+2]-SERVO_OFFSETS[i*3+2], dlegs[i]);
+      pos[0][i] = temp[0]+LEG_START_OFFSET[i*2];
+      pos[1][i] = temp[1]+LEG_START_OFFSET[i*2+1];
+      pos[2][i] = temp[2];
+    }
+    else{
+      float temp[3];
+      ftrigz(temp[0], temp[1], temp[2], -(angold[i*3]-SERVO_OFFSETS[i*3]), angold[i*3+1]-SERVO_OFFSETS[i*3+1], angold[i*3+2]-SERVO_OFFSETS[i*3+2], dlegs[i]);
+      pos[0][i] = temp[0]+LEG_START_OFFSET[i*2];
+      pos[1][i] = temp[1]+LEG_START_OFFSET[i*2+1];
+      pos[2][i] = temp[2];
     }
   }
-  //bodyToServos(pos);
+  resumeStream();
+  bodyToServos(pos);
 }
 
 void Nightmare::sit() {

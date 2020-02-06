@@ -18,9 +18,7 @@ void setup() {
 }
 
 void loop() {
-  Nightmare::readBody();
-  delay(50);
-  /*if (hc12::active()) {
+  if (hc12::active()) {
     if (!activated) {
       Nightmare::standUp();
       activated = true;
@@ -55,7 +53,7 @@ void loop() {
           delay(5);
         } break;
       case 2: {
-          int dir[4];
+          /*int dir[4];
 
           dir[0] = fmap(hc12.speed1_ * sin(toRad(hc12.angle1_)),-100,100,-500,500);
           dir[1] = fmap(hc12.speed1_ * cos(toRad(hc12.angle1_)),-100,100,-500,500);
@@ -63,7 +61,7 @@ void loop() {
           dir[3] = fmap(hc12.speed2_ * cos(toRad(hc12.angle2_)),-100,100,-500,500);
 
           Nightmare.moveleg(dir[0], dir[1], dir[2], dir[3]);
-          delay(10);
+          delay(10);*/
         } break;
     }
   }
@@ -73,8 +71,8 @@ void loop() {
       activated = false;
     }
     Nightmare::readBody();
-    delay(50);
-  }*/
+    delay(30);
+  }
 }
 
 void Task3code( void * parameter) {

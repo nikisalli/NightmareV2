@@ -13,5 +13,7 @@ void bodyToServos(float pos[][8]);
 void servoWrite(float angles[]);
 void bodyDetach();
 void bodyAttach();
+void pauseStream();
+void resumeStream();
 
 #endif

@@ -4,25 +4,25 @@
 #include "N_math.h"
 #include "N_structs.h"
 
-bool active_servo[26] = {};
-int variable_angles[26] = {};
-bool written = false;
-bool writing = false;
+bool active_servo[26] = {}; // spostare in dlegs
+int variable_angles[26] = {}; // spostare in Dlegs
+bool written = false; // togliere
+bool writing = false; // cambiare nome come flag
 
-TaskHandle_t Task2;
+TaskHandle_t Task2; // cambiare nome
 
-void Task2code( void * parameter) {
+void Task2code( void * parameter) { // cambiare nome
   for (;;) {
-    if(written){
+    if(written){ // togliere perchè mai eseguito
       if (!writing){
-        for (int i = 0; i < 24; i++) {
+        for (int i = 0; i < 24; i++) { // aggiungere servo di testa e coda
           if (active_servo[i]){
-            //servoMove((variable_angles[i]+SERVO_OFFSETS[i]),i+1); REMOVE COMMENT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            servoMove((variable_angles[i]+SERVO_OFFSETS[i]),i+1);
           }
         }
       }
     }
-    else{
+    else{ // togliere perchè mai eseguito
       vTaskDelay(pdMS_TO_TICKS(10));
     }
   }
@@ -39,11 +39,19 @@ void servoInit(){
     active_servo[i] = true;
   }
   
-  xTaskCreatePinnedToCore(Task2code, "Task2", 10000, NULL, 1, &Task2, 1);
+  xTaskCreatePinnedToCore(Task2code, "Task2", 10000, NULL, 1, &Task2, 1); // cambiare nome e impostare core stackdepth e priority via define.h
+}
+
+void pauseStream(){
+  vTaskSuspend(Task2);
+}
+
+void resumeStream(){
+  vTaskResume(Task2);
 }
 
 void bodyToServos(float pos[][8]){
-  float lol[24];
+  float lol[24]; // cambiare nome
   struct Dleg * dlegs = Nightmare::dlegs;
   for(int i=0;i<4;i++){
      trigz(lol[3*i],lol[3*i+1],lol[3*i+2],-(pos[0][i]-LEG_START_OFFSET[i*2]),-(pos[1][i]-LEG_START_OFFSET[i*2+1]),pos[2][i],dlegs[i]);
@@ -57,17 +65,17 @@ void bodyToServos(float pos[][8]){
      dlegs[i].FM_ANGLE=lol[3*i+1]+SERVO_OFFSETS[3*i+1];
      dlegs[i].TB_ANGLE=lol[3*i+2]+SERVO_OFFSETS[3*i+2];
   }
-  servoWrite(lol);
+  servoWrite(lol); // sostituire con codice low level
 }
 
-void servoWrite(float angles[]){
+void servoWrite(float angles[]){ // togliere
   for (int i = 0; i < 24; i++) {
     written = true;
     variable_angles[i] = angles[i];
   }
 }
 
-void bodyDetach(){
+void bodyDetach(){ // cambiare nome
   writing = true;
   for(int i=0;i<26;i++){
     if(active_servo[i]){
@@ -78,7 +86,7 @@ void bodyDetach(){
   writing = false;
 }
 
-void bodyAttach(){
+void bodyAttach(){ // cambiare nome
   writing = true;
   for(int i=0;i<26;i++){
     if(!active_servo[i]){
@@ -131,13 +139,13 @@ void servo_write(T t, Args... args) {
 }
 
 void servo_tx_enb() {
-  digitalWrite(SERVO_PIN_TX_ENB,HIGH);
-  digitalWrite(SERVO_PIN_RX_ENB,LOW);
+  GPIO.out_w1ts |= (1 << SERVO_PIN_TX_ENB);
+  GPIO.out_w1tc |= (1 << SERVO_PIN_RX_ENB);
 }
 
 void servo_rx_enb() {
-  digitalWrite(SERVO_PIN_TX_ENB,LOW);
-  digitalWrite(SERVO_PIN_RX_ENB,HIGH);
+  GPIO.out_w1tc |= (1 << SERVO_PIN_TX_ENB);
+  GPIO.out_w1ts |= (1 << SERVO_PIN_RX_ENB);
 }
 
 void servoMove(int ang, byte id){
@@ -194,6 +202,7 @@ void servoDetach(byte id){
 
 int servoReadPos(byte id){
   writing = true;
+  Serial2.flush();
   servo_tx_enb();
 
   servo_write(
@@ -207,17 +216,23 @@ int servoReadPos(byte id){
   servo_rx_enb();
 
   unsigned long time = micros();
-  while(Serial2.read() != 0x1C){
-    if((micros()-time)>20000){
+  while(Serial2.available() < 8){
+    if((micros()-time)>5000){
       return 4000;
     }
   }
+
+  while(Serial2.read() != 0x1C);
+
   byte low = Serial2.read();
   byte high = Serial2.read();
   byte checksum = Serial2.read();
+
   byte checksum_ = (~((byte)(id+0x21+low+high)));
   if(checksum == checksum_){
     return fmap((low|(high<<8)),0,1000,-120,120);
+  } else {
+    return 4000;
   }
   writing = false;
 }

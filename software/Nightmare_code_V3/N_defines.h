@@ -112,8 +112,8 @@ const float STAND_POS[3][8] = {
 
 const int   FAN1_PIN = 21;
 const int   FAN2_PIN = 22;
-const int   SERVO_PIN_TX_ENB = 18;
-const int   SERVO_PIN_RX_ENB = 19;
+const int   SERVO_PIN_TX_ENB = GPIO_NUM_18;
+const int   SERVO_PIN_RX_ENB = GPIO_NUM_19;
 const int   HC12_PIN_TX = 2;
 const int   HC12_PIN_RX = 15;
 const int   HC12_PIN_SET = 13;

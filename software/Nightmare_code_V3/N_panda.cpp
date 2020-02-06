@@ -14,15 +14,12 @@ bool pandaOnline;
 void pandaInit(){
     Serial.begin(460800);
     pinMode(PANDA_POWER_PIN,OUTPUT);
-    digitalWrite(DEBUG_LED_PIN_2,HIGH);
 }
 
 void Task4code(void * parameter) {                                                             
     digitalWrite(PANDA_POWER_PIN,HIGH);                                                         // electronically press the lattepanda power button
-    digitalWrite(DEBUG_LED_PIN_1,HIGH);
     vTaskDelay(pdMS_TO_TICKS(5000));                                                            // wait 3000ms to initialize the boot process
-    digitalWrite(PANDA_POWER_PIN,LOW);   
-    digitalWrite(DEBUG_LED_PIN_1,LOW);      
+    digitalWrite(PANDA_POWER_PIN,LOW);         
     pandaOnline = true;                                             
     vTaskDelete(NULL);                                                                          // end this task
 }
@@ -38,8 +35,8 @@ void Task5code( void * parameter) {
 }
 
 void pandaPowerOn(){
-    xTaskCreatePinnedToCore(Task4code, "Task4", 10000, NULL, 1, &Task4, 1);                     // create task for powering up the lattepanda board
-    xTaskCreatePinnedToCore(Task5code, "Task5", 10000, NULL, 1, &Task5, 1);                     // create task for sending data to the ros node
+    xTaskCreatePinnedToCore(Task4code, "Task4", 10000, NULL, 1, &Task4, 0);                     // create task for powering up the lattepanda board
+    xTaskCreatePinnedToCore(Task5code, "Task5", 10000, NULL, 1, &Task5, 0);                     // create task for sending data to the ros node
 }
 
 bool pandaIsOnline(){

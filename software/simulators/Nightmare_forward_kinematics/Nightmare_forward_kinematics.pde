@@ -58,7 +58,7 @@ void draw() {
   float y1 = cos(radians(-gama))*L2;
   float z1 = -(sin(radians(alpha))*fm+sin(radians((beta)+alpha))*tb);
   
-  text(Float.toString(L1),40,300);
+  /*text(Float.toString(L1),40,300);
   text(Float.toString(L2),300,300);
   text(Float.toString(x),40,340);
   text(Float.toString(x1),300,340);
@@ -68,5 +68,26 @@ void draw() {
   text(Float.toString(z1),300,420);
   text(Float.toString(alpha),40,460);
   text(Float.toString(beta),300,460);
-  text(Float.toString(gama),560,460);
+  text(Float.toString(gama),560,460);*/
+  
+  drawleg(alpha, beta, gama);
 } //<>//
+
+void drawleg(float alpha, float beta, float gama) {
+  print(alpha); 
+  print("  "); 
+  println(beta);
+  alpha = (180-alpha) + 180;
+  beta  = (180-beta);
+  stroke(255, 0, 0);
+  line(0, 660, cx*10*cos(radians(gama)), 660);
+  stroke(0, 255, 0);
+  float a = (cx*10*cos(radians(gama)))+cos(radians(alpha))*fm*10*cos(radians(gama));
+  float b = 160-sin(radians(alpha))*fm*10;
+  line(cx*10*cos(radians(gama)), 660, a, b+500);
+  stroke(0, 0, 255);
+  line(a, b+500, a+cos(radians((180-beta-alpha)))*tb*10*cos(radians(gama)), (b+sin(radians((180-beta-alpha)))*tb*10+500));
+  point(a+cos(radians((180-beta-alpha)))*tb*10, b+sin(radians((180-beta-alpha)))*tb*10);
+}
+
+//void draw3dleg(float alpha, float beta, float gama);
