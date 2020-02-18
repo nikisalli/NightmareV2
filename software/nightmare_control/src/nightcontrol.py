@@ -12,6 +12,11 @@ from radial_bar import RadialBar
 
 voltage = 7.2
 
+def listener_new():
+ rospy.init_node('listener_new', anonymous=True)
+ rospy.Subscriber("/nightmare/battery/voltage", String, callback)
+ rospy.spin()
+ 
 class MyClass(QtCore.QObject):
     randomValueChanged = QtCore.pyqtSignal(float)
     #self.randomValueChanged.emit(v)

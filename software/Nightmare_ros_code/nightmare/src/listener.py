@@ -73,7 +73,7 @@ class nightmare_node():
         self.pub_imu = rospy.Publisher("nightmare/imu", Imu, queue_size=1)                         #create topics name, type and data persistance
         self.pub_vol = rospy.Publisher("nightmare/battery/voltage", Float32, queue_size=1)
         self.pub_cur = rospy.Publisher("nightmare/battery/current", Float32, queue_size=1)
-        self.pub_jnt = rospy.Publisher("nightmare_v2/joint_states", JointState, queue_size=10)
+        self.pub_jnt = rospy.Publisher("nightmare/joint_states", JointState, queue_size=10)
 
         self.odomBroadcaster_imu = TransformBroadcaster()
         self.imu_msg = Imu()
