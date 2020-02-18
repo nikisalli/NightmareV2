@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>nightmare_control</name>
+  <version>0.0.0</version>
+  <description>The nightmare_control package</description>
+
+  <maintainer email="kek@gmail.com">nik</maintainer>
+  <license>GPLv3</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>python_qt_binding</build_depend>
+  <build_depend>roslib</build_depend>
+  <build_depend>rospkg</build_depend>
+  <build_depend>rviz</build_depend>
+  <build_export_depend>python_qt_binding</build_export_depend>
+  <build_export_depend>roslib</build_export_depend>
+  <build_export_depend>rospkg</build_export_depend>
+  <build_export_depend>rviz</build_export_depend>
+  <exec_depend>python_qt_binding</exec_depend>
+  <exec_depend>roslib</exec_depend>
+  <exec_depend>rospkg</exec_depend>
+  <exec_depend>rviz</exec_depend>
+
+  <export>
+  </export>
+</package>
