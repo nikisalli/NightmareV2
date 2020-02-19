@@ -4,7 +4,7 @@ project(nightmare_control)
 find_package(catkin REQUIRED COMPONENTS
   python_qt_binding
   roslib
-  rospkg
+  # rospkg
   rviz
 )
 

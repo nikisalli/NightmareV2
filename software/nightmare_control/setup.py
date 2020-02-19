@@ -7,7 +7,8 @@ from catkin_pkg.python_setup import generate_distutils_setup
 setup_args = generate_distutils_setup(
     packages=['nightmare_control'],
     package_dir={'': '/home/nik/catkin_ws/src'},
-    requires=['roslib', 'python_qt_binding', 'rospkg', 'rviz']
+    # requires=['roslib', 'python_qt_binding', 'rospkg', 'rviz']
+    requires=['roslib', 'python_qt_binding', 'rviz']
 )
 
 setup(**setup_args)
