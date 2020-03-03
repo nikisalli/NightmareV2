@@ -1,8 +1,7 @@
-from PyQt5 import QtCore, QtGui, QtQuick
+from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class RadialBar(QtQuick.QQuickPaintedItem):
-
+class RadialBar(QtWidgets.QWidget):
     class DialType():
         FullDial = 0
         MinToMax = 1
@@ -25,37 +24,36 @@ class RadialBar(QtQuick.QQuickPaintedItem):
     dialTypeChanged = QtCore.pyqtSignal()
     textFontChanged = QtCore.pyqtSignal()
 
+
     def __init__(self, parent=None):
         super(RadialBar, self).__init__(parent)
 
-        self.setWidth(200)
-        self.setHeight(200)
-        self.setSmooth(True)
-        self.setAntialiasing(True)
+        self.resize(150, 150)
+        # self.setSmooth(True)
+        # self.setAntialiasing(True)
 
         self._Size = 200
         self._StartAngle = 40
         self._SpanAngle = 280
         self._MinValue = 0
-        self._MaxValue = 100
-        self._Value = 50
-        self._DialWidth = 25
+        self._MaxValue = 9
+        self._Value = 5
+        self._DialWidth = 12
         self._BackgroundColor = QtCore.Qt.transparent
         self._DialColor = QtGui.QColor(80,80,80)
-        self._ProgressColor = QtGui.QColor(135,26,50)
+        self._ProgressColor = QtGui.QColor(42,100,80)
         self._TextColor = QtGui.QColor(0, 0, 0)
-        self._SuffixText = ""
+        self._SuffixText = "V"
         self._ShowText = True
-        self._PenStyle = QtCore.Qt.FlatCap
+        self._PenStyle = QtCore.Qt.RoundCap
         self._DialType = RadialBar.DialType.MinToMax
         self._TextFont = QtGui.QFont()
 
-    def paint(self, painter):
-        painter.save()
-        size = min(self.width(), self.height())
-        self.setWidth(size)
-        self.setHeight(size)
-        rect = QtCore.QRectF(0, 0, self.width(), self.height()) #self.boundingRect()
+    def paintEvent(self, event):
+        painter = QtGui.QPainter(self)
+        #painter.save() 
+        r = min(self.width, self.height)     
+        rect = QtCore.QRectF(0, 0, r, r) #self.boundingRect()
         painter.setRenderHint(QtGui.QPainter.Antialiasing)
         pen = painter.pen()
         pen.setCapStyle(self._PenStyle)
@@ -65,7 +63,6 @@ class RadialBar(QtQuick.QQuickPaintedItem):
             spanAngle = 0 - self._SpanAngle
         else:
             spanAngle = -360
-        painter.restore()
 
         #Draw outer dial
         painter.save()
@@ -111,6 +108,7 @@ class RadialBar(QtQuick.QQuickPaintedItem):
         painter.drawArc(rect.adjusted(offset, offset, -offset, -offset), startAngle * 16, valueAngle * 16)
         painter.restore()
 
+
     @QtCore.pyqtProperty(str, notify=sizeChanged)
     def size(self):
         return self._Size
@@ -121,6 +119,7 @@ class RadialBar(QtQuick.QQuickPaintedItem):
             return
         self._Size = size
         self.sizeChanged.emit()
+        self.update()
 
     @QtCore.pyqtProperty(int, notify=startAngleChanged)
     def startAngle(self):
@@ -132,6 +131,7 @@ class RadialBar(QtQuick.QQuickPaintedItem):
             return
         self._StartAngle = angle
         self.startAngleChanged.emit()
+        self.update()
 
     @QtCore.pyqtProperty(int, notify=spanAngleChanged)
     def spanAngle(self):
@@ -143,6 +143,7 @@ class RadialBar(QtQuick.QQuickPaintedItem):
             return
         self._SpanAngle = angle
         self.spanAngleChanged.emit()
+        self.update()
 
     @QtCore.pyqtProperty(int, notify=minValueChanged)
     def minValue(self):
@@ -154,6 +155,7 @@ class RadialBar(QtQuick.QQuickPaintedItem):
             return
         self._MinValue = value
         self.minValueChanged.emit()
+        self.update()
 
     @QtCore.pyqtProperty(int, notify=maxValueChanged)
     def maxValue(self):
@@ -165,6 +167,7 @@ class RadialBar(QtQuick.QQuickPaintedItem):
             return
         self._MaxValue = value
         self.maxValueChanged.emit()
+        self.update()
 
     @QtCore.pyqtProperty(float, notify=valueChanged)
     def value(self):
@@ -176,8 +179,9 @@ class RadialBar(QtQuick.QQuickPaintedItem):
             return
         self._Value = value
         self.valueChanged.emit()
+        self.update()
 
-    @QtCore.pyqtProperty(float, notify=dialWidthChanged)
+    @QtCore.pyqtProperty(int, notify=dialWidthChanged)
     def dialWidth(self):
         return self._DialWidth
 
@@ -187,6 +191,7 @@ class RadialBar(QtQuick.QQuickPaintedItem):
             return
         self._DialWidth = width
         self.dialWidthChanged.emit()
+        self.update()
 
     @QtCore.pyqtProperty(QtGui.QColor, notify=backgroundColorChanged)
     def backgroundColor(self):
@@ -198,6 +203,7 @@ class RadialBar(QtQuick.QQuickPaintedItem):
             return
         self._BackgroundColor = color
         self.backgroundColorChanged.emit()
+        self.update()
 
     @QtCore.pyqtProperty(QtGui.QColor, notify=foregroundColorChanged)
     def foregroundColor(self):
@@ -209,6 +215,7 @@ class RadialBar(QtQuick.QQuickPaintedItem):
             return
         self._DialColor = color
         self.foregroundColorChanged.emit()
+        self.update()
 
     @QtCore.pyqtProperty(QtGui.QColor, notify=progressColorChanged)
     def progressColor(self):
@@ -220,6 +227,7 @@ class RadialBar(QtQuick.QQuickPaintedItem):
             return
         self._ProgressColor = color
         self.progressColorChanged.emit()
+        self.update()
 
     @QtCore.pyqtProperty(QtGui.QColor, notify=textColorChanged)
     def textColor(self):
@@ -230,7 +238,8 @@ class RadialBar(QtQuick.QQuickPaintedItem):
         if self._TextColor == color:
             return
         self._TextColor = color
-        self.textColorChanged.emit()
+        self.textColorChanged.emit()  
+        self.update()
 
     @QtCore.pyqtProperty(str, notify=suffixTextChanged)
     def suffixText(self):
@@ -242,6 +251,7 @@ class RadialBar(QtQuick.QQuickPaintedItem):
             return
         self._SuffixText = text
         self.suffixTextChanged.emit()
+        self.update()
 
     @QtCore.pyqtProperty(str, notify=showTextChanged)
     def showText(self):
@@ -252,6 +262,7 @@ class RadialBar(QtQuick.QQuickPaintedItem):
         if self._ShowText == show:
             return
         self._ShowText = show
+        self.update()
 
     @QtCore.pyqtProperty(QtCore.Qt.PenCapStyle, notify=penStyleChanged)
     def penStyle(self):
@@ -263,6 +274,7 @@ class RadialBar(QtQuick.QQuickPaintedItem):
             return
         self._PenStyle = style
         self.penStyleChanged.emit()
+        self.update()
 
     @QtCore.pyqtProperty(int, notify=dialTypeChanged)
     def dialType(self):
@@ -274,6 +286,7 @@ class RadialBar(QtQuick.QQuickPaintedItem):
             return
         self._DialType = type
         self.dialTypeChanged.emit()
+        self.update()
 
     @QtCore.pyqtProperty(QtGui.QFont, notify=textFontChanged)
     def textFont(self):
@@ -285,3 +298,24 @@ class RadialBar(QtQuick.QQuickPaintedItem):
             return
         self._TextFont = font
         self.textFontChanged.emit()
+        self.update()
+
+
+if __name__ == '__main__':
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    w = RadialBar()
+    w.backgroundColor = QtGui.QColor("#1dc58f")
+    w.foregroundColor = QtGui.QColor("#191a2f")
+    w.dialWidth = 10
+    w.spanAngle = 70
+    w.textColor = QtGui.QColor("#FFFFFF")
+    w.penStyle = QtCore.Qt.RoundCap
+    w.dialType = RadialBar.DialType.FullDial
+    w.suffixText = "%"
+    timeline = QtCore.QTimeLine(10000, w)
+    timeline.setFrameRange(0, 100)
+    timeline.frameChanged.connect(lambda val: setattr(w, "value", val))
+    timeline.start()
+    w.show()
+    sys.exit(app.exec_())
